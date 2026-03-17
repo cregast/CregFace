@@ -1,8 +1,13 @@
+<p align="center">
+  <img width="231" height="360" alt="CregFace" src="https://github.com/user-attachments/assets/0b96cca5-95bb-4f7b-ba91-94c7bef4e326" />
+</p>
+
 # CregFace
 
 A custom analog watchface for the **Garmin Vivoactive 5**, written in [Monkey C](https://developer.garmin.com/connect-iq/monkey-c/) using the Connect IQ SDK. Designed for clarity and low power consumption on AMOLED displays.
 
 ---
+
 
 ## Features
 
