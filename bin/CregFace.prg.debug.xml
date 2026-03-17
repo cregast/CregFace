@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\temp\CregFace\CregFace\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="c:\\temp\\CregFace\\CregFace\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="3" lineNum="5" parent="globals/CregFaceApp" pc="268435501" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="4" lineNum="10" parent="globals/CregFaceView" pc="268435513" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="5" lineNum="12" parent="globals/CregFaceApp" pc="268435525" symbol="onStart"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="6" lineNum="20" parent="globals/CregFaceApp" pc="268435528" symbol="getInitialView"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="6" lineNum="21" parent="globals/CregFaceApp" pc="268435530" symbol="getInitialView"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="7" lineNum="7" parent="globals/CregFaceApp" pc="268435556" symbol="initialize"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="7" lineNum="8" parent="globals/CregFaceApp" pc="268435558" symbol="initialize"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceApp.mc" id="8" lineNum="16" parent="globals/CregFaceApp" pc="268435571" symbol="onStop"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="9" lineNum="70" parent="globals/CregFaceView" pc="268435574" symbol="onExitSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="9" lineNum="71" parent="globals/CregFaceView" pc="268435576" symbol="onExitSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="9" lineNum="72" parent="globals/CregFaceView" pc="268435584" symbol="onExitSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="9" lineNum="73" parent="globals/CregFaceView" pc="268435593" symbol="onExitSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="9" lineNum="74" parent="globals/CregFaceView" pc="268435622" symbol="onExitSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="9" lineNum="76" parent="globals/CregFaceView" pc="268435656" symbol="onExitSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="11" lineNum="31" parent="globals/CregFaceView" pc="268435668" symbol="onLayout"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="11" lineNum="32" parent="globals/CregFaceView" pc="268435670" symbol="onLayout"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="11" lineNum="33" parent="globals/CregFaceView" pc="268435687" symbol="onLayout"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="11" lineNum="34" parent="globals/CregFaceView" pc="268435704" symbol="onLayout"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="11" lineNum="37" parent="globals/CregFaceView" pc="268435741" symbol="onLayout"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="11" lineNum="38" parent="globals/CregFaceView" pc="268435763" symbol="onLayout"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="92" parent="globals/CregFaceView" pc="268435787" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="93" parent="globals/CregFaceView" pc="268435790" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="96" parent="globals/CregFaceView" pc="268435815" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="97" parent="globals/CregFaceView" pc="268435839" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="101" parent="globals/CregFaceView" pc="268435849" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="102" parent="globals/CregFaceView" pc="268435879" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="104" parent="globals/CregFaceView" pc="268435941" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="105" parent="globals/CregFaceView" pc="268435957" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="106" parent="globals/CregFaceView" pc="268435966" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="107" parent="globals/CregFaceView" pc="268435973" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="108" parent="globals/CregFaceView" pc="268436005" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="115" parent="globals/CregFaceView" pc="268436028" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="116" parent="globals/CregFaceView" pc="268436037" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="117" parent="globals/CregFaceView" pc="268436044" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="12" lineNum="118" parent="globals/CregFaceView" pc="268436076" symbol="drawIdleFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="13" lineNum="79" parent="globals/CregFaceView" pc="268436102" symbol="onEnterSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="13" lineNum="80" parent="globals/CregFaceView" pc="268436104" symbol="onEnterSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="13" lineNum="81" parent="globals/CregFaceView" pc="268436112" symbol="onEnterSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="13" lineNum="82" parent="globals/CregFaceView" pc="268436121" symbol="onEnterSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="13" lineNum="83" parent="globals/CregFaceView" pc="268436133" symbol="onEnterSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="13" lineNum="85" parent="globals/CregFaceView" pc="268436144" symbol="onEnterSleep"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="14" lineNum="25" parent="globals/CregFaceView" pc="268436156" symbol="initialize"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="14" lineNum="26" parent="globals/CregFaceView" pc="268436158" symbol="initialize"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="14" lineNum="27" parent="globals/CregFaceView" pc="268436170" symbol="initialize"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="231" parent="globals/CregFaceView" pc="268436178" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="232" parent="globals/CregFaceView" pc="268436181" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="233" parent="globals/CregFaceView" pc="268436197" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="236" parent="globals/CregFaceView" pc="268436222" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="237" parent="globals/CregFaceView" pc="268436233" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="238" parent="globals/CregFaceView" pc="268436249" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="239" parent="globals/CregFaceView" pc="268436280" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="240" parent="globals/CregFaceView" pc="268436308" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="241" parent="globals/CregFaceView" pc="268436336" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="242" parent="globals/CregFaceView" pc="268436361" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="244" parent="globals/CregFaceView" pc="268436386" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="245" parent="globals/CregFaceView" pc="268436407" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="247" parent="globals/CregFaceView" pc="268436437" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="249" parent="globals/CregFaceView" pc="268436455" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="250" parent="globals/CregFaceView" pc="268436465" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="251" parent="globals/CregFaceView" pc="268436487" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="252" parent="globals/CregFaceView" pc="268436497" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="253" parent="globals/CregFaceView" pc="268436522" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="255" parent="globals/CregFaceView" pc="268436547" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="256" parent="globals/CregFaceView" pc="268436551" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="257" parent="globals/CregFaceView" pc="268436560" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="259" parent="globals/CregFaceView" pc="268436573" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="16" lineNum="260" parent="globals/CregFaceView" pc="268436583" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="17" lineNum="42" parent="globals/CregFaceView" pc="268436617" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="17" lineNum="43" parent="globals/CregFaceView" pc="268436620" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="17" lineNum="44" parent="globals/CregFaceView" pc="268436645" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="17" lineNum="45" parent="globals/CregFaceView" pc="268436662" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="17" lineNum="47" parent="globals/CregFaceView" pc="268436679" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="17" lineNum="48" parent="globals/CregFaceView" pc="268436721" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="17" lineNum="50" parent="globals/CregFaceView" pc="268436768" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="18" lineNum="56" parent="globals/CregFaceView" pc="268436782" symbol="onUpdate"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="18" lineNum="57" parent="globals/CregFaceView" pc="268436784" symbol="onUpdate"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="18" lineNum="58" parent="globals/CregFaceView" pc="268436796" symbol="onUpdate"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="18" lineNum="60" parent="globals/CregFaceView" pc="268436804" symbol="onUpdate"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="18" lineNum="61" parent="globals/CregFaceView" pc="268436812" symbol="onUpdate"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="18" lineNum="63" parent="globals/CregFaceView" pc="268436826" symbol="onUpdate"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="125" parent="globals/CregFaceView" pc="268436838" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="127" parent="globals/CregFaceView" pc="268436841" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="130" parent="globals/CregFaceView" pc="268436852" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="131" parent="globals/CregFaceView" pc="268436864" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="132" parent="globals/CregFaceView" pc="268436875" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="133" parent="globals/CregFaceView" pc="268436883" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="136" parent="globals/CregFaceView" pc="268436891" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="137" parent="globals/CregFaceView" pc="268436910" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="138" parent="globals/CregFaceView" pc="268436917" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="139" parent="globals/CregFaceView" pc="268436921" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="141" parent="globals/CregFaceView" pc="268436925" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="142" parent="globals/CregFaceView" pc="268436934" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="143" parent="globals/CregFaceView" pc="268436952" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="144" parent="globals/CregFaceView" pc="268436974" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="145" parent="globals/CregFaceView" pc="268436989" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="147" parent="globals/CregFaceView" pc="268437002" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="148" parent="globals/CregFaceView" pc="268437022" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="150" parent="globals/CregFaceView" pc="268437040" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="151" parent="globals/CregFaceView" pc="268437053" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="158" parent="globals/CregFaceView" pc="268437078" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="159" parent="globals/CregFaceView" pc="268437090" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="160" parent="globals/CregFaceView" pc="268437098" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="161" parent="globals/CregFaceView" pc="268437126" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="162" parent="globals/CregFaceView" pc="268437133" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="164" parent="globals/CregFaceView" pc="268437152" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="165" parent="globals/CregFaceView" pc="268437168" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="171" parent="globals/CregFaceView" pc="268437187" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="172" parent="globals/CregFaceView" pc="268437199" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="173" parent="globals/CregFaceView" pc="268437207" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="174" parent="globals/CregFaceView" pc="268437247" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="175" parent="globals/CregFaceView" pc="268437266" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="176" parent="globals/CregFaceView" pc="268437273" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="178" parent="globals/CregFaceView" pc="268437296" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="179" parent="globals/CregFaceView" pc="268437309" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="185" parent="globals/CregFaceView" pc="268437328" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="186" parent="globals/CregFaceView" pc="268437358" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="187" parent="globals/CregFaceView" pc="268437420" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="188" parent="globals/CregFaceView" pc="268437427" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="190" parent="globals/CregFaceView" pc="268437446" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="191" parent="globals/CregFaceView" pc="268437462" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="197" parent="globals/CregFaceView" pc="268437482" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="198" parent="globals/CregFaceView" pc="268437494" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="199" parent="globals/CregFaceView" pc="268437505" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="200" parent="globals/CregFaceView" pc="268437512" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="201" parent="globals/CregFaceView" pc="268437531" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="202" parent="globals/CregFaceView" pc="268437547" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="206" parent="globals/CregFaceView" pc="268437566" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="207" parent="globals/CregFaceView" pc="268437585" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="208" parent="globals/CregFaceView" pc="268437613" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="210" parent="globals/CregFaceView" pc="268437632" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="213" parent="globals/CregFaceView" pc="268437648" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="214" parent="globals/CregFaceView" pc="268437682" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="215" parent="globals/CregFaceView" pc="268437716" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="216" parent="globals/CregFaceView" pc="268437728" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="219" parent="globals/CregFaceView" pc="268437752" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="220" parent="globals/CregFaceView" pc="268437786" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="221" parent="globals/CregFaceView" pc="268437820" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="224" parent="globals/CregFaceView" pc="268437844" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="225" parent="globals/CregFaceView" pc="268437878" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="226" parent="globals/CregFaceView" pc="268437912" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="227" parent="globals/CregFaceView" pc="268437928" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="19" lineNum="228" parent="globals/CregFaceView" pc="268437940" symbol="drawActiveFace"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="20" lineNum="88" parent="globals/CregFaceView" pc="268437965" symbol="onTimer"/>
+        <entry filename="C:\\temp\\CregFace\\CregFace\\source\\CregFaceView.mc" id="20" lineNum="89" parent="globals/CregFaceView" pc="268437967" symbol="onTimer"/>
+        <entry filename="c:\\temp\\CregFace\\CregFace\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="21" lineNum="13" parent="globals/Rez/Layouts" pc="268437979" symbol="WatchFace"/>
+        <entry filename="c:\\temp\\CregFace\\CregFace\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="21" lineNum="14" parent="globals/Rez/Layouts" pc="268437990" symbol="WatchFace"/>
+        <entry filename="c:\\temp\\CregFace\\CregFace\\bin\\gen\\006-B4426-00\\source\\Rez.mcgen" id="21" lineNum="16" parent="globals/Rez/Layouts" pc="268438094" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="16" symbol="&lt;globals/CregFaceView/&lt;&gt;mCenterY&gt;"/>
+        <entry field="true" id="15" symbol="&lt;globals/CregFaceView/&lt;&gt;mCenterX&gt;"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="22" symbol="&lt;globals/CregFaceView/&lt;&gt;mRadius&gt;"/>
+        <entry field="true" id="27" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry id="10" symbol="&lt;globals/CregFaceView/&lt;&gt;WEEK_DAYS&gt;"/>
+        <entry id="9" symbol="&lt;globals/CregFaceView/&lt;&gt;MONTH_NAMES&gt;"/>
+        <entry field="true" id="18" symbol="&lt;globals/CregFaceView/&lt;&gt;mDayDateText&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry field="true" id="17" symbol="&lt;globals/CregFaceView/&lt;&gt;mDateDims&gt;"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="6" object="true" symbol="CregFaceApp"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="19" symbol="&lt;globals/CregFaceView/&lt;&gt;mDayMonthDateText&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="21" symbol="&lt;globals/CregFaceView/&lt;&gt;mLastDateUpdate&gt;"/>
+        <entry id="7" object="true" symbol="CregFaceView"/>
+        <entry id="12" method="true" symbol="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="26" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="25" method="true" symbol="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="20" symbol="&lt;globals/CregFaceView/&lt;&gt;mIdleDigitalDims&gt;"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="11" method="true" symbol="drawActiveFace"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="8" module="true" symbol="Layouts"/>
+        <entry field="true" id="14" symbol="&lt;globals/CregFaceView/&lt;&gt;mAwake&gt;"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="13" method="true" symbol="drawIdleFace"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="24" method="true" symbol="onTimer"/>
+        <entry field="true" id="23" symbol="&lt;globals/CregFaceView/&lt;&gt;mTimer&gt;"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435786" name="dc" stackId="1" startPc="268435668"/>
+        <entry arg="true" endPc="268436101" name="dc" stackId="1" startPc="268435787"/>
+        <entry endPc="268436100" name="time" stackId="2" startPc="268435790"/>
+        <entry endPc="268436100" name="hour12" stackId="3" startPc="268435790"/>
+        <entry endPc="268436100" name="digitalText" stackId="4" startPc="268435790"/>
+        <entry endPc="268436024" name="digitalX" stackId="5" startPc="268435966"/>
+        <entry endPc="268436024" name="digitalY" stackId="6" startPc="268435966"/>
+        <entry endPc="268436097" name="dateX" stackId="7" startPc="268436037"/>
+        <entry endPc="268436097" name="dateY" stackId="8" startPc="268436037"/>
+        <entry arg="true" endPc="268436616" name="dc" stackId="1" startPc="268436178"/>
+        <entry endPc="268436615" name="i" stackId="2" startPc="268436233"/>
+        <entry endPc="268436605" name="angle" stackId="3" startPc="268436233"/>
+        <entry endPc="268436605" name="innerR" stackId="4" startPc="268436233"/>
+        <entry endPc="268436605" name="outerX" stackId="5" startPc="268436233"/>
+        <entry endPc="268436605" name="outerY" stackId="6" startPc="268436233"/>
+        <entry endPc="268436605" name="innerX" stackId="7" startPc="268436233"/>
+        <entry endPc="268436605" name="innerY" stackId="8" startPc="268436233"/>
+        <entry endPc="268436602" name="hour" stackId="9" startPc="268436465"/>
+        <entry endPc="268436602" name="labelR" stackId="10" startPc="268436465"/>
+        <entry endPc="268436602" name="lx" stackId="11" startPc="268436465"/>
+        <entry endPc="268436602" name="ly" stackId="12" startPc="268436465"/>
+        <entry endPc="268436602" name="font" stackId="13" startPc="268436465"/>
+        <entry endPc="268436602" name="text" stackId="14" startPc="268436465"/>
+        <entry endPc="268436602" name="textHeight" stackId="15" startPc="268436465"/>
+        <entry endPc="268436780" name="time" stackId="1" startPc="268436620"/>
+        <entry endPc="268436780" name="dayOfWeek" stackId="2" startPc="268436620"/>
+        <entry endPc="268436780" name="month" stackId="3" startPc="268436620"/>
+        <entry arg="true" endPc="268436837" name="dc" stackId="1" startPc="268436782"/>
+        <entry arg="true" endPc="268437964" name="dc" stackId="1" startPc="268436838"/>
+        <entry endPc="268437963" name="t" stackId="2" startPc="268436841"/>
+        <entry endPc="268437963" name="hour" stackId="3" startPc="268436841"/>
+        <entry endPc="268437963" name="minute" stackId="4" startPc="268436841"/>
+        <entry endPc="268437963" name="second" stackId="5" startPc="268436841"/>
+        <entry endPc="268437963" name="dateX" stackId="6" startPc="268436841"/>
+        <entry endPc="268437963" name="dateY" stackId="7" startPc="268436841"/>
+        <entry endPc="268437963" name="xPadding" stackId="8" startPc="268436841"/>
+        <entry endPc="268437963" name="yPadding" stackId="9" startPc="268436841"/>
+        <entry endPc="268437074" name="rectX" stackId="10" startPc="268436934"/>
+        <entry endPc="268437074" name="rectY" stackId="11" startPc="268436934"/>
+        <entry endPc="268437074" name="rectW" stackId="12" startPc="268436934"/>
+        <entry endPc="268437074" name="rectH" stackId="13" startPc="268436934"/>
+        <entry endPc="268437963" name="activityInfo" stackId="14" startPc="268436841"/>
+        <entry endPc="268437963" name="steps" stackId="15" startPc="268436841"/>
+        <entry endPc="268437963" name="stepsText" stackId="16" startPc="268436841"/>
+        <entry endPc="268437963" name="stepsX" stackId="17" startPc="268436841"/>
+        <entry endPc="268437963" name="stepsY" stackId="18" startPc="268436841"/>
+        <entry endPc="268437963" name="battStats" stackId="19" startPc="268436841"/>
+        <entry endPc="268437963" name="batteryLevel" stackId="20" startPc="268436841"/>
+        <entry endPc="268437963" name="battText" stackId="21" startPc="268436841"/>
+        <entry endPc="268437963" name="battX" stackId="22" startPc="268436841"/>
+        <entry endPc="268437963" name="battY" stackId="23" startPc="268436841"/>
+        <entry endPc="268437963" name="battColor" stackId="24" startPc="268436841"/>
+        <entry endPc="268437963" name="hour12" stackId="25" startPc="268436841"/>
+        <entry endPc="268437963" name="digitalText" stackId="26" startPc="268436841"/>
+        <entry endPc="268437963" name="digitalX" stackId="27" startPc="268436841"/>
+        <entry endPc="268437963" name="digitalY" stackId="28" startPc="268436841"/>
+        <entry endPc="268437963" name="stats" stackId="29" startPc="268436841"/>
+        <entry endPc="268437562" name="notifyX" stackId="30" startPc="268437505"/>
+        <entry endPc="268437562" name="notifyY" stackId="31" startPc="268437505"/>
+        <entry endPc="268437963" name="minuteAngle" stackId="32" startPc="268436841"/>
+        <entry endPc="268437963" name="hourAngle" stackId="33" startPc="268436841"/>
+        <entry endPc="268437963" name="secAngle" stackId="34" startPc="268436841"/>
+        <entry endPc="268437963" name="hourX" stackId="35" startPc="268436841"/>
+        <entry endPc="268437963" name="hourY" stackId="36" startPc="268436841"/>
+        <entry endPc="268437963" name="minX" stackId="37" startPc="268436841"/>
+        <entry endPc="268437963" name="minY" stackId="38" startPc="268436841"/>
+        <entry endPc="268437963" name="secX" stackId="39" startPc="268436841"/>
+        <entry endPc="268437963" name="secY" stackId="40" startPc="268436841"/>
+        <entry arg="true" endPc="268438103" name="dc" stackId="1" startPc="268437979"/>
+        <entry endPc="268438103" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268437990"/>
+    </localVars>
+    <deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B4426-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="125" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/CregFaceApp" offset="178" parentId="globals" symbolId="CregFaceApp" type="class"/>
+        <dataEntry label="globals/CregFaceView" offset="249" parentId="globals" symbolId="CregFaceView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="500" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="535" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="570" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435500" name="&lt;init&gt;" parent="Rez" startPc="268435481">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435512" name="&lt;init&gt;" parent="CregFaceApp" startPc="268435501">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="CregFaceView" startPc="268435513">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435527" name="onStart" parent="CregFaceApp" startPc="268435525">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435555" name="getInitialView" parent="CregFaceApp" startPc="268435528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435570" name="initialize" parent="CregFaceApp" startPc="268435556">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435573" name="onStop" parent="CregFaceApp" startPc="268435571">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435667" name="onExitSleep" parent="CregFaceView" startPc="268435574">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="CregFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435786" name="onLayout" parent="CregFaceView" startPc="268435668">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436101" name="drawIdleFace" parent="CregFaceView" startPc="268435787">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436155" name="onEnterSleep" parent="CregFaceView" startPc="268436102">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436177" name="initialize" parent="CregFaceView" startPc="268436156">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="CregFaceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436616" name="&lt;globals/CregFaceView/&lt;&gt;drawDial&gt;" parent="CregFaceView" startPc="268436178">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436781" name="&lt;globals/CregFaceView/&lt;&gt;updateDateText&gt;" parent="CregFaceView" startPc="268436617">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436837" name="onUpdate" parent="CregFaceView" startPc="268436782">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437964" name="drawActiveFace" parent="CregFaceView" startPc="268436838">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437978" name="onTimer" parent="CregFaceView" startPc="268437965">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438103" name="WatchFace" parent="Layouts" startPc="268437979">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

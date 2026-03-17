@@ -1,0 +1,2862 @@
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [ActivityMonitor,1,14,29]; ]
+import Toybox.ActivityMonitor;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Time,5,14,18]; ]
+import Toybox.Time;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Time,6,14,18]; @symbol_importdef<2> = [Gregorian,6,19,28]; ]
+import Toybox.Time.Gregorian;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [WatchUi,7,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 26; @symbol_classdef = [OLDCregFaceView,26,6,21]; @symbol_extends<0> = [WatchUi,26,30,37]; @symbol_extends<1> = [WatchFace,26,38,47]; ]
+class OLDCregFaceView extends WatchUi.WatchFace {
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 26; ]
+    <init> {
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 57 18 ]
+        %tmp.1 = newa 7;
+        %tmp.2 = "Sun";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "Mon";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "Tue";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "Wed";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "Thu";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "Fri";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = "Sat";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        putv self :WEEK_DAYS %tmp.22;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 58 18 ]
+        %tmp.23 = newa 12;
+        %tmp.24 = "Jan";
+        %tmp.25 = dup %tmp.23;
+        %tmp.26 = aputv %tmp.25 0 %tmp.24;
+        %tmp.27 = "Feb";
+        %tmp.28 = dup %tmp.26;
+        %tmp.29 = aputv %tmp.28 1 %tmp.27;
+        %tmp.30 = "Mar";
+        %tmp.31 = dup %tmp.29;
+        %tmp.32 = aputv %tmp.31 2 %tmp.30;
+        %tmp.33 = "Apr";
+        %tmp.34 = dup %tmp.32;
+        %tmp.35 = aputv %tmp.34 3 %tmp.33;
+        %tmp.36 = "May";
+        %tmp.37 = dup %tmp.35;
+        %tmp.38 = aputv %tmp.37 4 %tmp.36;
+        %tmp.39 = "Jun";
+        %tmp.40 = dup %tmp.38;
+        %tmp.41 = aputv %tmp.40 5 %tmp.39;
+        %tmp.42 = "Jul";
+        %tmp.43 = dup %tmp.41;
+        %tmp.44 = aputv %tmp.43 6 %tmp.42;
+        %tmp.45 = "Aug";
+        %tmp.46 = dup %tmp.44;
+        %tmp.47 = aputv %tmp.46 7 %tmp.45;
+        %tmp.48 = "Sept";
+        %tmp.49 = dup %tmp.47;
+        %tmp.50 = aputv %tmp.49 8 %tmp.48;
+        %tmp.51 = "Oct";
+        %tmp.52 = dup %tmp.50;
+        %tmp.53 = aputv %tmp.52 9 %tmp.51;
+        %tmp.54 = "Nov";
+        %tmp.55 = dup %tmp.53;
+        %tmp.56 = aputv %tmp.55 10 %tmp.54;
+        %tmp.57 = "Dec";
+        %tmp.58 = dup %tmp.56;
+        %tmp.59 = aputv %tmp.58 11 %tmp.57;
+        putv self :MONTH_NAMES %tmp.59;
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 26; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 29; @position = 16; @symbol_vardef = [mCenterX,29,16,24]; @symbol_type<0> = [Number,29,28,34]; ]
+    private
+    var mCenterX as Number = 0;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 30; @position = 16; @symbol_vardef = [mCenterY,30,16,24]; @symbol_type<0> = [Number,30,28,34]; ]
+    private
+    var mCenterY as Number = 0;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 31; @position = 16; @symbol_vardef = [mRadius,31,16,23]; @symbol_type<0> = [Number,31,28,34]; ]
+    private
+    var mRadius as Number = 0;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 35; @position = 16; @symbol_vardef = [mDialBuffer,35,16,27]; @symbol_type<0> = [Graphics,35,31,39]; @symbol_type<1> = [BufferedBitmap,35,40,54]; ]
+    private
+    var mDialBuffer as Graphics.BufferedBitmap or Null = null;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 38; @position = 16; @symbol_vardef = [mAwake,38,16,22]; @symbol_type<0> = [Boolean,38,26,33]; ]
+    private
+    var mAwake as Boolean = true;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 43; @position = 16; @symbol_vardef = [mPrevSecX,43,16,25]; @symbol_type<0> = [Float,43,34,39]; ]
+    private
+    var mPrevSecX as Float = 0.0;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 44; @position = 16; @symbol_vardef = [mPrevSecY,44,16,25]; @symbol_type<0> = [Float,44,34,39]; ]
+    private
+    var mPrevSecY as Float = 0.0;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 45; @position = 16; @symbol_vardef = [mPrevSecValid,45,16,29]; @symbol_type<0> = [Boolean,45,34,41]; ]
+    private
+    var mPrevSecValid as Boolean = false;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 48; @position = 16; @symbol_vardef = [mDayDateText,48,16,28]; @symbol_type<0> = [String,48,37,43]; ]
+    private
+    var mDayDateText as String or Null = null;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 49; @position = 16; @symbol_vardef = [mDayMonthDateText,49,16,33]; @symbol_type<0> = [String,49,37,43]; ]
+    private
+    var mDayMonthDateText as String or Null = null;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 50; @position = 16; @symbol_vardef = [mLastDateDay,50,16,28]; @symbol_type<0> = [Number,50,37,43]; ]
+    private
+    var mLastDateDay as Number or Null = null;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 53; @position = 16; @symbol_vardef = [mDateDims,53,16,25]; @symbol_type<0> = [Array,53,33,38]; @symbol_type<1> = [Number,53,39,45]; ]
+    private
+    var mDateDims as Array<Number> or Null = null;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 54; @position = 16; @symbol_vardef = [mIdleTimeDims,54,16,29]; @symbol_type<0> = [Array,54,33,38]; @symbol_type<1> = [Number,54,39,45]; ]
+    private
+    var mIdleTimeDims as Array<Number> or Null = null;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 57; @position = 18; @symbol_constdef = [WEEK_DAYS,57,18,27]; ]
+    private
+    const WEEK_DAYS;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 58; @position = 18; @symbol_constdef = [MONTH_NAMES,58,18,29]; ]
+    private
+    const MONTH_NAMES;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 61; @position = 18; @symbol_constdef = [HOUR_LEN,61,18,26]; ]
+    private
+    const HOUR_LEN = 0.50f;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 62; @position = 18; @symbol_constdef = [MIN_LEN,62,18,25]; ]
+    private
+    const MIN_LEN = 0.78f;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 63; @position = 18; @symbol_constdef = [SEC_LEN,63,18,25]; ]
+    private
+    const SEC_LEN = 0.88f;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 64; @position = 18; @symbol_constdef = [SEC_TAIL,64,18,26]; ]
+    private
+    const SEC_TAIL = 0.15f;
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 67; @symbol_functiondef = [initialize,67,13,23]; ]
+    function initialize() as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_67_26_69_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 68 8 ]
+        symbol [ WatchFace %tmp.2 68 8 17 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 68 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_67_26_69_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 73; @symbol_functiondef = [onLayout,73,13,21]; @symbol_param<0> = [dc,73,22,24]; @symbol_param<0>_type<0> = [Graphics,73,28,36]; @symbol_param<0>_type<1> = [Dc,73,37,39]; ]
+    function onLayout(dc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_73_49_87_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 74 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 74 19 21 ];
+        symbol [ getWidth %tmp.2 74 22 30 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        symbol [ mCenterX ? 74 8 16 ];
+        putv self :mCenterX %tmp.5;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 75 8 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 75 19 21 ];
+        symbol [ getHeight %tmp.7 75 22 31 ];
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        symbol [ mCenterY ? 75 8 16 ];
+        putv self :mCenterY %tmp.10;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 76 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_begin:
+        symbol [ mCenterX %tmp.12 76 20 28 ];
+        %tmp.12 = getv ? :mCenterX;
+        symbol [ mCenterY %tmp.14 76 31 39 ];
+        %tmp.14 = getv ? :mCenterY;
+        %tmp.15 = lt %tmp.12 %tmp.14;
+        bf %tmp.15 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_true:
+        symbol [ mCenterX %tmp.17 76 42 50 ];
+        %tmp.17 = getv ? :mCenterX;
+        push %tmp.17;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_false:
+        symbol [ mCenterY %tmp.19 76 53 61 ];
+        %tmp.19 = getv ? :mCenterY;
+        push %tmp.19;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_end:
+        %tmp.20 = phi [%tmp.15 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_begin] [%tmp.17 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_true] [%tmp.19 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_false] [%tmp.20 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_76_20_76_53_end];
+        %tmp.21 = 10;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        symbol [ mRadius ? 76 8 15 ];
+        putv self :mRadius %tmp.22;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 79 8 ]
+        %tmp.23 = self;
+        symbol [ updateDateCache %tmp.24 79 8 23 ];
+        %tmp.24 = getv function %tmp.23 :updateDateCache;
+        invoke %tmp.23 %tmp.24();
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 82 8 ]
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 82 24 26 ];
+        symbol [ getTextDimensions %tmp.26 82 27 44 ];
+        %tmp.26 = getv function %tmp.25 :getTextDimensions;
+        %tmp.27 = "Wed 4";
+        symbol [ Graphics %tmp.28 82 55 63 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.29 82 64 74 ];
+        %tmp.29 = getv %tmp.28 :FONT_XTINY;
+        %tmp.30 = invoke %tmp.25 %tmp.26(%tmp.27, %tmp.29);
+        symbol [ mDateDims ? 82 8 17 ];
+        putv self :mDateDims %tmp.30;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 83 8 ]
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 83 24 26 ];
+        symbol [ getTextDimensions %tmp.32 83 27 44 ];
+        %tmp.32 = getv function %tmp.31 :getTextDimensions;
+        %tmp.33 = "12:59";
+        symbol [ Graphics %tmp.34 83 55 63 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.35 83 64 82 ];
+        %tmp.35 = getv %tmp.34 :FONT_NUMBER_MEDIUM;
+        %tmp.36 = invoke %tmp.31 %tmp.32(%tmp.33, %tmp.35);
+        symbol [ mIdleTimeDims ? 83 8 21 ];
+        putv self :mIdleTimeDims %tmp.36;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 86 8 ]
+        %tmp.37 = self;
+        symbol [ buildDialBuffer %tmp.38 86 8 23 ];
+        %tmp.38 = getv function %tmp.37 :buildDialBuffer;
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 86 24 26 ];
+        invoke %tmp.37 %tmp.38(%tmp.39);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_73_49_87_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 90; @symbol_functiondef = [onShow,90,13,19]; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 91; @symbol_functiondef = [onHide,91,13,19]; ]
+    function onHide() as Void {
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 94; @symbol_functiondef = [onExitSleep,94,13,24]; ]
+    function onExitSleep() as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_94_35_98_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 95 8 ]
+        %tmp.1 = true;
+        symbol [ mAwake ? 95 8 14 ];
+        putv self :mAwake %tmp.1;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 96 8 ]
+        %tmp.2 = false;
+        symbol [ mPrevSecValid ? 96 8 21 ];
+        putv self :mPrevSecValid %tmp.2;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 97 8 ]
+        symbol [ WatchUi %tmp.3 97 8 15 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.4 97 16 29 ];
+        %tmp.4 = getv function %tmp.3 :requestUpdate;
+        invoke %tmp.3 %tmp.4();
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_94_35_98_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 100; @symbol_functiondef = [onEnterSleep,100,13,25]; ]
+    function onEnterSleep() as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_100_36_104_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 101 8 ]
+        %tmp.1 = false;
+        symbol [ mAwake ? 101 8 14 ];
+        putv self :mAwake %tmp.1;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 102 8 ]
+        %tmp.2 = false;
+        symbol [ mPrevSecValid ? 102 8 21 ];
+        putv self :mPrevSecValid %tmp.2;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 103 8 ]
+        symbol [ WatchUi %tmp.3 103 8 15 ];
+        %tmp.3 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.4 103 16 29 ];
+        %tmp.4 = getv function %tmp.3 :requestUpdate;
+        invoke %tmp.3 %tmp.4();
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_100_36_104_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 107; @symbol_functiondef = [onUpdate,107,13,21]; @symbol_param<0> = [dc,107,22,24]; @symbol_param<0>_type<0> = [Graphics,107,28,36]; @symbol_param<0>_type<1> = [Dc,107,37,39]; ]
+    function onUpdate(dc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_107_49_122_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 109 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_107_49_122_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_107_49_122_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 109 12 16 ];
+        symbol [ Gregorian %tmp.1 109 19 28 ];
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.2 109 29 33 ];
+        %tmp.2 = getv function %tmp.1 :info;
+        symbol [ Time %tmp.3 109 34 38 ];
+        %tmp.3 = getm $.Toybox.Time;
+        symbol [ now %tmp.4 109 39 42 ];
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ Time %tmp.6 109 46 50 ];
+        %tmp.6 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.7 109 51 63 ];
+        %tmp.7 = getv %tmp.6 :FORMAT_SHORT;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %info.1 %tmp.8;
+        symbol [ info %info.1 109 12 16 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 110 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_8_112_8_if_stmt:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_12_110_69_begin:
+        symbol [ mLastDateDay %tmp.10 110 12 24 ];
+        %tmp.10 = getv ? :mLastDateDay;
+        %tmp.11 = null;
+        %tmp.12 = eq %tmp.10 %tmp.11;
+        bt %tmp.12 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_8_112_8_if_true;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_36_110_69_false:
+        symbol [ mLastDateDay %tmp.14 110 37 49 ];
+        %tmp.14 = getv ? :mLastDateDay;
+        %tmp.15 = as %tmp.14 { (!Null) };
+        %tmp.16 = as %tmp.15 Number;
+        symbol [ Number %tmp.16 110 53 59 ];
+        %tmp.17 = lgetv %info.1;
+        symbol [ info %tmp.17 110 64 68 ];
+        symbol [ day %tmp.18 110 69 72 ];
+        %tmp.18 = getv %tmp.17 :day;
+        %tmp.19 = ne %tmp.16 %tmp.18;
+        push %tmp.19;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_36_110_69_end:
+        %tmp.20 = phi [%tmp.12 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_12_110_69_begin] [%tmp.19 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_36_110_69_false] [%tmp.20 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_36_110_69_end];
+        bf %tmp.20 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_8_112_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_8_112_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_74_112_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 111 12 ]
+        %tmp.21 = self;
+        symbol [ updateDateCache %tmp.22 111 12 27 ];
+        %tmp.22 = getv function %tmp.21 :updateDateCache;
+        invoke %tmp.21 %tmp.22();
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_74_112_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_8_112_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_110_8_112_8_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 114 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 114 8 10 ];
+        symbol [ setColor %tmp.24 114 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ Graphics %tmp.25 114 20 28 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.26 114 29 40 ];
+        %tmp.26 = getv %tmp.25 :COLOR_BLACK;
+        symbol [ Graphics %tmp.27 114 42 50 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.28 114 51 62 ];
+        %tmp.28 = getv %tmp.27 :COLOR_BLACK;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 115 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 115 8 10 ];
+        symbol [ clear %tmp.30 115 11 16 ];
+        %tmp.30 = getv function %tmp.29 :clear;
+        invoke %tmp.29 %tmp.30();
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 117 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_8_121_8_if_stmt:
+        symbol [ mAwake %tmp.32 117 12 18 ];
+        %tmp.32 = getv ? :mAwake;
+        bf %tmp.32 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_8_121_8_if_else_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_8_121_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_20_119_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 118 12 ]
+        %tmp.33 = self;
+        symbol [ drawActiveFace %tmp.34 118 12 26 ];
+        %tmp.34 = getv function %tmp.33 :drawActiveFace;
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 118 27 29 ];
+        invoke %tmp.33 %tmp.34(%tmp.35);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_20_119_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_8_121_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_8_121_8_if_else_false:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_119_15_121_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 120 12 ]
+        %tmp.36 = self;
+        symbol [ drawIdleFace %tmp.37 120 12 24 ];
+        %tmp.37 = getv function %tmp.36 :drawIdleFace;
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 120 25 27 ];
+        invoke %tmp.36 %tmp.37(%tmp.38);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_119_15_121_8_stop:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_117_8_121_8_if_end:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_107_49_122_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 125; @symbol_functiondef = [onPartialUpdate,125,13,28]; @symbol_param<0> = [dc,125,29,31]; @symbol_param<0>_type<0> = [Graphics,125,35,43]; @symbol_param<0>_type<1> = [Dc,125,44,46]; ]
+    function onPartialUpdate(dc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 127 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_127_8_129_8_if_stmt:
+        symbol [ mAwake %tmp.2 127 13 19 ];
+        %tmp.2 = getv ? :mAwake;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_127_8_129_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_127_8_129_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_127_21_129_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 128 12 ]
+        ret ?;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_127_21_129_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_127_8_129_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_127_8_129_8_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 131 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %t.1 = local;
+        symbol [ t %t.1 131 12 13 ];
+        symbol [ System %tmp.4 131 22 28 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.5 131 29 41 ];
+        %tmp.5 = getv function %tmp.4 :getClockTime;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %t.1 %tmp.6;
+        symbol [ t %t.1 131 12 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 132 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %secAng.2 = local;
+        symbol [ secAng %secAng.2 132 12 18 ];
+        %tmp.7 = lgetv %t.1;
+        symbol [ t %tmp.7 132 23 24 ];
+        symbol [ sec %tmp.8 132 25 28 ];
+        %tmp.8 = getv %tmp.7 :sec;
+        %tmp.9 = 60.0;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        %tmp.11 = 2.0;
+        %tmp.12 = mul %tmp.10 %tmp.11;
+        symbol [ Math %tmp.14 132 45 49 ];
+        %tmp.14 = getv ? :Math;
+        symbol [ PI %tmp.15 132 50 52 ];
+        %tmp.15 = getv %tmp.14 :PI;
+        %tmp.16 = mul %tmp.12 %tmp.15;
+        lputv %secAng.2 %tmp.16;
+        symbol [ secAng %secAng.2 132 12 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 134 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %newSecX.3 = local;
+        symbol [ newSecX %newSecX.3 134 12 19 ];
+        symbol [ mCenterX %tmp.18 134 22 30 ];
+        %tmp.18 = getv ? :mCenterX;
+        symbol [ mRadius %tmp.20 134 34 41 ];
+        %tmp.20 = getv ? :mRadius;
+        symbol [ SEC_LEN %tmp.22 134 44 51 ];
+        %tmp.22 = getv ? :SEC_LEN;
+        %tmp.23 = mul %tmp.20 %tmp.22;
+        symbol [ Math %tmp.25 134 56 60 ];
+        %tmp.25 = getv ? :Math;
+        symbol [ sin %tmp.26 134 61 64 ];
+        %tmp.26 = getv function %tmp.25 :sin;
+        %tmp.27 = lgetv %secAng.2;
+        symbol [ secAng %tmp.27 134 65 71 ];
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        %tmp.29 = mul %tmp.23 %tmp.28;
+        %tmp.30 = add %tmp.18 %tmp.29;
+        lputv %newSecX.3 %tmp.30;
+        symbol [ newSecX %newSecX.3 134 12 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 135 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %newSecY.4 = local;
+        symbol [ newSecY %newSecY.4 135 12 19 ];
+        symbol [ mCenterY %tmp.32 135 22 30 ];
+        %tmp.32 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.34 135 34 41 ];
+        %tmp.34 = getv ? :mRadius;
+        symbol [ SEC_LEN %tmp.36 135 44 51 ];
+        %tmp.36 = getv ? :SEC_LEN;
+        %tmp.37 = mul %tmp.34 %tmp.36;
+        symbol [ Math %tmp.39 135 56 60 ];
+        %tmp.39 = getv ? :Math;
+        symbol [ cos %tmp.40 135 61 64 ];
+        %tmp.40 = getv function %tmp.39 :cos;
+        %tmp.41 = lgetv %secAng.2;
+        symbol [ secAng %tmp.41 135 65 71 ];
+        %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
+        %tmp.43 = mul %tmp.37 %tmp.42;
+        %tmp.44 = sub %tmp.32 %tmp.43;
+        lputv %newSecY.4 %tmp.44;
+        symbol [ newSecY %newSecY.4 135 12 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 136 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %tailX.5 = local;
+        symbol [ tailX %tailX.5 136 12 17 ];
+        symbol [ mCenterX %tmp.46 136 22 30 ];
+        %tmp.46 = getv ? :mCenterX;
+        symbol [ mRadius %tmp.48 136 34 41 ];
+        %tmp.48 = getv ? :mRadius;
+        symbol [ SEC_TAIL %tmp.50 136 44 52 ];
+        %tmp.50 = getv ? :SEC_TAIL;
+        %tmp.51 = mul %tmp.48 %tmp.50;
+        symbol [ Math %tmp.53 136 56 60 ];
+        %tmp.53 = getv ? :Math;
+        symbol [ sin %tmp.54 136 61 64 ];
+        %tmp.54 = getv function %tmp.53 :sin;
+        %tmp.55 = lgetv %secAng.2;
+        symbol [ secAng %tmp.55 136 65 71 ];
+        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
+        %tmp.57 = mul %tmp.51 %tmp.56;
+        %tmp.58 = sub %tmp.46 %tmp.57;
+        lputv %tailX.5 %tmp.58;
+        symbol [ tailX %tailX.5 136 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 137 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %tailY.6 = local;
+        symbol [ tailY %tailY.6 137 12 17 ];
+        symbol [ mCenterY %tmp.60 137 22 30 ];
+        %tmp.60 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.62 137 34 41 ];
+        %tmp.62 = getv ? :mRadius;
+        symbol [ SEC_TAIL %tmp.64 137 44 52 ];
+        %tmp.64 = getv ? :SEC_TAIL;
+        %tmp.65 = mul %tmp.62 %tmp.64;
+        symbol [ Math %tmp.67 137 56 60 ];
+        %tmp.67 = getv ? :Math;
+        symbol [ cos %tmp.68 137 61 64 ];
+        %tmp.68 = getv function %tmp.67 :cos;
+        %tmp.69 = lgetv %secAng.2;
+        symbol [ secAng %tmp.69 137 65 71 ];
+        %tmp.70 = invoke %tmp.67 %tmp.68(%tmp.69);
+        %tmp.71 = mul %tmp.65 %tmp.70;
+        %tmp.72 = add %tmp.60 %tmp.71;
+        lputv %tailY.6 %tmp.72;
+        symbol [ tailY %tailY.6 137 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 142 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %PAD.7 = local;
+        symbol [ PAD %PAD.7 142 12 15 ];
+        %tmp.73 = 3;
+        lputv %PAD.7 %tmp.73;
+        symbol [ PAD %PAD.7 142 12 15 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 144 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %x1.8 = local;
+        symbol [ x1 %x1.8 144 12 14 ];
+        %tmp.74 = lgetv %newSecX.3;
+        symbol [ newSecX %tmp.74 144 17 24 ];
+        symbol [ toNumber %tmp.75 144 25 33 ];
+        %tmp.75 = getv function %tmp.74 :toNumber;
+        %tmp.76 = invoke %tmp.74 %tmp.75();
+        lputv %x1.8 %tmp.76;
+        symbol [ x1 %x1.8 144 12 14 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 145 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %y1.9 = local;
+        symbol [ y1 %y1.9 145 12 14 ];
+        %tmp.77 = lgetv %newSecY.4;
+        symbol [ newSecY %tmp.77 145 17 24 ];
+        symbol [ toNumber %tmp.78 145 25 33 ];
+        %tmp.78 = getv function %tmp.77 :toNumber;
+        %tmp.79 = invoke %tmp.77 %tmp.78();
+        lputv %y1.9 %tmp.79;
+        symbol [ y1 %y1.9 145 12 14 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 146 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %x2.10 = local;
+        symbol [ x2 %x2.10 146 12 14 ];
+        %tmp.80 = lgetv %tailX.5;
+        symbol [ tailX %tmp.80 146 17 22 ];
+        symbol [ toNumber %tmp.81 146 23 31 ];
+        %tmp.81 = getv function %tmp.80 :toNumber;
+        %tmp.82 = invoke %tmp.80 %tmp.81();
+        lputv %x2.10 %tmp.82;
+        symbol [ x2 %x2.10 146 12 14 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 147 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %y2.11 = local;
+        symbol [ y2 %y2.11 147 12 14 ];
+        %tmp.83 = lgetv %tailY.6;
+        symbol [ tailY %tmp.83 147 17 22 ];
+        symbol [ toNumber %tmp.84 147 23 31 ];
+        %tmp.84 = getv function %tmp.83 :toNumber;
+        %tmp.85 = invoke %tmp.83 %tmp.84();
+        lputv %y2.11 %tmp.85;
+        symbol [ y2 %y2.11 147 12 14 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 149 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %clipX.12 = local;
+        symbol [ clipX %clipX.12 149 12 17 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_begin:
+        %tmp.86 = lgetv %x1.8;
+        symbol [ x1 %tmp.86 149 20 22 ];
+        %tmp.87 = lgetv %x2.10;
+        symbol [ x2 %tmp.87 149 25 27 ];
+        %tmp.88 = lt %tmp.86 %tmp.87;
+        bf %tmp.88 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_true:
+        %tmp.89 = lgetv %x1.8;
+        symbol [ x1 %tmp.89 149 30 32 ];
+        push %tmp.89;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_false:
+        %tmp.90 = lgetv %x2.10;
+        symbol [ x2 %tmp.90 149 35 37 ];
+        push %tmp.90;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_end:
+        %tmp.91 = phi [%tmp.88 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_begin] [%tmp.89 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_true] [%tmp.90 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_false] [%tmp.91 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_149_20_149_35_end];
+        lputv %clipX.12 %tmp.91;
+        symbol [ clipX %clipX.12 149 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 150 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %clipY.13 = local;
+        symbol [ clipY %clipY.13 150 12 17 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_begin:
+        %tmp.92 = lgetv %y1.9;
+        symbol [ y1 %tmp.92 150 20 22 ];
+        %tmp.93 = lgetv %y2.11;
+        symbol [ y2 %tmp.93 150 25 27 ];
+        %tmp.94 = lt %tmp.92 %tmp.93;
+        bf %tmp.94 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_true:
+        %tmp.95 = lgetv %y1.9;
+        symbol [ y1 %tmp.95 150 30 32 ];
+        push %tmp.95;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_false:
+        %tmp.96 = lgetv %y2.11;
+        symbol [ y2 %tmp.96 150 35 37 ];
+        push %tmp.96;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_end:
+        %tmp.97 = phi [%tmp.94 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_begin] [%tmp.95 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_true] [%tmp.96 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_false] [%tmp.97 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_150_20_150_35_end];
+        lputv %clipY.13 %tmp.97;
+        symbol [ clipY %clipY.13 150 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 151 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %clipW.14 = local;
+        symbol [ clipW %clipW.14 151 12 17 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_begin:
+        %tmp.98 = lgetv %x1.8;
+        symbol [ x1 %tmp.98 151 21 23 ];
+        %tmp.99 = lgetv %x2.10;
+        symbol [ x2 %tmp.99 151 26 28 ];
+        %tmp.100 = gt %tmp.98 %tmp.99;
+        bf %tmp.100 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_true:
+        %tmp.101 = lgetv %x1.8;
+        symbol [ x1 %tmp.101 151 31 33 ];
+        push %tmp.101;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_false:
+        %tmp.102 = lgetv %x2.10;
+        symbol [ x2 %tmp.102 151 36 38 ];
+        push %tmp.102;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_end:
+        %tmp.103 = phi [%tmp.100 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_begin] [%tmp.101 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_true] [%tmp.102 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_false] [%tmp.103 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_151_21_151_36_end];
+        %tmp.104 = lgetv %clipX.12;
+        symbol [ clipX %tmp.104 151 42 47 ];
+        %tmp.105 = sub %tmp.103 %tmp.104;
+        lputv %clipW.14 %tmp.105;
+        symbol [ clipW %clipW.14 151 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 152 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %clipH.15 = local;
+        symbol [ clipH %clipH.15 152 12 17 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_begin:
+        %tmp.106 = lgetv %y1.9;
+        symbol [ y1 %tmp.106 152 21 23 ];
+        %tmp.107 = lgetv %y2.11;
+        symbol [ y2 %tmp.107 152 26 28 ];
+        %tmp.108 = gt %tmp.106 %tmp.107;
+        bf %tmp.108 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_true:
+        %tmp.109 = lgetv %y1.9;
+        symbol [ y1 %tmp.109 152 31 33 ];
+        push %tmp.109;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_false:
+        %tmp.110 = lgetv %y2.11;
+        symbol [ y2 %tmp.110 152 36 38 ];
+        push %tmp.110;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_end:
+        %tmp.111 = phi [%tmp.108 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_begin] [%tmp.109 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_true] [%tmp.110 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_false] [%tmp.111 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_152_21_152_36_end];
+        %tmp.112 = lgetv %clipY.13;
+        symbol [ clipY %tmp.112 152 42 47 ];
+        %tmp.113 = sub %tmp.111 %tmp.112;
+        lputv %clipH.15 %tmp.113;
+        symbol [ clipH %clipH.15 152 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 154 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_8_163_8_if_stmt:
+        symbol [ mPrevSecValid %tmp.115 154 12 25 ];
+        %tmp.115 = getv ? :mPrevSecValid;
+        bf %tmp.115 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_8_163_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_8_163_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 155 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_stop" ]
+        %px.16 = local;
+        symbol [ px %px.16 155 16 18 ];
+        symbol [ mPrevSecX %tmp.117 155 22 31 ];
+        %tmp.117 = getv ? :mPrevSecX;
+        symbol [ toNumber %tmp.118 155 32 40 ];
+        %tmp.118 = getv function %tmp.117 :toNumber;
+        %tmp.119 = invoke %tmp.117 %tmp.118();
+        lputv %px.16 %tmp.119;
+        symbol [ px %px.16 155 16 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 156 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_stop" ]
+        %py.17 = local;
+        symbol [ py %py.17 156 16 18 ];
+        symbol [ mPrevSecY %tmp.121 156 22 31 ];
+        %tmp.121 = getv ? :mPrevSecY;
+        symbol [ toNumber %tmp.122 156 32 40 ];
+        %tmp.122 = getv function %tmp.121 :toNumber;
+        %tmp.123 = invoke %tmp.121 %tmp.122();
+        lputv %py.17 %tmp.123;
+        symbol [ py %py.17 156 16 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 157 12 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_157_12_157_42_if_stmt:
+        %tmp.124 = lgetv %px.16;
+        symbol [ px %tmp.124 157 16 18 ];
+        %tmp.125 = lgetv %clipX.12;
+        symbol [ clipX %tmp.125 157 21 26 ];
+        %tmp.126 = lt %tmp.124 %tmp.125;
+        bf %tmp.126 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_157_12_157_42_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_157_12_157_42_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_157_28_157_42_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 157 30 ]
+        %tmp.127 = lgetv %px.16;
+        symbol [ px %tmp.127 157 38 40 ];
+        lputv %clipX.12 %tmp.127;
+        symbol [ clipX %clipX.12 157 30 35 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_157_28_157_42_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_157_12_157_42_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_157_12_157_42_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 158 12 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_158_12_158_42_if_stmt:
+        %tmp.128 = lgetv %py.17;
+        symbol [ py %tmp.128 158 16 18 ];
+        %tmp.129 = lgetv %clipY.13;
+        symbol [ clipY %tmp.129 158 21 26 ];
+        %tmp.130 = lt %tmp.128 %tmp.129;
+        bf %tmp.130 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_158_12_158_42_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_158_12_158_42_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_158_28_158_42_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 158 30 ]
+        %tmp.131 = lgetv %py.17;
+        symbol [ py %tmp.131 158 38 40 ];
+        lputv %clipY.13 %tmp.131;
+        symbol [ clipY %clipY.13 158 30 35 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_158_28_158_42_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_158_12_158_42_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_158_12_158_42_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 159 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_stop" ]
+        %px2.18 = local;
+        symbol [ px2 %px2.18 159 16 19 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_begin:
+        %tmp.132 = lgetv %px.16;
+        symbol [ px %tmp.132 159 22 24 ];
+        %tmp.133 = lgetv %clipX.12;
+        symbol [ clipX %tmp.133 159 28 33 ];
+        %tmp.134 = lgetv %clipW.14;
+        symbol [ clipW %tmp.134 159 36 41 ];
+        %tmp.135 = add %tmp.133 %tmp.134;
+        %tmp.136 = gt %tmp.132 %tmp.135;
+        bf %tmp.136 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_true:
+        %tmp.137 = lgetv %px.16;
+        symbol [ px %tmp.137 159 45 47 ];
+        push %tmp.137;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_false:
+        %tmp.138 = lgetv %clipX.12;
+        symbol [ clipX %tmp.138 159 51 56 ];
+        %tmp.139 = lgetv %clipW.14;
+        symbol [ clipW %tmp.139 159 59 64 ];
+        %tmp.140 = add %tmp.138 %tmp.139;
+        push %tmp.140;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_end:
+        %tmp.141 = phi [%tmp.136 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_begin] [%tmp.137 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_true] [%tmp.140 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_false] [%tmp.141 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_159_22_159_64_end];
+        lputv %px2.18 %tmp.141;
+        symbol [ px2 %px2.18 159 16 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 160 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_stop" ]
+        %py2.19 = local;
+        symbol [ py2 %py2.19 160 16 19 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_begin:
+        %tmp.142 = lgetv %py.17;
+        symbol [ py %tmp.142 160 22 24 ];
+        %tmp.143 = lgetv %clipY.13;
+        symbol [ clipY %tmp.143 160 28 33 ];
+        %tmp.144 = lgetv %clipH.15;
+        symbol [ clipH %tmp.144 160 36 41 ];
+        %tmp.145 = add %tmp.143 %tmp.144;
+        %tmp.146 = gt %tmp.142 %tmp.145;
+        bf %tmp.146 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_true:
+        %tmp.147 = lgetv %py.17;
+        symbol [ py %tmp.147 160 45 47 ];
+        push %tmp.147;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_false:
+        %tmp.148 = lgetv %clipY.13;
+        symbol [ clipY %tmp.148 160 51 56 ];
+        %tmp.149 = lgetv %clipH.15;
+        symbol [ clipH %tmp.149 160 59 64 ];
+        %tmp.150 = add %tmp.148 %tmp.149;
+        push %tmp.150;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_end:
+        %tmp.151 = phi [%tmp.146 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_begin] [%tmp.147 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_true] [%tmp.150 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_false] [%tmp.151 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_160_22_160_64_end];
+        lputv %py2.19 %tmp.151;
+        symbol [ py2 %py2.19 160 16 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 161 14 ]
+        %tmp.152 = lgetv %px2.18;
+        symbol [ px2 %tmp.152 161 22 25 ];
+        %tmp.153 = lgetv %clipX.12;
+        symbol [ clipX %tmp.153 161 28 33 ];
+        %tmp.154 = sub %tmp.152 %tmp.153;
+        lputv %clipW.14 %tmp.154;
+        symbol [ clipW %clipW.14 161 14 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 162 14 ]
+        %tmp.155 = lgetv %py2.19;
+        symbol [ py2 %tmp.155 162 22 25 ];
+        %tmp.156 = lgetv %clipY.13;
+        symbol [ clipY %tmp.156 162 28 33 ];
+        %tmp.157 = sub %tmp.155 %tmp.156;
+        lputv %clipH.15 %tmp.157;
+        symbol [ clipH %clipH.15 162 14 19 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_27_163_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_8_163_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_154_8_163_8_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 166 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %bossR.20 = local;
+        symbol [ bossR %bossR.20 166 12 17 ];
+        %tmp.158 = 6;
+        lputv %bossR.20 %tmp.158;
+        symbol [ bossR %bossR.20 166 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 167 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %bx.21 = local;
+        symbol [ bx %bx.21 167 12 14 ];
+        symbol [ mCenterX %tmp.160 167 17 25 ];
+        %tmp.160 = getv ? :mCenterX;
+        %tmp.161 = lgetv %bossR.20;
+        symbol [ bossR %tmp.161 167 28 33 ];
+        %tmp.162 = sub %tmp.160 %tmp.161;
+        lputv %bx.21 %tmp.162;
+        symbol [ bx %bx.21 167 12 14 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 168 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %by.22 = local;
+        symbol [ by %by.22 168 12 14 ];
+        symbol [ mCenterY %tmp.164 168 17 25 ];
+        %tmp.164 = getv ? :mCenterY;
+        %tmp.165 = lgetv %bossR.20;
+        symbol [ bossR %tmp.165 168 28 33 ];
+        %tmp.166 = sub %tmp.164 %tmp.165;
+        lputv %by.22 %tmp.166;
+        symbol [ by %by.22 168 12 14 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 169 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_169_8_169_38_if_stmt:
+        %tmp.167 = lgetv %bx.21;
+        symbol [ bx %tmp.167 169 12 14 ];
+        %tmp.168 = lgetv %clipX.12;
+        symbol [ clipX %tmp.168 169 17 22 ];
+        %tmp.169 = lt %tmp.167 %tmp.168;
+        bf %tmp.169 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_169_8_169_38_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_169_8_169_38_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_169_24_169_38_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 169 26 ]
+        %tmp.170 = lgetv %bx.21;
+        symbol [ bx %tmp.170 169 34 36 ];
+        lputv %clipX.12 %tmp.170;
+        symbol [ clipX %clipX.12 169 26 31 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_169_24_169_38_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_169_8_169_38_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_169_8_169_38_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 170 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_170_8_170_38_if_stmt:
+        %tmp.171 = lgetv %by.22;
+        symbol [ by %tmp.171 170 12 14 ];
+        %tmp.172 = lgetv %clipY.13;
+        symbol [ clipY %tmp.172 170 17 22 ];
+        %tmp.173 = lt %tmp.171 %tmp.172;
+        bf %tmp.173 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_170_8_170_38_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_170_8_170_38_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_170_24_170_38_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 170 26 ]
+        %tmp.174 = lgetv %by.22;
+        symbol [ by %tmp.174 170 34 36 ];
+        lputv %clipY.13 %tmp.174;
+        symbol [ clipY %clipY.13 170 26 31 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_170_24_170_38_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_170_8_170_38_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_170_8_170_38_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 171 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %bx2.23 = local;
+        symbol [ bx2 %bx2.23 171 12 15 ];
+        symbol [ mCenterX %tmp.176 171 18 26 ];
+        %tmp.176 = getv ? :mCenterX;
+        %tmp.177 = lgetv %bossR.20;
+        symbol [ bossR %tmp.177 171 29 34 ];
+        %tmp.178 = add %tmp.176 %tmp.177;
+        lputv %bx2.23 %tmp.178;
+        symbol [ bx2 %bx2.23 171 12 15 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 172 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %by2.24 = local;
+        symbol [ by2 %by2.24 172 12 15 ];
+        symbol [ mCenterY %tmp.180 172 18 26 ];
+        %tmp.180 = getv ? :mCenterY;
+        %tmp.181 = lgetv %bossR.20;
+        symbol [ bossR %tmp.181 172 29 34 ];
+        %tmp.182 = add %tmp.180 %tmp.181;
+        lputv %by2.24 %tmp.182;
+        symbol [ by2 %by2.24 172 12 15 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 173 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_173_8_173_56_if_stmt:
+        %tmp.183 = lgetv %bx2.23;
+        symbol [ bx2 %tmp.183 173 12 15 ];
+        %tmp.184 = lgetv %clipX.12;
+        symbol [ clipX %tmp.184 173 18 23 ];
+        %tmp.185 = lgetv %clipW.14;
+        symbol [ clipW %tmp.185 173 26 31 ];
+        %tmp.186 = add %tmp.184 %tmp.185;
+        %tmp.187 = gt %tmp.183 %tmp.186;
+        bf %tmp.187 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_173_8_173_56_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_173_8_173_56_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_173_33_173_56_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 173 35 ]
+        %tmp.188 = lgetv %bx2.23;
+        symbol [ bx2 %tmp.188 173 43 46 ];
+        %tmp.189 = lgetv %clipX.12;
+        symbol [ clipX %tmp.189 173 49 54 ];
+        %tmp.190 = sub %tmp.188 %tmp.189;
+        lputv %clipW.14 %tmp.190;
+        symbol [ clipW %clipW.14 173 35 40 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_173_33_173_56_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_173_8_173_56_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_173_8_173_56_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 174 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_174_8_174_56_if_stmt:
+        %tmp.191 = lgetv %by2.24;
+        symbol [ by2 %tmp.191 174 12 15 ];
+        %tmp.192 = lgetv %clipY.13;
+        symbol [ clipY %tmp.192 174 18 23 ];
+        %tmp.193 = lgetv %clipH.15;
+        symbol [ clipH %tmp.193 174 26 31 ];
+        %tmp.194 = add %tmp.192 %tmp.193;
+        %tmp.195 = gt %tmp.191 %tmp.194;
+        bf %tmp.195 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_174_8_174_56_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_174_8_174_56_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_174_33_174_56_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 174 35 ]
+        %tmp.196 = lgetv %by2.24;
+        symbol [ by2 %tmp.196 174 43 46 ];
+        %tmp.197 = lgetv %clipY.13;
+        symbol [ clipY %tmp.197 174 49 54 ];
+        %tmp.198 = sub %tmp.196 %tmp.197;
+        lputv %clipH.15 %tmp.198;
+        symbol [ clipH %clipH.15 174 35 40 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_174_33_174_56_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_174_8_174_56_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_174_8_174_56_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 176 8 ]
+        %tmp.199 = lgetv %clipX.12;
+        symbol [ clipX %tmp.199 176 8 13 ];
+        %tmp.200 = lgetv %PAD.7;
+        symbol [ PAD %tmp.200 176 17 20 ];
+        %tmp.201 = sub %tmp.199 %tmp.200;
+        lputv %clipX.12 %tmp.201;
+        symbol [ clipX %clipX.12 176 8 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 177 8 ]
+        %tmp.202 = lgetv %clipY.13;
+        symbol [ clipY %tmp.202 177 8 13 ];
+        %tmp.203 = lgetv %PAD.7;
+        symbol [ PAD %tmp.203 177 17 20 ];
+        %tmp.204 = sub %tmp.202 %tmp.203;
+        lputv %clipY.13 %tmp.204;
+        symbol [ clipY %clipY.13 177 8 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 178 8 ]
+        %tmp.205 = lgetv %clipW.14;
+        symbol [ clipW %tmp.205 178 8 13 ];
+        %tmp.206 = lgetv %PAD.7;
+        symbol [ PAD %tmp.206 178 17 20 ];
+        %tmp.207 = 2;
+        %tmp.208 = mul %tmp.206 %tmp.207;
+        %tmp.209 = add %tmp.205 %tmp.208;
+        lputv %clipW.14 %tmp.209;
+        symbol [ clipW %clipW.14 178 8 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 179 8 ]
+        %tmp.210 = lgetv %clipH.15;
+        symbol [ clipH %tmp.210 179 8 13 ];
+        %tmp.211 = lgetv %PAD.7;
+        symbol [ PAD %tmp.211 179 17 20 ];
+        %tmp.212 = 2;
+        %tmp.213 = mul %tmp.211 %tmp.212;
+        %tmp.214 = add %tmp.210 %tmp.213;
+        lputv %clipH.15 %tmp.214;
+        symbol [ clipH %clipH.15 179 8 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 181 8 ]
+        %tmp.215 = lgetv %dc;
+        symbol [ dc %tmp.215 181 8 10 ];
+        symbol [ setClip %tmp.216 181 11 18 ];
+        %tmp.216 = getv function %tmp.215 :setClip;
+        %tmp.217 = lgetv %clipX.12;
+        symbol [ clipX %tmp.217 181 19 24 ];
+        %tmp.218 = lgetv %clipY.13;
+        symbol [ clipY %tmp.218 181 26 31 ];
+        %tmp.219 = lgetv %clipW.14;
+        symbol [ clipW %tmp.219 181 33 38 ];
+        %tmp.220 = lgetv %clipH.15;
+        symbol [ clipH %tmp.220 181 40 45 ];
+        invoke %tmp.215 %tmp.216(%tmp.217, %tmp.218, %tmp.219, %tmp.220);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 185 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_8_190_8_if_stmt:
+        symbol [ mDialBuffer %tmp.222 185 12 23 ];
+        %tmp.222 = getv ? :mDialBuffer;
+        %tmp.223 = null;
+        %tmp.224 = ne %tmp.222 %tmp.223;
+        bf %tmp.224 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_8_190_8_if_else_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_8_190_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_33_187_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 186 12 ]
+        %tmp.225 = lgetv %dc;
+        symbol [ dc %tmp.225 186 12 14 ];
+        symbol [ drawBitmap %tmp.226 186 15 25 ];
+        %tmp.226 = getv function %tmp.225 :drawBitmap;
+        %tmp.227 = 0;
+        %tmp.228 = 0;
+        symbol [ mDialBuffer %tmp.230 186 32 43 ];
+        %tmp.230 = getv ? :mDialBuffer;
+        %tmp.231 = as %tmp.230 { (!Null) };
+        %tmp.232 = as %tmp.231 Graphics.BufferedBitmap;
+        symbol [ Graphics %tmp.232 186 47 55 ];
+        symbol [ BufferedBitmap %tmp.232 186 56 70 ];
+        invoke %tmp.225 %tmp.226(%tmp.227, %tmp.228, %tmp.232);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_33_187_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_8_190_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_8_190_8_if_else_false:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_187_15_190_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 188 12 ]
+        %tmp.233 = lgetv %dc;
+        symbol [ dc %tmp.233 188 12 14 ];
+        symbol [ setColor %tmp.234 188 15 23 ];
+        %tmp.234 = getv function %tmp.233 :setColor;
+        symbol [ Graphics %tmp.235 188 24 32 ];
+        %tmp.235 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.236 188 33 44 ];
+        %tmp.236 = getv %tmp.235 :COLOR_BLACK;
+        symbol [ Graphics %tmp.237 188 46 54 ];
+        %tmp.237 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.238 188 55 66 ];
+        %tmp.238 = getv %tmp.237 :COLOR_BLACK;
+        invoke %tmp.233 %tmp.234(%tmp.236, %tmp.238);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 189 12 ]
+        %tmp.239 = lgetv %dc;
+        symbol [ dc %tmp.239 189 12 14 ];
+        symbol [ fillRectangle %tmp.240 189 15 28 ];
+        %tmp.240 = getv function %tmp.239 :fillRectangle;
+        %tmp.241 = lgetv %clipX.12;
+        symbol [ clipX %tmp.241 189 29 34 ];
+        %tmp.242 = lgetv %clipY.13;
+        symbol [ clipY %tmp.242 189 36 41 ];
+        %tmp.243 = lgetv %clipW.14;
+        symbol [ clipW %tmp.243 189 43 48 ];
+        %tmp.244 = lgetv %clipH.15;
+        symbol [ clipH %tmp.244 189 50 55 ];
+        invoke %tmp.239 %tmp.240(%tmp.241, %tmp.242, %tmp.243, %tmp.244);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_187_15_190_8_stop:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_185_8_190_8_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 193 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %hour.25 = local;
+        symbol [ hour %hour.25 193 12 16 ];
+        %tmp.245 = lgetv %t.1;
+        symbol [ t %tmp.245 193 21 22 ];
+        symbol [ hour %tmp.246 193 23 27 ];
+        %tmp.246 = getv %tmp.245 :hour;
+        %tmp.247 = 12;
+        %tmp.248 = mod %tmp.246 %tmp.247;
+        lputv %hour.25 %tmp.248;
+        symbol [ hour %hour.25 193 12 16 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 194 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop" ]
+        %minute.26 = local;
+        symbol [ minute %minute.26 194 12 18 ];
+        %tmp.249 = lgetv %t.1;
+        symbol [ t %tmp.249 194 21 22 ];
+        symbol [ min %tmp.250 194 23 26 ];
+        %tmp.250 = getv %tmp.249 :min;
+        lputv %minute.26 %tmp.250;
+        symbol [ minute %minute.26 194 12 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 195 8 ]
+        %tmp.251 = self;
+        symbol [ redrawHourMinHands %tmp.252 195 8 26 ];
+        %tmp.252 = getv function %tmp.251 :redrawHourMinHands;
+        %tmp.253 = lgetv %dc;
+        symbol [ dc %tmp.253 195 27 29 ];
+        %tmp.254 = lgetv %hour.25;
+        symbol [ hour %tmp.254 195 31 35 ];
+        %tmp.255 = lgetv %minute.26;
+        symbol [ minute %tmp.255 195 37 43 ];
+        invoke %tmp.251 %tmp.252(%tmp.253, %tmp.254, %tmp.255);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 198 8 ]
+        %tmp.256 = lgetv %dc;
+        symbol [ dc %tmp.256 198 8 10 ];
+        symbol [ setColor %tmp.257 198 11 19 ];
+        %tmp.257 = getv function %tmp.256 :setColor;
+        symbol [ Graphics %tmp.258 198 20 28 ];
+        %tmp.258 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.259 198 29 38 ];
+        %tmp.259 = getv %tmp.258 :COLOR_RED;
+        symbol [ Graphics %tmp.260 198 40 48 ];
+        %tmp.260 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.261 198 49 66 ];
+        %tmp.261 = getv %tmp.260 :COLOR_TRANSPARENT;
+        invoke %tmp.256 %tmp.257(%tmp.259, %tmp.261);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 199 8 ]
+        %tmp.262 = lgetv %dc;
+        symbol [ dc %tmp.262 199 8 10 ];
+        symbol [ setPenWidth %tmp.263 199 11 22 ];
+        %tmp.263 = getv function %tmp.262 :setPenWidth;
+        %tmp.264 = 2;
+        invoke %tmp.262 %tmp.263(%tmp.264);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 200 8 ]
+        %tmp.265 = lgetv %dc;
+        symbol [ dc %tmp.265 200 8 10 ];
+        symbol [ drawLine %tmp.266 200 11 19 ];
+        %tmp.266 = getv function %tmp.265 :drawLine;
+        %tmp.267 = lgetv %tailX.5;
+        symbol [ tailX %tmp.267 200 20 25 ];
+        symbol [ toNumber %tmp.268 200 26 34 ];
+        %tmp.268 = getv function %tmp.267 :toNumber;
+        %tmp.269 = invoke %tmp.267 %tmp.268();
+        %tmp.270 = lgetv %tailY.6;
+        symbol [ tailY %tmp.270 200 38 43 ];
+        symbol [ toNumber %tmp.271 200 44 52 ];
+        %tmp.271 = getv function %tmp.270 :toNumber;
+        %tmp.272 = invoke %tmp.270 %tmp.271();
+        %tmp.273 = lgetv %x1.8;
+        symbol [ x1 %tmp.273 200 56 58 ];
+        %tmp.274 = lgetv %y1.9;
+        symbol [ y1 %tmp.274 200 60 62 ];
+        invoke %tmp.265 %tmp.266(%tmp.269, %tmp.272, %tmp.273, %tmp.274);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 203 8 ]
+        %tmp.275 = lgetv %dc;
+        symbol [ dc %tmp.275 203 8 10 ];
+        symbol [ setColor %tmp.276 203 11 19 ];
+        %tmp.276 = getv function %tmp.275 :setColor;
+        symbol [ Graphics %tmp.277 203 20 28 ];
+        %tmp.277 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.278 203 29 42 ];
+        %tmp.278 = getv %tmp.277 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.279 203 44 52 ];
+        %tmp.279 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.280 203 53 70 ];
+        %tmp.280 = getv %tmp.279 :COLOR_TRANSPARENT;
+        invoke %tmp.275 %tmp.276(%tmp.278, %tmp.280);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 204 8 ]
+        %tmp.281 = lgetv %dc;
+        symbol [ dc %tmp.281 204 8 10 ];
+        symbol [ fillCircle %tmp.282 204 11 21 ];
+        %tmp.282 = getv function %tmp.281 :fillCircle;
+        symbol [ mCenterX %tmp.284 204 22 30 ];
+        %tmp.284 = getv ? :mCenterX;
+        symbol [ mCenterY %tmp.286 204 32 40 ];
+        %tmp.286 = getv ? :mCenterY;
+        %tmp.287 = lgetv %bossR.20;
+        symbol [ bossR %tmp.287 204 42 47 ];
+        %tmp.288 = 1;
+        %tmp.289 = sub %tmp.287 %tmp.288;
+        invoke %tmp.281 %tmp.282(%tmp.284, %tmp.286, %tmp.289);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 205 8 ]
+        %tmp.290 = lgetv %dc;
+        symbol [ dc %tmp.290 205 8 10 ];
+        symbol [ setColor %tmp.291 205 11 19 ];
+        %tmp.291 = getv function %tmp.290 :setColor;
+        symbol [ Graphics %tmp.292 205 20 28 ];
+        %tmp.292 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.293 205 29 38 ];
+        %tmp.293 = getv %tmp.292 :COLOR_RED;
+        symbol [ Graphics %tmp.294 205 40 48 ];
+        %tmp.294 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.295 205 49 66 ];
+        %tmp.295 = getv %tmp.294 :COLOR_TRANSPARENT;
+        invoke %tmp.290 %tmp.291(%tmp.293, %tmp.295);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 206 8 ]
+        %tmp.296 = lgetv %dc;
+        symbol [ dc %tmp.296 206 8 10 ];
+        symbol [ fillCircle %tmp.297 206 11 21 ];
+        %tmp.297 = getv function %tmp.296 :fillCircle;
+        symbol [ mCenterX %tmp.299 206 22 30 ];
+        %tmp.299 = getv ? :mCenterX;
+        symbol [ mCenterY %tmp.301 206 32 40 ];
+        %tmp.301 = getv ? :mCenterY;
+        %tmp.302 = 3;
+        invoke %tmp.296 %tmp.297(%tmp.299, %tmp.301, %tmp.302);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 208 8 ]
+        %tmp.303 = lgetv %dc;
+        symbol [ dc %tmp.303 208 8 10 ];
+        symbol [ clearClip %tmp.304 208 11 20 ];
+        %tmp.304 = getv function %tmp.303 :clearClip;
+        invoke %tmp.303 %tmp.304();
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 211 8 ]
+        %tmp.305 = lgetv %newSecX.3;
+        symbol [ newSecX %tmp.305 211 24 31 ];
+        symbol [ mPrevSecX ? 211 8 17 ];
+        putv self :mPrevSecX %tmp.305;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 212 8 ]
+        %tmp.306 = lgetv %newSecY.4;
+        symbol [ newSecY %tmp.306 212 24 31 ];
+        symbol [ mPrevSecY ? 212 8 17 ];
+        putv self :mPrevSecY %tmp.306;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 213 8 ]
+        %tmp.307 = true;
+        symbol [ mPrevSecValid ? 213 8 21 ];
+        putv self :mPrevSecValid %tmp.307;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_125_56_214_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 222; @symbol_functiondef = [buildDialBuffer,222,21,36]; @symbol_param<0> = [dc,222,37,39]; @symbol_param<0>_type<0> = [Graphics,222,43,51]; @symbol_param<0>_type<1> = [Dc,222,52,54]; ]
+    private
+    function buildDialBuffer(dc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 223 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 223 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 223 16 18 ];
+        symbol [ getWidth %tmp.2 223 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 223 12 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 224 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 224 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 224 16 18 ];
+        symbol [ getHeight %tmp.5 224 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 224 12 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 225 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_stop" ]
+        %options.3 = local;
+        symbol [ options %options.3 225 12 19 ];
+        %tmp.7 = newd 2;
+        %tmp.9 = const :width;
+        symbol [ width %tmp.9 226 13 18 const ];
+        %tmp.10 = lgetv %w.1;
+        symbol [ w %tmp.10 226 23 24 ];
+        %tmp.11 = dup %tmp.7;
+        %tmp.12 = aputv %tmp.11 %tmp.9 %tmp.10;
+        %tmp.14 = const :height;
+        symbol [ height %tmp.14 227 13 19 const ];
+        %tmp.15 = lgetv %h.2;
+        symbol [ h %tmp.15 227 23 24 ];
+        %tmp.16 = dup %tmp.12;
+        %tmp.17 = aputv %tmp.16 %tmp.14 %tmp.15;
+        lputv %options.3 %tmp.17;
+        symbol [ options %options.3 225 12 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 229 8 ]
+        symbol [ Graphics %tmp.18 229 22 30 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ createBufferedBitmap %tmp.19 229 31 51 ];
+        %tmp.19 = getv function %tmp.18 :createBufferedBitmap;
+        %tmp.20 = lgetv %options.3;
+        symbol [ options %tmp.20 229 52 59 ];
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        symbol [ get %tmp.22 229 61 64 ];
+        %tmp.22 = getv function %tmp.21 :get;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = as %tmp.23 Graphics.BufferedBitmap;
+        symbol [ Graphics %tmp.24 229 70 78 ];
+        symbol [ BufferedBitmap %tmp.24 229 79 93 ];
+        symbol [ mDialBuffer ? 229 8 19 ];
+        putv self :mDialBuffer %tmp.24;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 230 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_230_8_232_8_if_stmt:
+        symbol [ mDialBuffer %tmp.26 230 12 23 ];
+        %tmp.26 = getv ? :mDialBuffer;
+        %tmp.27 = null;
+        %tmp.28 = eq %tmp.26 %tmp.27;
+        bf %tmp.28 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_230_8_232_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_230_8_232_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_230_33_232_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 231 12 ]
+        ret ?;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_230_33_232_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_230_8_232_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_230_8_232_8_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 234 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_stop" ]
+        %bdc.4 = local;
+        symbol [ bdc %bdc.4 234 12 15 ];
+        symbol [ mDialBuffer %tmp.30 234 19 30 ];
+        %tmp.30 = getv ? :mDialBuffer;
+        %tmp.31 = as %tmp.30 Graphics.BufferedBitmap;
+        symbol [ Graphics %tmp.31 234 34 42 ];
+        symbol [ BufferedBitmap %tmp.31 234 43 57 ];
+        symbol [ getDc %tmp.32 234 59 64 ];
+        %tmp.32 = getv function %tmp.31 :getDc;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        lputv %bdc.4 %tmp.33;
+        symbol [ bdc %bdc.4 234 12 15 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 235 8 ]
+        %tmp.34 = lgetv %bdc.4;
+        symbol [ bdc %tmp.34 235 8 11 ];
+        symbol [ setColor %tmp.35 235 12 20 ];
+        %tmp.35 = getv function %tmp.34 :setColor;
+        symbol [ Graphics %tmp.36 235 21 29 ];
+        %tmp.36 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.37 235 30 41 ];
+        %tmp.37 = getv %tmp.36 :COLOR_BLACK;
+        symbol [ Graphics %tmp.38 235 43 51 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.39 235 52 63 ];
+        %tmp.39 = getv %tmp.38 :COLOR_BLACK;
+        invoke %tmp.34 %tmp.35(%tmp.37, %tmp.39);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 236 8 ]
+        %tmp.40 = lgetv %bdc.4;
+        symbol [ bdc %tmp.40 236 8 11 ];
+        symbol [ clear %tmp.41 236 12 17 ];
+        %tmp.41 = getv function %tmp.40 :clear;
+        invoke %tmp.40 %tmp.41();
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 238 8 ]
+        %tmp.42 = self;
+        symbol [ renderDial %tmp.43 238 8 18 ];
+        %tmp.43 = getv function %tmp.42 :renderDial;
+        %tmp.44 = lgetv %bdc.4;
+        symbol [ bdc %tmp.44 238 19 22 ];
+        invoke %tmp.42 %tmp.43(%tmp.44);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_222_64_239_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 242; @symbol_functiondef = [renderDial,242,21,31]; @symbol_param<0> = [bdc,242,32,35]; @symbol_param<0>_type<0> = [Graphics,242,39,47]; @symbol_param<0>_type<1> = [Dc,242,48,50]; ]
+    private
+    function renderDial(bdc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_242_60_276_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 243 8 ]
+        %tmp.1 = lgetv %bdc;
+        symbol [ bdc %tmp.1 243 8 11 ];
+        symbol [ setColor %tmp.2 243 12 20 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 243 21 29 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.4 243 30 41 ];
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        symbol [ Graphics %tmp.5 243 43 51 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.6 243 52 63 ];
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 244 8 ]
+        %tmp.7 = lgetv %bdc;
+        symbol [ bdc %tmp.7 244 8 11 ];
+        symbol [ setPenWidth %tmp.8 244 12 23 ];
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 1;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 245 8 ]
+        %tmp.10 = lgetv %bdc;
+        symbol [ bdc %tmp.10 245 8 11 ];
+        symbol [ drawCircle %tmp.11 245 12 22 ];
+        %tmp.11 = getv function %tmp.10 :drawCircle;
+        symbol [ mCenterX %tmp.13 245 23 31 ];
+        %tmp.13 = getv ? :mCenterX;
+        symbol [ mCenterY %tmp.15 245 33 41 ];
+        %tmp.15 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.17 245 43 50 ];
+        %tmp.17 = getv ? :mRadius;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15, %tmp.17);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 247 8 ]
+        for @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_test @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_incr @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_init:
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_begin" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 247 17 18 ];
+        %tmp.18 = 0;
+        lputv %i.1 %tmp.18;
+        symbol [ i %i.1 247 17 18 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_test:
+        %tmp.19 = lgetv %i.1;
+        symbol [ i %tmp.19 247 24 25 ];
+        %tmp.20 = 60;
+        %tmp.21 = lt %tmp.19 %tmp.20;
+        bf %tmp.21 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_begin:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 248 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %angle.2 = local;
+        symbol [ angle %angle.2 248 16 21 ];
+        %tmp.22 = 2.0;
+        symbol [ Math %tmp.24 248 31 35 ];
+        %tmp.24 = getv ? :Math;
+        symbol [ PI %tmp.25 248 36 38 ];
+        %tmp.25 = getv %tmp.24 :PI;
+        %tmp.26 = mul %tmp.22 %tmp.25;
+        %tmp.27 = lgetv %i.1;
+        symbol [ i %tmp.27 248 41 42 ];
+        %tmp.28 = mul %tmp.26 %tmp.27;
+        %tmp.29 = 60.0;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        lputv %angle.2 %tmp.30;
+        symbol [ angle %angle.2 248 16 21 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 249 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %sinA.3 = local;
+        symbol [ sinA %sinA.3 249 16 20 ];
+        symbol [ Math %tmp.32 249 25 29 ];
+        %tmp.32 = getv ? :Math;
+        symbol [ sin %tmp.33 249 30 33 ];
+        %tmp.33 = getv function %tmp.32 :sin;
+        %tmp.34 = lgetv %angle.2;
+        symbol [ angle %tmp.34 249 34 39 ];
+        %tmp.35 = invoke %tmp.32 %tmp.33(%tmp.34);
+        lputv %sinA.3 %tmp.35;
+        symbol [ sinA %sinA.3 249 16 20 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 250 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %cosA.4 = local;
+        symbol [ cosA %cosA.4 250 16 20 ];
+        symbol [ Math %tmp.37 250 25 29 ];
+        %tmp.37 = getv ? :Math;
+        symbol [ cos %tmp.38 250 30 33 ];
+        %tmp.38 = getv function %tmp.37 :cos;
+        %tmp.39 = lgetv %angle.2;
+        symbol [ angle %tmp.39 250 34 39 ];
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        lputv %cosA.4 %tmp.40;
+        symbol [ cosA %cosA.4 250 16 20 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 251 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %isHour.5 = local;
+        symbol [ isHour %isHour.5 251 16 22 ];
+        %tmp.41 = lgetv %i.1;
+        symbol [ i %tmp.41 251 26 27 ];
+        %tmp.42 = 5;
+        %tmp.43 = mod %tmp.41 %tmp.42;
+        %tmp.44 = 0;
+        %tmp.45 = eq %tmp.43 %tmp.44;
+        lputv %isHour.5 %tmp.45;
+        symbol [ isHour %isHour.5 251 16 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 253 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %innerR.6 = local;
+        symbol [ innerR %innerR.6 253 16 22 ];
+        symbol [ mRadius %tmp.47 253 25 32 ];
+        %tmp.47 = getv ? :mRadius;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_begin:
+        %tmp.48 = lgetv %isHour.5;
+        symbol [ isHour %tmp.48 253 36 42 ];
+        bf %tmp.48 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_true:
+        %tmp.49 = 15;
+        push %tmp.49;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_false:
+        %tmp.50 = 8;
+        push %tmp.50;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_end:
+        %tmp.51 = phi [%tmp.48 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_begin] [%tmp.49 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_true] [%tmp.50 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_false] [%tmp.51 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_253_36_253_50_end];
+        %tmp.52 = sub %tmp.47 %tmp.51;
+        lputv %innerR.6 %tmp.52;
+        symbol [ innerR %innerR.6 253 16 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 254 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %outerX.7 = local;
+        symbol [ outerX %outerX.7 254 16 22 ];
+        symbol [ mCenterX %tmp.54 254 25 33 ];
+        %tmp.54 = getv ? :mCenterX;
+        symbol [ mRadius %tmp.56 254 36 43 ];
+        %tmp.56 = getv ? :mRadius;
+        %tmp.57 = lgetv %sinA.3;
+        symbol [ sinA %tmp.57 254 46 50 ];
+        %tmp.58 = mul %tmp.56 %tmp.57;
+        %tmp.59 = add %tmp.54 %tmp.58;
+        lputv %outerX.7 %tmp.59;
+        symbol [ outerX %outerX.7 254 16 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 255 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %outerY.8 = local;
+        symbol [ outerY %outerY.8 255 16 22 ];
+        symbol [ mCenterY %tmp.61 255 25 33 ];
+        %tmp.61 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.63 255 36 43 ];
+        %tmp.63 = getv ? :mRadius;
+        %tmp.64 = lgetv %cosA.4;
+        symbol [ cosA %tmp.64 255 46 50 ];
+        %tmp.65 = mul %tmp.63 %tmp.64;
+        %tmp.66 = sub %tmp.61 %tmp.65;
+        lputv %outerY.8 %tmp.66;
+        symbol [ outerY %outerY.8 255 16 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 256 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %innerX.9 = local;
+        symbol [ innerX %innerX.9 256 16 22 ];
+        symbol [ mCenterX %tmp.68 256 25 33 ];
+        %tmp.68 = getv ? :mCenterX;
+        %tmp.69 = lgetv %innerR.6;
+        symbol [ innerR %tmp.69 256 36 42 ];
+        %tmp.70 = lgetv %sinA.3;
+        symbol [ sinA %tmp.70 256 46 50 ];
+        %tmp.71 = mul %tmp.69 %tmp.70;
+        %tmp.72 = add %tmp.68 %tmp.71;
+        lputv %innerX.9 %tmp.72;
+        symbol [ innerX %innerX.9 256 16 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 257 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop" ]
+        %innerY.10 = local;
+        symbol [ innerY %innerY.10 257 16 22 ];
+        symbol [ mCenterY %tmp.74 257 25 33 ];
+        %tmp.74 = getv ? :mCenterY;
+        %tmp.75 = lgetv %innerR.6;
+        symbol [ innerR %tmp.75 257 36 42 ];
+        %tmp.76 = lgetv %cosA.4;
+        symbol [ cosA %tmp.76 257 46 50 ];
+        %tmp.77 = mul %tmp.75 %tmp.76;
+        %tmp.78 = sub %tmp.74 %tmp.77;
+        lputv %innerY.10 %tmp.78;
+        symbol [ innerY %innerY.10 257 16 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 259 12 ]
+        %tmp.79 = lgetv %bdc;
+        symbol [ bdc %tmp.79 259 12 15 ];
+        symbol [ setPenWidth %tmp.80 259 16 27 ];
+        %tmp.80 = getv function %tmp.79 :setPenWidth;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_begin:
+        %tmp.81 = lgetv %isHour.5;
+        symbol [ isHour %tmp.81 259 28 34 ];
+        bf %tmp.81 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_true:
+        %tmp.82 = 3;
+        push %tmp.82;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_false:
+        %tmp.83 = 1;
+        push %tmp.83;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_end:
+        %tmp.84 = phi [%tmp.81 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_begin] [%tmp.82 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_true] [%tmp.83 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_false] [%tmp.84 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_259_28_259_41_end];
+        invoke %tmp.79 %tmp.80(%tmp.84);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 260 12 ]
+        %tmp.85 = lgetv %bdc;
+        symbol [ bdc %tmp.85 260 12 15 ];
+        symbol [ drawLine %tmp.86 260 16 24 ];
+        %tmp.86 = getv function %tmp.85 :drawLine;
+        %tmp.87 = lgetv %innerX.9;
+        symbol [ innerX %tmp.87 260 25 31 ];
+        symbol [ toNumber %tmp.88 260 32 40 ];
+        %tmp.88 = getv function %tmp.87 :toNumber;
+        %tmp.89 = invoke %tmp.87 %tmp.88();
+        %tmp.90 = lgetv %innerY.10;
+        symbol [ innerY %tmp.90 260 44 50 ];
+        symbol [ toNumber %tmp.91 260 51 59 ];
+        %tmp.91 = getv function %tmp.90 :toNumber;
+        %tmp.92 = invoke %tmp.90 %tmp.91();
+        %tmp.93 = lgetv %outerX.7;
+        symbol [ outerX %tmp.93 261 25 31 ];
+        symbol [ toNumber %tmp.94 261 32 40 ];
+        %tmp.94 = getv function %tmp.93 :toNumber;
+        %tmp.95 = invoke %tmp.93 %tmp.94();
+        %tmp.96 = lgetv %outerY.8;
+        symbol [ outerY %tmp.96 261 44 50 ];
+        symbol [ toNumber %tmp.97 261 51 59 ];
+        %tmp.97 = getv function %tmp.96 :toNumber;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
+        invoke %tmp.85 %tmp.86(%tmp.89, %tmp.92, %tmp.95, %tmp.98);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 263 12 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_12_274_12_if_stmt:
+        %tmp.99 = lgetv %isHour.5;
+        symbol [ isHour %tmp.99 263 16 22 ];
+        bf %tmp.99 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_12_274_12_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_12_274_12_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 264 16 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_stop" ]
+        %hour.11 = local;
+        symbol [ hour %hour.11 264 20 24 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_begin:
+        %tmp.100 = lgetv %i.1;
+        symbol [ i %tmp.100 264 30 31 ];
+        %tmp.101 = 0;
+        %tmp.102 = eq %tmp.100 %tmp.101;
+        bf %tmp.102 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_true:
+        %tmp.103 = 12;
+        push %tmp.103;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_false:
+        %tmp.104 = lgetv %i.1;
+        symbol [ i %tmp.104 264 45 46 ];
+        %tmp.105 = 5;
+        %tmp.106 = div %tmp.104 %tmp.105;
+        push %tmp.106;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_end:
+        %tmp.107 = phi [%tmp.102 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_begin] [%tmp.103 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_true] [%tmp.106 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_false] [%tmp.107 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_264_29_264_49_end];
+        lputv %hour.11 %tmp.107;
+        symbol [ hour %hour.11 264 20 24 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 265 16 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_stop" ]
+        %labelR.12 = local;
+        symbol [ labelR %labelR.12 265 20 26 ];
+        symbol [ mRadius %tmp.109 265 29 36 ];
+        %tmp.109 = getv ? :mRadius;
+        %tmp.110 = 38;
+        %tmp.111 = sub %tmp.109 %tmp.110;
+        lputv %labelR.12 %tmp.111;
+        symbol [ labelR %labelR.12 265 20 26 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 266 16 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_stop" ]
+        %lx.13 = local;
+        symbol [ lx %lx.13 266 20 22 ];
+        symbol [ mCenterX %tmp.113 266 29 37 ];
+        %tmp.113 = getv ? :mCenterX;
+        %tmp.114 = lgetv %labelR.12;
+        symbol [ labelR %tmp.114 266 40 46 ];
+        %tmp.115 = lgetv %sinA.3;
+        symbol [ sinA %tmp.115 266 49 53 ];
+        %tmp.116 = mul %tmp.114 %tmp.115;
+        %tmp.117 = add %tmp.113 %tmp.116;
+        lputv %lx.13 %tmp.117;
+        symbol [ lx %lx.13 266 20 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 267 16 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_stop" ]
+        %ly.14 = local;
+        symbol [ ly %ly.14 267 20 22 ];
+        symbol [ mCenterY %tmp.119 267 29 37 ];
+        %tmp.119 = getv ? :mCenterY;
+        %tmp.120 = lgetv %labelR.12;
+        symbol [ labelR %tmp.120 267 40 46 ];
+        %tmp.121 = lgetv %cosA.4;
+        symbol [ cosA %tmp.121 267 49 53 ];
+        %tmp.122 = mul %tmp.120 %tmp.121;
+        %tmp.123 = sub %tmp.119 %tmp.122;
+        lputv %ly.14 %tmp.123;
+        symbol [ ly %ly.14 267 20 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 268 16 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_stop" ]
+        %fh.15 = local;
+        symbol [ fh %fh.15 268 20 22 ];
+        %tmp.124 = lgetv %bdc;
+        symbol [ bdc %tmp.124 268 29 32 ];
+        symbol [ getFontHeight %tmp.125 268 33 46 ];
+        %tmp.125 = getv function %tmp.124 :getFontHeight;
+        symbol [ Graphics %tmp.126 268 47 55 ];
+        %tmp.126 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.127 268 56 65 ];
+        %tmp.127 = getv %tmp.126 :FONT_TINY;
+        %tmp.128 = invoke %tmp.124 %tmp.125(%tmp.127);
+        lputv %fh.15 %tmp.128;
+        symbol [ fh %fh.15 268 20 22 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 269 16 ]
+        %tmp.129 = lgetv %bdc;
+        symbol [ bdc %tmp.129 269 16 19 ];
+        symbol [ setColor %tmp.130 269 20 28 ];
+        %tmp.130 = getv function %tmp.129 :setColor;
+        symbol [ Graphics %tmp.131 269 29 37 ];
+        %tmp.131 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.132 269 38 49 ];
+        %tmp.132 = getv %tmp.131 :COLOR_WHITE;
+        symbol [ Graphics %tmp.133 269 51 59 ];
+        %tmp.133 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.134 269 60 71 ];
+        %tmp.134 = getv %tmp.133 :COLOR_BLACK;
+        invoke %tmp.129 %tmp.130(%tmp.132, %tmp.134);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 270 16 ]
+        %tmp.135 = lgetv %bdc;
+        symbol [ bdc %tmp.135 270 16 19 ];
+        symbol [ drawText %tmp.136 270 20 28 ];
+        %tmp.136 = getv function %tmp.135 :drawText;
+        %tmp.137 = lgetv %lx.13;
+        symbol [ lx %tmp.137 270 29 31 ];
+        symbol [ toNumber %tmp.138 270 32 40 ];
+        %tmp.138 = getv function %tmp.137 :toNumber;
+        %tmp.139 = invoke %tmp.137 %tmp.138();
+        %tmp.140 = lgetv %ly.14;
+        symbol [ ly %tmp.140 270 45 47 ];
+        %tmp.141 = lgetv %fh.15;
+        symbol [ fh %tmp.141 270 50 52 ];
+        %tmp.142 = 2;
+        %tmp.143 = div %tmp.141 %tmp.142;
+        %tmp.144 = sub %tmp.140 %tmp.143;
+        symbol [ toNumber %tmp.145 270 58 66 ];
+        %tmp.145 = getv function %tmp.144 :toNumber;
+        %tmp.146 = invoke %tmp.144 %tmp.145();
+        symbol [ Graphics %tmp.147 271 29 37 ];
+        %tmp.147 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.148 271 38 47 ];
+        %tmp.148 = getv %tmp.147 :FONT_TINY;
+        %tmp.149 = lgetv %hour.11;
+        symbol [ hour %tmp.149 272 29 33 ];
+        symbol [ toString %tmp.150 272 34 42 ];
+        %tmp.150 = getv function %tmp.149 :toString;
+        %tmp.151 = invoke %tmp.149 %tmp.150();
+        symbol [ Graphics %tmp.152 273 29 37 ];
+        %tmp.152 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.153 273 38 57 ];
+        %tmp.153 = getv %tmp.152 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.135 %tmp.136(%tmp.139, %tmp.146, %tmp.148, %tmp.151, %tmp.153);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_24_274_12_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_12_274_12_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_263_12_274_12_if_end:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_37_275_8_stop:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_incr:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 247 ]
+        %tmp.156 = lgetv %i.1;
+        symbol [ i %tmp.156 247 32 33 ];
+        %tmp.157 = add %tmp.156 1;
+        lputv %i.1 %tmp.157;
+        symbol [ i %i.1 247 32 33 ];
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_test;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_247_8_275_8_for_end:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_242_60_276_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 279; @symbol_functiondef = [drawActiveFace,279,21,35]; @symbol_param<0> = [dc,279,36,38]; @symbol_param<0>_type<0> = [Graphics,279,42,50]; @symbol_param<0>_type<1> = [Dc,279,51,53]; ]
+    private
+    function drawActiveFace(dc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_279_63_347_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 281 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_8_285_8_if_stmt:
+        symbol [ mDialBuffer %tmp.2 281 12 23 ];
+        %tmp.2 = getv ? :mDialBuffer;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_8_285_8_if_else_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_8_285_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_33_283_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 282 12 ]
+        %tmp.5 = lgetv %dc;
+        symbol [ dc %tmp.5 282 12 14 ];
+        symbol [ drawBitmap %tmp.6 282 15 25 ];
+        %tmp.6 = getv function %tmp.5 :drawBitmap;
+        %tmp.7 = 0;
+        %tmp.8 = 0;
+        symbol [ mDialBuffer %tmp.10 282 32 43 ];
+        %tmp.10 = getv ? :mDialBuffer;
+        %tmp.11 = as %tmp.10 { (!Null) };
+        %tmp.12 = as %tmp.11 Graphics.BufferedBitmap;
+        symbol [ Graphics %tmp.12 282 47 55 ];
+        symbol [ BufferedBitmap %tmp.12 282 56 70 ];
+        invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8, %tmp.12);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_33_283_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_8_285_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_8_285_8_if_else_false:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_283_15_285_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 284 12 ]
+        %tmp.13 = self;
+        symbol [ renderDial %tmp.14 284 12 22 ];
+        %tmp.14 = getv function %tmp.13 :renderDial;
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 284 23 25 ];
+        invoke %tmp.13 %tmp.14(%tmp.15);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_283_15_285_8_stop:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_281_8_285_8_if_end:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_279_63_347_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 350; @symbol_functiondef = [redrawHourMinHands,350,21,39]; @symbol_param<0> = [dc,350,40,42]; @symbol_param<0>_type<0> = [Graphics,350,46,54]; @symbol_param<0>_type<1> = [Dc,350,55,57]; @symbol_param<1> = [hour,350,59,63]; @symbol_param<1>_type<0> = [Number,350,67,73]; @symbol_param<2> = [minute,350,75,81]; @symbol_param<2>_type<0> = [Number,350,85,91]; ]
+    private
+    function redrawHourMinHands(dc as Graphics.Dc, hour as Number, minute as Number) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 351 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_stop" ]
+        %minAng.1 = local;
+        symbol [ minAng %minAng.1 351 12 18 ];
+        %tmp.1 = lgetv %minute;
+        symbol [ minute %tmp.1 351 23 29 ];
+        %tmp.2 = 60.0;
+        %tmp.3 = div %tmp.1 %tmp.2;
+        %tmp.4 = 2.0;
+        %tmp.5 = mul %tmp.3 %tmp.4;
+        symbol [ Math %tmp.7 351 46 50 ];
+        %tmp.7 = getv ? :Math;
+        symbol [ PI %tmp.8 351 51 53 ];
+        %tmp.8 = getv %tmp.7 :PI;
+        %tmp.9 = mul %tmp.5 %tmp.8;
+        lputv %minAng.1 %tmp.9;
+        symbol [ minAng %minAng.1 351 12 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 352 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_stop" ]
+        %hourAng.2 = local;
+        symbol [ hourAng %hourAng.2 352 12 19 ];
+        %tmp.10 = lgetv %hour;
+        symbol [ hour %tmp.10 352 24 28 ];
+        %tmp.11 = lgetv %minute;
+        symbol [ minute %tmp.11 352 31 37 ];
+        %tmp.12 = 60.0;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        %tmp.14 = add %tmp.10 %tmp.13;
+        %tmp.15 = 12.0;
+        %tmp.16 = div %tmp.14 %tmp.15;
+        %tmp.17 = 2.0;
+        %tmp.18 = mul %tmp.16 %tmp.17;
+        symbol [ Math %tmp.20 352 62 66 ];
+        %tmp.20 = getv ? :Math;
+        symbol [ PI %tmp.21 352 67 69 ];
+        %tmp.21 = getv %tmp.20 :PI;
+        %tmp.22 = mul %tmp.18 %tmp.21;
+        lputv %hourAng.2 %tmp.22;
+        symbol [ hourAng %hourAng.2 352 12 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 354 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_stop" ]
+        %minX.3 = local;
+        symbol [ minX %minX.3 354 12 16 ];
+        symbol [ mCenterX %tmp.24 354 20 28 ];
+        %tmp.24 = getv ? :mCenterX;
+        symbol [ mRadius %tmp.26 354 32 39 ];
+        %tmp.26 = getv ? :mRadius;
+        symbol [ MIN_LEN %tmp.28 354 42 49 ];
+        %tmp.28 = getv ? :MIN_LEN;
+        %tmp.29 = mul %tmp.26 %tmp.28;
+        symbol [ Math %tmp.31 354 54 58 ];
+        %tmp.31 = getv ? :Math;
+        symbol [ sin %tmp.32 354 59 62 ];
+        %tmp.32 = getv function %tmp.31 :sin;
+        %tmp.33 = lgetv %minAng.1;
+        symbol [ minAng %tmp.33 354 63 69 ];
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        %tmp.35 = mul %tmp.29 %tmp.34;
+        %tmp.36 = add %tmp.24 %tmp.35;
+        lputv %minX.3 %tmp.36;
+        symbol [ minX %minX.3 354 12 16 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 355 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_stop" ]
+        %minY.4 = local;
+        symbol [ minY %minY.4 355 12 16 ];
+        symbol [ mCenterY %tmp.38 355 20 28 ];
+        %tmp.38 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.40 355 32 39 ];
+        %tmp.40 = getv ? :mRadius;
+        symbol [ MIN_LEN %tmp.42 355 42 49 ];
+        %tmp.42 = getv ? :MIN_LEN;
+        %tmp.43 = mul %tmp.40 %tmp.42;
+        symbol [ Math %tmp.45 355 54 58 ];
+        %tmp.45 = getv ? :Math;
+        symbol [ cos %tmp.46 355 59 62 ];
+        %tmp.46 = getv function %tmp.45 :cos;
+        %tmp.47 = lgetv %minAng.1;
+        symbol [ minAng %tmp.47 355 63 69 ];
+        %tmp.48 = invoke %tmp.45 %tmp.46(%tmp.47);
+        %tmp.49 = mul %tmp.43 %tmp.48;
+        %tmp.50 = sub %tmp.38 %tmp.49;
+        lputv %minY.4 %tmp.50;
+        symbol [ minY %minY.4 355 12 16 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 356 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_stop" ]
+        %hourX.5 = local;
+        symbol [ hourX %hourX.5 356 12 17 ];
+        symbol [ mCenterX %tmp.52 356 20 28 ];
+        %tmp.52 = getv ? :mCenterX;
+        symbol [ mRadius %tmp.54 356 32 39 ];
+        %tmp.54 = getv ? :mRadius;
+        symbol [ HOUR_LEN %tmp.56 356 42 50 ];
+        %tmp.56 = getv ? :HOUR_LEN;
+        %tmp.57 = mul %tmp.54 %tmp.56;
+        symbol [ Math %tmp.59 356 54 58 ];
+        %tmp.59 = getv ? :Math;
+        symbol [ sin %tmp.60 356 59 62 ];
+        %tmp.60 = getv function %tmp.59 :sin;
+        %tmp.61 = lgetv %hourAng.2;
+        symbol [ hourAng %tmp.61 356 63 70 ];
+        %tmp.62 = invoke %tmp.59 %tmp.60(%tmp.61);
+        %tmp.63 = mul %tmp.57 %tmp.62;
+        %tmp.64 = add %tmp.52 %tmp.63;
+        lputv %hourX.5 %tmp.64;
+        symbol [ hourX %hourX.5 356 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 357 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_stop" ]
+        %hourY.6 = local;
+        symbol [ hourY %hourY.6 357 12 17 ];
+        symbol [ mCenterY %tmp.66 357 20 28 ];
+        %tmp.66 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.68 357 32 39 ];
+        %tmp.68 = getv ? :mRadius;
+        symbol [ HOUR_LEN %tmp.70 357 42 50 ];
+        %tmp.70 = getv ? :HOUR_LEN;
+        %tmp.71 = mul %tmp.68 %tmp.70;
+        symbol [ Math %tmp.73 357 54 58 ];
+        %tmp.73 = getv ? :Math;
+        symbol [ cos %tmp.74 357 59 62 ];
+        %tmp.74 = getv function %tmp.73 :cos;
+        %tmp.75 = lgetv %hourAng.2;
+        symbol [ hourAng %tmp.75 357 63 70 ];
+        %tmp.76 = invoke %tmp.73 %tmp.74(%tmp.75);
+        %tmp.77 = mul %tmp.71 %tmp.76;
+        %tmp.78 = sub %tmp.66 %tmp.77;
+        lputv %hourY.6 %tmp.78;
+        symbol [ hourY %hourY.6 357 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 359 8 ]
+        %tmp.79 = lgetv %dc;
+        symbol [ dc %tmp.79 359 8 10 ];
+        symbol [ setColor %tmp.80 359 11 19 ];
+        %tmp.80 = getv function %tmp.79 :setColor;
+        symbol [ Graphics %tmp.81 359 20 28 ];
+        %tmp.81 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.82 359 29 42 ];
+        %tmp.82 = getv %tmp.81 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.83 359 44 52 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.84 359 53 70 ];
+        %tmp.84 = getv %tmp.83 :COLOR_TRANSPARENT;
+        invoke %tmp.79 %tmp.80(%tmp.82, %tmp.84);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 360 8 ]
+        %tmp.85 = lgetv %dc;
+        symbol [ dc %tmp.85 360 8 10 ];
+        symbol [ setPenWidth %tmp.86 360 11 22 ];
+        %tmp.86 = getv function %tmp.85 :setPenWidth;
+        %tmp.87 = 7;
+        invoke %tmp.85 %tmp.86(%tmp.87);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 361 8 ]
+        %tmp.88 = lgetv %dc;
+        symbol [ dc %tmp.88 361 8 10 ];
+        symbol [ drawLine %tmp.89 361 11 19 ];
+        %tmp.89 = getv function %tmp.88 :drawLine;
+        symbol [ mCenterX %tmp.91 361 20 28 ];
+        %tmp.91 = getv ? :mCenterX;
+        symbol [ mCenterY %tmp.93 361 30 38 ];
+        %tmp.93 = getv ? :mCenterY;
+        %tmp.94 = lgetv %hourX.5;
+        symbol [ hourX %tmp.94 361 40 45 ];
+        symbol [ toNumber %tmp.95 361 46 54 ];
+        %tmp.95 = getv function %tmp.94 :toNumber;
+        %tmp.96 = invoke %tmp.94 %tmp.95();
+        %tmp.97 = lgetv %hourY.6;
+        symbol [ hourY %tmp.97 361 58 63 ];
+        symbol [ toNumber %tmp.98 361 64 72 ];
+        %tmp.98 = getv function %tmp.97 :toNumber;
+        %tmp.99 = invoke %tmp.97 %tmp.98();
+        invoke %tmp.88 %tmp.89(%tmp.91, %tmp.93, %tmp.96, %tmp.99);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 362 8 ]
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 362 8 10 ];
+        symbol [ setPenWidth %tmp.101 362 11 22 ];
+        %tmp.101 = getv function %tmp.100 :setPenWidth;
+        %tmp.102 = 4;
+        invoke %tmp.100 %tmp.101(%tmp.102);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 363 8 ]
+        %tmp.103 = lgetv %dc;
+        symbol [ dc %tmp.103 363 8 10 ];
+        symbol [ drawLine %tmp.104 363 11 19 ];
+        %tmp.104 = getv function %tmp.103 :drawLine;
+        symbol [ mCenterX %tmp.106 363 20 28 ];
+        %tmp.106 = getv ? :mCenterX;
+        symbol [ mCenterY %tmp.108 363 30 38 ];
+        %tmp.108 = getv ? :mCenterY;
+        %tmp.109 = lgetv %minX.3;
+        symbol [ minX %tmp.109 363 40 44 ];
+        symbol [ toNumber %tmp.110 363 45 53 ];
+        %tmp.110 = getv function %tmp.109 :toNumber;
+        %tmp.111 = invoke %tmp.109 %tmp.110();
+        %tmp.112 = lgetv %minY.4;
+        symbol [ minY %tmp.112 363 58 62 ];
+        symbol [ toNumber %tmp.113 363 63 71 ];
+        %tmp.113 = getv function %tmp.112 :toNumber;
+        %tmp.114 = invoke %tmp.112 %tmp.113();
+        invoke %tmp.103 %tmp.104(%tmp.106, %tmp.108, %tmp.111, %tmp.114);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_350_101_364_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 367; @symbol_functiondef = [drawComplications,367,21,38]; @symbol_param<0> = [dc,367,39,41]; @symbol_param<0>_type<0> = [Graphics,367,45,53]; @symbol_param<0>_type<1> = [Dc,367,54,56]; ]
+    private
+    function drawComplications(dc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 368 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %actInfo.1 = local;
+        symbol [ actInfo %actInfo.1 368 12 19 ];
+        symbol [ ActivityMonitor %tmp.1 368 23 38 ];
+        %tmp.1 = getm $.Toybox.ActivityMonitor;
+        symbol [ getInfo %tmp.2 368 39 46 ];
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %actInfo.1 %tmp.3;
+        symbol [ actInfo %actInfo.1 368 12 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 369 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %sysStats.2 = local;
+        symbol [ sysStats %sysStats.2 369 12 20 ];
+        symbol [ System %tmp.4 369 23 29 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.5 369 30 44 ];
+        %tmp.5 = getv function %tmp.4 :getSystemStats;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %sysStats.2 %tmp.6;
+        symbol [ sysStats %sysStats.2 369 12 20 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 370 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %devSet.3 = local;
+        symbol [ devSet %devSet.3 370 12 18 ];
+        symbol [ System %tmp.7 370 23 29 ];
+        %tmp.7 = getm $.Toybox.System;
+        symbol [ getDeviceSettings %tmp.8 370 30 47 ];
+        %tmp.8 = getv function %tmp.7 :getDeviceSettings;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %devSet.3 %tmp.9;
+        symbol [ devSet %devSet.3 370 12 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 371 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %t.4 = local;
+        symbol [ t %t.4 371 12 13 ];
+        symbol [ System %tmp.10 371 23 29 ];
+        %tmp.10 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.11 371 30 42 ];
+        %tmp.11 = getv function %tmp.10 :getClockTime;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %t.4 %tmp.12;
+        symbol [ t %t.4 371 12 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 374 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %hour12.5 = local;
+        symbol [ hour12 %hour12.5 374 12 18 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_begin:
+        %tmp.13 = lgetv %t.4;
+        symbol [ t %tmp.13 374 27 28 ];
+        symbol [ hour %tmp.14 374 29 33 ];
+        %tmp.14 = getv %tmp.13 :hour;
+        %tmp.15 = 12;
+        %tmp.16 = mod %tmp.14 %tmp.15;
+        %tmp.17 = 0;
+        %tmp.18 = eq %tmp.16 %tmp.17;
+        bf %tmp.18 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_true:
+        %tmp.19 = 12;
+        push %tmp.19;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_false:
+        %tmp.20 = lgetv %t.4;
+        symbol [ t %tmp.20 374 52 53 ];
+        symbol [ hour %tmp.21 374 54 58 ];
+        %tmp.21 = getv %tmp.20 :hour;
+        %tmp.22 = 12;
+        %tmp.23 = mod %tmp.21 %tmp.22;
+        push %tmp.23;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_end:
+        %tmp.24 = phi [%tmp.18 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_begin] [%tmp.19 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_true] [%tmp.23 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_false] [%tmp.24 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_374_26_374_61_end];
+        lputv %hour12.5 %tmp.24;
+        symbol [ hour12 %hour12.5 374 12 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 375 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %digitalText.6 = local;
+        symbol [ digitalText %digitalText.6 375 12 23 ];
+        symbol [ Lang %tmp.25 375 26 30 ];
+        %tmp.25 = getm $.Toybox.Lang;
+        symbol [ format %tmp.26 375 31 37 ];
+        %tmp.26 = getv function %tmp.25 :format;
+        %tmp.27 = "$1$:$2$";
+        %tmp.28 = newa 2;
+        %tmp.29 = lgetv %hour12.5;
+        symbol [ hour12 %tmp.29 375 50 56 ];
+        symbol [ format %tmp.30 375 57 63 ];
+        %tmp.30 = getv function %tmp.29 :format;
+        %tmp.31 = "%d";
+        %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+        %tmp.33 = dup %tmp.28;
+        %tmp.34 = aputv %tmp.33 0 %tmp.32;
+        %tmp.35 = lgetv %t.4;
+        symbol [ t %tmp.35 375 71 72 ];
+        symbol [ min %tmp.36 375 73 76 ];
+        %tmp.36 = getv %tmp.35 :min;
+        symbol [ format %tmp.37 375 77 83 ];
+        %tmp.37 = getv function %tmp.36 :format;
+        %tmp.38 = "%02d";
+        %tmp.39 = invoke %tmp.36 %tmp.37(%tmp.38);
+        %tmp.40 = dup %tmp.34;
+        %tmp.41 = aputv %tmp.40 1 %tmp.39;
+        %tmp.42 = invoke %tmp.25 %tmp.26(%tmp.27, %tmp.41);
+        lputv %digitalText.6 %tmp.42;
+        symbol [ digitalText %digitalText.6 375 12 23 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 376 8 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 376 8 10 ];
+        symbol [ setColor %tmp.44 376 11 19 ];
+        %tmp.44 = getv function %tmp.43 :setColor;
+        symbol [ Graphics %tmp.45 376 20 28 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.46 376 29 40 ];
+        %tmp.46 = getv %tmp.45 :COLOR_WHITE;
+        symbol [ Graphics %tmp.47 376 42 50 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.48 376 51 68 ];
+        %tmp.48 = getv %tmp.47 :COLOR_TRANSPARENT;
+        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.48);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 377 8 ]
+        %tmp.49 = lgetv %dc;
+        symbol [ dc %tmp.49 377 8 10 ];
+        symbol [ drawText %tmp.50 377 11 19 ];
+        %tmp.50 = getv function %tmp.49 :drawText;
+        symbol [ mCenterX %tmp.52 377 20 28 ];
+        %tmp.52 = getv ? :mCenterX;
+        symbol [ mCenterY %tmp.54 378 20 28 ];
+        %tmp.54 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.56 378 32 39 ];
+        %tmp.56 = getv ? :mRadius;
+        %tmp.57 = 0.39;
+        %tmp.58 = mul %tmp.56 %tmp.57;
+        symbol [ toNumber %tmp.59 378 48 56 ];
+        %tmp.59 = getv function %tmp.58 :toNumber;
+        %tmp.60 = invoke %tmp.58 %tmp.59();
+        %tmp.61 = sub %tmp.54 %tmp.60;
+        symbol [ Graphics %tmp.62 379 20 28 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.63 379 29 39 ];
+        %tmp.63 = getv %tmp.62 :FONT_LARGE;
+        %tmp.64 = lgetv %digitalText.6;
+        symbol [ digitalText %tmp.64 380 20 31 ];
+        symbol [ Graphics %tmp.65 381 20 28 ];
+        %tmp.65 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.66 381 29 48 ];
+        %tmp.66 = getv %tmp.65 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.67 381 51 59 ];
+        %tmp.67 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.68 381 60 80 ];
+        %tmp.68 = getv %tmp.67 :TEXT_JUSTIFY_VCENTER;
+        %tmp.69 = bitor %tmp.66 %tmp.68;
+        invoke %tmp.49 %tmp.50(%tmp.52, %tmp.61, %tmp.63, %tmp.64, %tmp.69);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 384 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %dateX.7 = local;
+        symbol [ dateX %dateX.7 384 12 17 ];
+        symbol [ mCenterX %tmp.71 384 20 28 ];
+        %tmp.71 = getv ? :mCenterX;
+        symbol [ mRadius %tmp.73 384 32 39 ];
+        %tmp.73 = getv ? :mRadius;
+        %tmp.74 = 0.40;
+        %tmp.75 = mul %tmp.73 %tmp.74;
+        symbol [ toNumber %tmp.76 384 48 56 ];
+        %tmp.76 = getv function %tmp.75 :toNumber;
+        %tmp.77 = invoke %tmp.75 %tmp.76();
+        %tmp.78 = add %tmp.71 %tmp.77;
+        lputv %dateX.7 %tmp.78;
+        symbol [ dateX %dateX.7 384 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 385 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %dateY.8 = local;
+        symbol [ dateY %dateY.8 385 12 17 ];
+        symbol [ mCenterY %tmp.80 385 20 28 ];
+        %tmp.80 = getv ? :mCenterY;
+        lputv %dateY.8 %tmp.80;
+        symbol [ dateY %dateY.8 385 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 386 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %xPad.9 = local;
+        symbol [ xPad %xPad.9 386 12 16 ];
+        %tmp.81 = 2;
+        lputv %xPad.9 %tmp.81;
+        symbol [ xPad %xPad.9 386 12 16 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 387 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %yPad.10 = local;
+        symbol [ yPad %yPad.10 387 12 16 ];
+        %tmp.82 = 0;
+        lputv %yPad.10 %tmp.82;
+        symbol [ yPad %yPad.10 387 12 16 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 388 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_8_401_8_if_stmt:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_12_388_49_begin:
+        symbol [ mDateDims %tmp.84 388 12 21 ];
+        %tmp.84 = getv ? :mDateDims;
+        %tmp.85 = null;
+        %tmp.86 = ne %tmp.84 %tmp.85;
+        bf %tmp.86 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_8_401_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_33_388_49_true:
+        symbol [ mDayDateText %tmp.88 388 33 45 ];
+        %tmp.88 = getv ? :mDayDateText;
+        %tmp.89 = null;
+        %tmp.90 = ne %tmp.88 %tmp.89;
+        push %tmp.90;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_33_388_49_end:
+        %tmp.91 = phi [%tmp.86 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_12_388_49_begin] [%tmp.90 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_33_388_49_true] [%tmp.91 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_33_388_49_end];
+        bf %tmp.91 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_8_401_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_8_401_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_55_401_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 389 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_55_401_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_55_401_8_stop" ]
+        %dw.11 = local;
+        symbol [ dw %dw.11 389 16 18 ];
+        symbol [ mDateDims %tmp.93 389 22 31 ];
+        %tmp.93 = getv ? :mDateDims;
+        %tmp.94 = as %tmp.93 { (!Null) };
+        %tmp.95 = as %tmp.94 Array<Number>;
+        symbol [ Array %tmp.95 389 35 40 ];
+        symbol [ Number %tmp.95 389 41 47 ];
+        %tmp.96 = 0;
+        %tmp.97 = agetv %tmp.95 %tmp.96;
+        lputv %dw.11 %tmp.97;
+        symbol [ dw %dw.11 389 16 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 390 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_55_401_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_55_401_8_stop" ]
+        %dh.12 = local;
+        symbol [ dh %dh.12 390 16 18 ];
+        symbol [ mDateDims %tmp.99 390 22 31 ];
+        %tmp.99 = getv ? :mDateDims;
+        %tmp.100 = as %tmp.99 { (!Null) };
+        %tmp.101 = as %tmp.100 Array<Number>;
+        symbol [ Array %tmp.101 390 35 40 ];
+        symbol [ Number %tmp.101 390 41 47 ];
+        %tmp.102 = 1;
+        %tmp.103 = agetv %tmp.101 %tmp.102;
+        lputv %dh.12 %tmp.103;
+        symbol [ dh %dh.12 390 16 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 391 12 ]
+        %tmp.104 = lgetv %dc;
+        symbol [ dc %tmp.104 391 12 14 ];
+        symbol [ setColor %tmp.105 391 15 23 ];
+        %tmp.105 = getv function %tmp.104 :setColor;
+        symbol [ Graphics %tmp.106 391 24 32 ];
+        %tmp.106 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.107 391 33 44 ];
+        %tmp.107 = getv %tmp.106 :COLOR_WHITE;
+        symbol [ Graphics %tmp.108 391 46 54 ];
+        %tmp.108 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.109 391 55 66 ];
+        %tmp.109 = getv %tmp.108 :COLOR_WHITE;
+        invoke %tmp.104 %tmp.105(%tmp.107, %tmp.109);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 392 12 ]
+        %tmp.110 = lgetv %dc;
+        symbol [ dc %tmp.110 392 12 14 ];
+        symbol [ fillRectangle %tmp.111 392 15 28 ];
+        %tmp.111 = getv function %tmp.110 :fillRectangle;
+        %tmp.112 = lgetv %dateX.7;
+        symbol [ dateX %tmp.112 392 29 34 ];
+        %tmp.113 = lgetv %dw.11;
+        symbol [ dw %tmp.113 392 37 39 ];
+        %tmp.114 = 2;
+        %tmp.115 = div %tmp.113 %tmp.114;
+        %tmp.116 = sub %tmp.112 %tmp.115;
+        %tmp.117 = lgetv %xPad.9;
+        symbol [ xPad %tmp.117 392 46 50 ];
+        %tmp.118 = sub %tmp.116 %tmp.117;
+        %tmp.119 = lgetv %dateY.8;
+        symbol [ dateY %tmp.119 393 29 34 ];
+        %tmp.120 = lgetv %dh.12;
+        symbol [ dh %tmp.120 393 37 39 ];
+        %tmp.121 = 2;
+        %tmp.122 = div %tmp.120 %tmp.121;
+        %tmp.123 = sub %tmp.119 %tmp.122;
+        %tmp.124 = lgetv %yPad.10;
+        symbol [ yPad %tmp.124 393 46 50 ];
+        %tmp.125 = 2;
+        %tmp.126 = div %tmp.124 %tmp.125;
+        %tmp.127 = sub %tmp.123 %tmp.126;
+        %tmp.128 = lgetv %dw.11;
+        symbol [ dw %tmp.128 394 29 31 ];
+        %tmp.129 = 2;
+        %tmp.130 = lgetv %xPad.9;
+        symbol [ xPad %tmp.130 394 38 42 ];
+        %tmp.131 = mul %tmp.129 %tmp.130;
+        %tmp.132 = add %tmp.128 %tmp.131;
+        %tmp.133 = lgetv %dh.12;
+        symbol [ dh %tmp.133 395 29 31 ];
+        %tmp.134 = lgetv %yPad.10;
+        symbol [ yPad %tmp.134 395 34 38 ];
+        %tmp.135 = add %tmp.133 %tmp.134;
+        invoke %tmp.110 %tmp.111(%tmp.118, %tmp.127, %tmp.132, %tmp.135);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 396 12 ]
+        %tmp.136 = lgetv %dc;
+        symbol [ dc %tmp.136 396 12 14 ];
+        symbol [ setColor %tmp.137 396 15 23 ];
+        %tmp.137 = getv function %tmp.136 :setColor;
+        symbol [ Graphics %tmp.138 396 24 32 ];
+        %tmp.138 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.139 396 33 44 ];
+        %tmp.139 = getv %tmp.138 :COLOR_BLACK;
+        symbol [ Graphics %tmp.140 396 46 54 ];
+        %tmp.140 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.141 396 55 72 ];
+        %tmp.141 = getv %tmp.140 :COLOR_TRANSPARENT;
+        invoke %tmp.136 %tmp.137(%tmp.139, %tmp.141);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 397 12 ]
+        %tmp.142 = lgetv %dc;
+        symbol [ dc %tmp.142 397 12 14 ];
+        symbol [ drawText %tmp.143 397 15 23 ];
+        %tmp.143 = getv function %tmp.142 :drawText;
+        %tmp.144 = lgetv %dateX.7;
+        symbol [ dateX %tmp.144 397 24 29 ];
+        %tmp.145 = lgetv %dateY.8;
+        symbol [ dateY %tmp.145 397 31 36 ];
+        symbol [ Graphics %tmp.146 398 24 32 ];
+        %tmp.146 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.147 398 33 43 ];
+        %tmp.147 = getv %tmp.146 :FONT_XTINY;
+        symbol [ mDayDateText %tmp.149 399 24 36 ];
+        %tmp.149 = getv ? :mDayDateText;
+        %tmp.150 = as %tmp.149 String;
+        symbol [ String %tmp.150 399 40 46 ];
+        symbol [ Graphics %tmp.151 400 24 32 ];
+        %tmp.151 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.152 400 33 52 ];
+        %tmp.152 = getv %tmp.151 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.153 400 55 63 ];
+        %tmp.153 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.154 400 64 84 ];
+        %tmp.154 = getv %tmp.153 :TEXT_JUSTIFY_VCENTER;
+        %tmp.155 = bitor %tmp.152 %tmp.154;
+        invoke %tmp.142 %tmp.143(%tmp.144, %tmp.145, %tmp.147, %tmp.150, %tmp.155);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_55_401_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_8_401_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_388_8_401_8_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 404 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %stepsY.13 = local;
+        symbol [ stepsY %stepsY.13 404 12 18 ];
+        symbol [ mCenterY %tmp.157 404 22 30 ];
+        %tmp.157 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.159 404 34 41 ];
+        %tmp.159 = getv ? :mRadius;
+        %tmp.160 = 0.55;
+        %tmp.161 = mul %tmp.159 %tmp.160;
+        symbol [ toNumber %tmp.162 404 50 58 ];
+        %tmp.162 = getv function %tmp.161 :toNumber;
+        %tmp.163 = invoke %tmp.161 %tmp.162();
+        %tmp.164 = add %tmp.157 %tmp.163;
+        lputv %stepsY.13 %tmp.164;
+        symbol [ stepsY %stepsY.13 404 12 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 405 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %notifyY.14 = local;
+        symbol [ notifyY %notifyY.14 405 12 19 ];
+        symbol [ mCenterY %tmp.166 405 22 30 ];
+        %tmp.166 = getv ? :mCenterY;
+        symbol [ mRadius %tmp.168 405 34 41 ];
+        %tmp.168 = getv ? :mRadius;
+        %tmp.169 = 0.38;
+        %tmp.170 = mul %tmp.168 %tmp.169;
+        symbol [ toNumber %tmp.171 405 50 58 ];
+        %tmp.171 = getv function %tmp.170 :toNumber;
+        %tmp.172 = invoke %tmp.170 %tmp.171();
+        %tmp.173 = add %tmp.166 %tmp.172;
+        lputv %notifyY.14 %tmp.173;
+        symbol [ notifyY %notifyY.14 405 12 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 407 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_407_8_410_8_if_stmt:
+        %tmp.174 = lgetv %devSet.3;
+        symbol [ devSet %tmp.174 407 12 18 ];
+        symbol [ notificationCount %tmp.175 407 19 36 ];
+        %tmp.175 = getv %tmp.174 :notificationCount;
+        %tmp.176 = 0;
+        %tmp.177 = gt %tmp.175 %tmp.176;
+        bf %tmp.177 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_407_8_410_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_407_8_410_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_407_42_410_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 408 12 ]
+        %tmp.178 = lgetv %dc;
+        symbol [ dc %tmp.178 408 12 14 ];
+        symbol [ setColor %tmp.179 408 15 23 ];
+        %tmp.179 = getv function %tmp.178 :setColor;
+        symbol [ Graphics %tmp.180 408 24 32 ];
+        %tmp.180 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.181 408 33 42 ];
+        %tmp.181 = getv %tmp.180 :COLOR_RED;
+        symbol [ Graphics %tmp.182 408 44 52 ];
+        %tmp.182 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.183 408 53 70 ];
+        %tmp.183 = getv %tmp.182 :COLOR_TRANSPARENT;
+        invoke %tmp.178 %tmp.179(%tmp.181, %tmp.183);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 409 12 ]
+        %tmp.184 = lgetv %dc;
+        symbol [ dc %tmp.184 409 12 14 ];
+        symbol [ fillCircle %tmp.185 409 15 25 ];
+        %tmp.185 = getv function %tmp.184 :fillCircle;
+        symbol [ mCenterX %tmp.187 409 26 34 ];
+        %tmp.187 = getv ? :mCenterX;
+        %tmp.188 = lgetv %notifyY.14;
+        symbol [ notifyY %tmp.188 409 36 43 ];
+        %tmp.189 = 5;
+        invoke %tmp.184 %tmp.185(%tmp.187, %tmp.188, %tmp.189);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_407_42_410_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_407_8_410_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_407_8_410_8_if_end:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 412 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %stepsText.15 = local;
+        symbol [ stepsText %stepsText.15 412 12 21 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_begin:
+        %tmp.190 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.190 412 25 32 ];
+        symbol [ steps %tmp.191 412 33 38 ];
+        %tmp.191 = getv %tmp.190 :steps;
+        %tmp.192 = null;
+        %tmp.193 = eq %tmp.191 %tmp.192;
+        bf %tmp.193 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_true:
+        %tmp.194 = "--";
+        push %tmp.194;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_false:
+        symbol [ Lang %tmp.195 412 57 61 ];
+        %tmp.195 = getm $.Toybox.Lang;
+        symbol [ format %tmp.196 412 62 68 ];
+        %tmp.196 = getv function %tmp.195 :format;
+        %tmp.197 = "$1$";
+        %tmp.198 = newa 1;
+        %tmp.199 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.199 412 77 84 ];
+        symbol [ steps %tmp.200 412 85 90 ];
+        %tmp.200 = getv %tmp.199 :steps;
+        %tmp.201 = dup %tmp.198;
+        %tmp.202 = aputv %tmp.201 0 %tmp.200;
+        %tmp.203 = invoke %tmp.195 %tmp.196(%tmp.197, %tmp.202);
+        push %tmp.203;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_end:
+        %tmp.204 = phi [%tmp.193 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_begin] [%tmp.194 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_true] [%tmp.203 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_false] [%tmp.204 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_412_24_412_91_end];
+        lputv %stepsText.15 %tmp.204;
+        symbol [ stepsText %stepsText.15 412 12 21 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 413 8 ]
+        %tmp.205 = lgetv %dc;
+        symbol [ dc %tmp.205 413 8 10 ];
+        symbol [ setColor %tmp.206 413 11 19 ];
+        %tmp.206 = getv function %tmp.205 :setColor;
+        symbol [ Graphics %tmp.207 413 20 28 ];
+        %tmp.207 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.208 413 29 40 ];
+        %tmp.208 = getv %tmp.207 :COLOR_WHITE;
+        symbol [ Graphics %tmp.209 413 42 50 ];
+        %tmp.209 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.210 413 51 68 ];
+        %tmp.210 = getv %tmp.209 :COLOR_TRANSPARENT;
+        invoke %tmp.205 %tmp.206(%tmp.208, %tmp.210);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 414 8 ]
+        %tmp.211 = lgetv %dc;
+        symbol [ dc %tmp.211 414 8 10 ];
+        symbol [ drawText %tmp.212 414 11 19 ];
+        %tmp.212 = getv function %tmp.211 :drawText;
+        symbol [ mCenterX %tmp.214 414 20 28 ];
+        %tmp.214 = getv ? :mCenterX;
+        %tmp.215 = lgetv %stepsY.13;
+        symbol [ stepsY %tmp.215 414 30 36 ];
+        symbol [ Graphics %tmp.216 415 20 28 ];
+        %tmp.216 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.217 415 29 39 ];
+        %tmp.217 = getv %tmp.216 :FONT_XTINY;
+        %tmp.218 = lgetv %stepsText.15;
+        symbol [ stepsText %tmp.218 416 20 29 ];
+        symbol [ Graphics %tmp.219 417 20 28 ];
+        %tmp.219 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.220 417 29 48 ];
+        %tmp.220 = getv %tmp.219 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.221 417 51 59 ];
+        %tmp.221 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.222 417 60 80 ];
+        %tmp.222 = getv %tmp.221 :TEXT_JUSTIFY_VCENTER;
+        %tmp.223 = bitor %tmp.220 %tmp.222;
+        invoke %tmp.211 %tmp.212(%tmp.214, %tmp.215, %tmp.217, %tmp.218, %tmp.223);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 420 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %battLevel.16 = local;
+        symbol [ battLevel %battLevel.16 420 12 21 ];
+        %tmp.224 = lgetv %sysStats.2;
+        symbol [ sysStats %tmp.224 420 24 32 ];
+        symbol [ battery %tmp.225 420 33 40 ];
+        %tmp.225 = getv %tmp.224 :battery;
+        lputv %battLevel.16 %tmp.225;
+        symbol [ battLevel %battLevel.16 420 12 21 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 421 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %battText.17 = local;
+        symbol [ battText %battText.17 421 12 20 ];
+        symbol [ Lang %tmp.226 421 24 28 ];
+        %tmp.226 = getm $.Toybox.Lang;
+        symbol [ format %tmp.227 421 29 35 ];
+        %tmp.227 = getv function %tmp.226 :format;
+        %tmp.228 = "$1$%";
+        %tmp.229 = newa 1;
+        %tmp.230 = lgetv %battLevel.16;
+        symbol [ battLevel %tmp.230 421 45 54 ];
+        symbol [ format %tmp.231 421 55 61 ];
+        %tmp.231 = getv function %tmp.230 :format;
+        %tmp.232 = "%d";
+        %tmp.233 = invoke %tmp.230 %tmp.231(%tmp.232);
+        %tmp.234 = dup %tmp.229;
+        %tmp.235 = aputv %tmp.234 0 %tmp.233;
+        %tmp.236 = invoke %tmp.226 %tmp.227(%tmp.228, %tmp.235);
+        lputv %battText.17 %tmp.236;
+        symbol [ battText %battText.17 421 12 20 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 422 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop" ]
+        %battColor.18 = local;
+        symbol [ battColor %battColor.18 422 12 21 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_begin:
+        %tmp.237 = lgetv %battLevel.16;
+        symbol [ battLevel %tmp.237 422 25 34 ];
+        %tmp.238 = 15;
+        %tmp.239 = lte %tmp.237 %tmp.238;
+        bf %tmp.239 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_true:
+        symbol [ Graphics %tmp.240 422 44 52 ];
+        %tmp.240 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.241 422 53 62 ];
+        %tmp.241 = getv %tmp.240 :COLOR_RED;
+        push %tmp.241;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_false:
+        symbol [ Graphics %tmp.242 422 65 73 ];
+        %tmp.242 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.243 422 74 85 ];
+        %tmp.243 = getv %tmp.242 :COLOR_WHITE;
+        push %tmp.243;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_end:
+        %tmp.244 = phi [%tmp.239 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_begin] [%tmp.241 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_true] [%tmp.243 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_false] [%tmp.244 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_422_24_422_74_end];
+        lputv %battColor.18 %tmp.244;
+        symbol [ battColor %battColor.18 422 12 21 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 423 8 ]
+        %tmp.245 = lgetv %dc;
+        symbol [ dc %tmp.245 423 8 10 ];
+        symbol [ setColor %tmp.246 423 11 19 ];
+        %tmp.246 = getv function %tmp.245 :setColor;
+        %tmp.247 = lgetv %battColor.18;
+        symbol [ battColor %tmp.247 423 20 29 ];
+        symbol [ Graphics %tmp.248 423 31 39 ];
+        %tmp.248 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.249 423 40 57 ];
+        %tmp.249 = getv %tmp.248 :COLOR_TRANSPARENT;
+        invoke %tmp.245 %tmp.246(%tmp.247, %tmp.249);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 424 8 ]
+        %tmp.250 = lgetv %dc;
+        symbol [ dc %tmp.250 424 8 10 ];
+        symbol [ drawText %tmp.251 424 11 19 ];
+        %tmp.251 = getv function %tmp.250 :drawText;
+        symbol [ mCenterX %tmp.253 424 20 28 ];
+        %tmp.253 = getv ? :mCenterX;
+        symbol [ mRadius %tmp.255 424 32 39 ];
+        %tmp.255 = getv ? :mRadius;
+        %tmp.256 = 0.52;
+        %tmp.257 = mul %tmp.255 %tmp.256;
+        symbol [ toNumber %tmp.258 424 48 56 ];
+        %tmp.258 = getv function %tmp.257 :toNumber;
+        %tmp.259 = invoke %tmp.257 %tmp.258();
+        %tmp.260 = sub %tmp.253 %tmp.259;
+        symbol [ mCenterY %tmp.262 425 20 28 ];
+        %tmp.262 = getv ? :mCenterY;
+        symbol [ Graphics %tmp.263 426 20 28 ];
+        %tmp.263 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.264 426 29 39 ];
+        %tmp.264 = getv %tmp.263 :FONT_XTINY;
+        %tmp.265 = lgetv %battText.17;
+        symbol [ battText %tmp.265 427 20 28 ];
+        symbol [ Graphics %tmp.266 428 20 28 ];
+        %tmp.266 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.267 428 29 48 ];
+        %tmp.267 = getv %tmp.266 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.268 428 51 59 ];
+        %tmp.268 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.269 428 60 80 ];
+        %tmp.269 = getv %tmp.268 :TEXT_JUSTIFY_VCENTER;
+        %tmp.270 = bitor %tmp.267 %tmp.269;
+        invoke %tmp.250 %tmp.251(%tmp.260, %tmp.262, %tmp.264, %tmp.265, %tmp.270);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_367_66_429_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 432; @symbol_functiondef = [drawIdleFace,432,21,33]; @symbol_param<0> = [dc,432,34,36]; @symbol_param<0>_type<0> = [Graphics,432,40,48]; @symbol_param<0>_type<1> = [Dc,432,49,51]; ]
+    private
+    function drawIdleFace(dc as Graphics.Dc) as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 433 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_stop" ]
+        %t.1 = local;
+        symbol [ t %t.1 433 12 13 ];
+        symbol [ System %tmp.1 433 22 28 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 433 29 41 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %t.1 %tmp.3;
+        symbol [ t %t.1 433 12 13 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 434 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_stop" ]
+        %hour12.2 = local;
+        symbol [ hour12 %hour12.2 434 12 18 ];
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_begin:
+        %tmp.4 = lgetv %t.1;
+        symbol [ t %tmp.4 434 23 24 ];
+        symbol [ hour %tmp.5 434 25 29 ];
+        %tmp.5 = getv %tmp.4 :hour;
+        %tmp.6 = 12;
+        %tmp.7 = mod %tmp.5 %tmp.6;
+        %tmp.8 = 0;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        bf %tmp.9 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_true:
+        %tmp.10 = 12;
+        push %tmp.10;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_false:
+        %tmp.11 = lgetv %t.1;
+        symbol [ t %tmp.11 434 48 49 ];
+        symbol [ hour %tmp.12 434 50 54 ];
+        %tmp.12 = getv %tmp.11 :hour;
+        %tmp.13 = 12;
+        %tmp.14 = mod %tmp.12 %tmp.13;
+        push %tmp.14;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_end:
+        %tmp.15 = phi [%tmp.9 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_begin] [%tmp.10 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_true] [%tmp.14 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_false] [%tmp.15 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_434_22_434_57_end];
+        lputv %hour12.2 %tmp.15;
+        symbol [ hour12 %hour12.2 434 12 18 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 435 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_stop" ]
+        %timeStr.3 = local;
+        symbol [ timeStr %timeStr.3 435 12 19 ];
+        symbol [ Lang %tmp.16 435 22 26 ];
+        %tmp.16 = getm $.Toybox.Lang;
+        symbol [ format %tmp.17 435 27 33 ];
+        %tmp.17 = getv function %tmp.16 :format;
+        %tmp.18 = "$1$:$2$";
+        %tmp.19 = newa 2;
+        %tmp.20 = lgetv %hour12.2;
+        symbol [ hour12 %tmp.20 435 46 52 ];
+        symbol [ format %tmp.21 435 53 59 ];
+        %tmp.21 = getv function %tmp.20 :format;
+        %tmp.22 = "%d";
+        %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
+        %tmp.24 = dup %tmp.19;
+        %tmp.25 = aputv %tmp.24 0 %tmp.23;
+        %tmp.26 = lgetv %t.1;
+        symbol [ t %tmp.26 435 67 68 ];
+        symbol [ min %tmp.27 435 69 72 ];
+        %tmp.27 = getv %tmp.26 :min;
+        symbol [ format %tmp.28 435 73 79 ];
+        %tmp.28 = getv function %tmp.27 :format;
+        %tmp.29 = "%02d";
+        %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+        %tmp.31 = dup %tmp.25;
+        %tmp.32 = aputv %tmp.31 1 %tmp.30;
+        %tmp.33 = invoke %tmp.16 %tmp.17(%tmp.18, %tmp.32);
+        lputv %timeStr.3 %tmp.33;
+        symbol [ timeStr %timeStr.3 435 12 19 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 436 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_stop" ]
+        %timeY.4 = local;
+        symbol [ timeY %timeY.4 436 12 17 ];
+        symbol [ mCenterY %tmp.35 436 22 30 ];
+        %tmp.35 = getv ? :mCenterY;
+        lputv %timeY.4 %tmp.35;
+        symbol [ timeY %timeY.4 436 12 17 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 438 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 438 8 10 ];
+        symbol [ setColor %tmp.37 438 11 19 ];
+        %tmp.37 = getv function %tmp.36 :setColor;
+        symbol [ Graphics %tmp.38 438 20 28 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.39 438 29 40 ];
+        %tmp.39 = getv %tmp.38 :COLOR_WHITE;
+        symbol [ Graphics %tmp.40 438 42 50 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.41 438 51 68 ];
+        %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 439 8 ]
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 439 8 10 ];
+        symbol [ drawText %tmp.43 439 11 19 ];
+        %tmp.43 = getv function %tmp.42 :drawText;
+        symbol [ mCenterX %tmp.45 439 20 28 ];
+        %tmp.45 = getv ? :mCenterX;
+        %tmp.46 = lgetv %timeY.4;
+        symbol [ timeY %tmp.46 439 30 35 ];
+        symbol [ Graphics %tmp.47 440 20 28 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_MEDIUM %tmp.48 440 29 47 ];
+        %tmp.48 = getv %tmp.47 :FONT_NUMBER_MEDIUM;
+        %tmp.49 = lgetv %timeStr.3;
+        symbol [ timeStr %tmp.49 441 20 27 ];
+        symbol [ Graphics %tmp.50 442 20 28 ];
+        %tmp.50 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.51 442 29 48 ];
+        %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.52 442 51 59 ];
+        %tmp.52 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.53 442 60 80 ];
+        %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_VCENTER;
+        %tmp.54 = bitor %tmp.51 %tmp.53;
+        invoke %tmp.42 %tmp.43(%tmp.45, %tmp.46, %tmp.48, %tmp.49, %tmp.54);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 444 8 ]
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_8_452_8_if_stmt:
+        symbol [ mDayMonthDateText %tmp.56 444 12 29 ];
+        %tmp.56 = getv ? :mDayMonthDateText;
+        %tmp.57 = null;
+        %tmp.58 = ne %tmp.56 %tmp.57;
+        bf %tmp.58 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_8_452_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_8_452_8_if_true:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_39_452_8_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 445 12 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_39_452_8_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_39_452_8_stop" ]
+        %dateY.5 = local;
+        symbol [ dateY %dateY.5 445 16 21 ];
+        symbol [ mCenterY %tmp.60 445 24 32 ];
+        %tmp.60 = getv ? :mCenterY;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_begin:
+        symbol [ mIdleTimeDims %tmp.62 445 36 49 ];
+        %tmp.62 = getv ? :mIdleTimeDims;
+        %tmp.63 = null;
+        %tmp.64 = ne %tmp.62 %tmp.63;
+        bf %tmp.64 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_false;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_true:
+        symbol [ mIdleTimeDims %tmp.66 445 61 74 ];
+        %tmp.66 = getv ? :mIdleTimeDims;
+        %tmp.67 = as %tmp.66 { (!Null) };
+        %tmp.68 = as %tmp.67 Array<Number>;
+        symbol [ Array %tmp.68 445 78 83 ];
+        symbol [ Number %tmp.68 445 84 90 ];
+        %tmp.69 = 1;
+        %tmp.70 = agetv %tmp.68 %tmp.69;
+        %tmp.71 = 2.0;
+        %tmp.72 = div %tmp.70 %tmp.71;
+        push %tmp.72;
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_false:
+        %tmp.73 = 0;
+        push %tmp.73;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_end:
+        %tmp.74 = phi [%tmp.64 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_begin] [%tmp.72 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_true] [%tmp.73 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_false] [%tmp.74 @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_445_36_445_104_end];
+        %tmp.75 = add %tmp.60 %tmp.74;
+        lputv %dateY.5 %tmp.75;
+        symbol [ dateY %dateY.5 445 16 21 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 447 12 ]
+        %tmp.76 = lgetv %dc;
+        symbol [ dc %tmp.76 447 12 14 ];
+        symbol [ setColor %tmp.77 447 15 23 ];
+        %tmp.77 = getv function %tmp.76 :setColor;
+        symbol [ Graphics %tmp.78 447 24 32 ];
+        %tmp.78 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.79 447 33 44 ];
+        %tmp.79 = getv %tmp.78 :COLOR_WHITE;
+        symbol [ Graphics %tmp.80 447 46 54 ];
+        %tmp.80 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.81 447 55 72 ];
+        %tmp.81 = getv %tmp.80 :COLOR_TRANSPARENT;
+        invoke %tmp.76 %tmp.77(%tmp.79, %tmp.81);
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 448 12 ]
+        %tmp.82 = lgetv %dc;
+        symbol [ dc %tmp.82 448 12 14 ];
+        symbol [ drawText %tmp.83 448 15 23 ];
+        %tmp.83 = getv function %tmp.82 :drawText;
+        symbol [ mCenterX %tmp.85 448 24 32 ];
+        %tmp.85 = getv ? :mCenterX;
+        %tmp.86 = lgetv %dateY.5;
+        symbol [ dateY %tmp.86 448 34 39 ];
+        symbol [ Graphics %tmp.87 449 24 32 ];
+        %tmp.87 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.88 449 33 43 ];
+        %tmp.88 = getv %tmp.87 :FONT_XTINY;
+        symbol [ mDayMonthDateText %tmp.90 450 24 41 ];
+        %tmp.90 = getv ? :mDayMonthDateText;
+        %tmp.91 = as %tmp.90 String;
+        symbol [ String %tmp.91 450 45 51 ];
+        symbol [ Graphics %tmp.92 451 24 32 ];
+        %tmp.92 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.93 451 33 52 ];
+        %tmp.93 = getv %tmp.92 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.94 451 55 63 ];
+        %tmp.94 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.95 451 64 84 ];
+        %tmp.95 = getv %tmp.94 :TEXT_JUSTIFY_VCENTER;
+        %tmp.96 = bitor %tmp.93 %tmp.95;
+        invoke %tmp.82 %tmp.83(%tmp.85, %tmp.86, %tmp.88, %tmp.91, %tmp.96);
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_39_452_8_stop:
+        goto @C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_8_452_8_if_end;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_444_8_452_8_if_end:
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_432_61_453_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 456; @symbol_functiondef = [updateDateCache,456,21,36]; ]
+    private
+    function updateDateCache() as Void {
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 457 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 457 12 16 ];
+        symbol [ Gregorian %tmp.1 457 19 28 ];
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.2 457 29 33 ];
+        %tmp.2 = getv function %tmp.1 :info;
+        symbol [ Time %tmp.3 457 34 38 ];
+        %tmp.3 = getm $.Toybox.Time;
+        symbol [ now %tmp.4 457 39 42 ];
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ Time %tmp.6 457 46 50 ];
+        %tmp.6 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.7 457 51 63 ];
+        %tmp.7 = getv %tmp.6 :FORMAT_SHORT;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %info.1 %tmp.8;
+        symbol [ info %info.1 457 12 16 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 458 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_stop" ]
+        %dow.2 = local;
+        symbol [ dow %dow.2 458 12 15 ];
+        symbol [ WEEK_DAYS %tmp.10 458 19 28 ];
+        %tmp.10 = getv ? :WEEK_DAYS;
+        %tmp.11 = lgetv %info.1;
+        symbol [ info %tmp.11 458 29 33 ];
+        symbol [ day_of_week %tmp.12 458 34 45 ];
+        %tmp.12 = getv %tmp.11 :day_of_week;
+        %tmp.13 = 1;
+        %tmp.14 = sub %tmp.12 %tmp.13;
+        %tmp.15 = agetv %tmp.10 %tmp.14;
+        lputv %dow.2 %tmp.15;
+        symbol [ dow %dow.2 458 12 15 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 459 8 ]
+        [ "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_start" "C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_stop" ]
+        %mon.3 = local;
+        symbol [ mon %mon.3 459 12 15 ];
+        symbol [ MONTH_NAMES %tmp.17 459 19 30 ];
+        %tmp.17 = getv ? :MONTH_NAMES;
+        %tmp.18 = lgetv %info.1;
+        symbol [ info %tmp.18 459 31 35 ];
+        symbol [ month %tmp.19 459 36 41 ];
+        %tmp.19 = getv %tmp.18 :month;
+        %tmp.20 = 1;
+        %tmp.21 = sub %tmp.19 %tmp.20;
+        %tmp.22 = agetv %tmp.17 %tmp.21;
+        lputv %mon.3 %tmp.22;
+        symbol [ mon %mon.3 459 12 15 ];
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 461 8 ]
+        symbol [ Lang %tmp.23 461 28 32 ];
+        %tmp.23 = getm $.Toybox.Lang;
+        symbol [ format %tmp.24 461 33 39 ];
+        %tmp.24 = getv function %tmp.23 :format;
+        %tmp.25 = "$1$ $2$";
+        %tmp.26 = newa 2;
+        %tmp.27 = lgetv %dow.2;
+        symbol [ dow %tmp.27 461 57 60 ];
+        %tmp.28 = dup %tmp.26;
+        %tmp.29 = aputv %tmp.28 0 %tmp.27;
+        %tmp.30 = lgetv %info.1;
+        symbol [ info %tmp.30 461 62 66 ];
+        symbol [ day %tmp.31 461 67 70 ];
+        %tmp.31 = getv %tmp.30 :day;
+        %tmp.32 = dup %tmp.29;
+        %tmp.33 = aputv %tmp.32 1 %tmp.31;
+        %tmp.34 = invoke %tmp.23 %tmp.24(%tmp.25, %tmp.33);
+        symbol [ mDayDateText ? 461 8 20 ];
+        putv self :mDayDateText %tmp.34;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 462 8 ]
+        symbol [ Lang %tmp.35 462 28 32 ];
+        %tmp.35 = getm $.Toybox.Lang;
+        symbol [ format %tmp.36 462 33 39 ];
+        %tmp.36 = getv function %tmp.35 :format;
+        %tmp.37 = "$1$, $2$ $3$";
+        %tmp.38 = newa 3;
+        %tmp.39 = lgetv %dow.2;
+        symbol [ dow %tmp.39 462 57 60 ];
+        %tmp.40 = dup %tmp.38;
+        %tmp.41 = aputv %tmp.40 0 %tmp.39;
+        %tmp.42 = lgetv %mon.3;
+        symbol [ mon %tmp.42 462 62 65 ];
+        %tmp.43 = dup %tmp.41;
+        %tmp.44 = aputv %tmp.43 1 %tmp.42;
+        %tmp.45 = lgetv %info.1;
+        symbol [ info %tmp.45 462 67 71 ];
+        symbol [ day %tmp.46 462 72 75 ];
+        %tmp.46 = getv %tmp.45 :day;
+        %tmp.47 = dup %tmp.44;
+        %tmp.48 = aputv %tmp.47 2 %tmp.46;
+        %tmp.49 = invoke %tmp.35 %tmp.36(%tmp.37, %tmp.48);
+        symbol [ mDayMonthDateText ? 462 8 25 ];
+        putv self :mDayMonthDateText %tmp.49;
+[ "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc" 463 8 ]
+        %tmp.50 = lgetv %info.1;
+        symbol [ info %tmp.50 463 28 32 ];
+        symbol [ day %tmp.51 463 33 36 ];
+        %tmp.51 = getv %tmp.50 :day;
+        symbol [ mLastDateDay ? 463 8 20 ];
+        putv self :mLastDateDay %tmp.51;
+C__temp_CregFace_CregFace_source_CregFaceView_20250307_mc_456_47_464_4_stop:
+    }
+}
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceView_20250307.mc"; @line = 1; ]
+<init> {
+}

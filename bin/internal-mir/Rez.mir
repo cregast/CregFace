@@ -1,0 +1,1697 @@
+[ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 12; @symbol_moduledef = [Layouts,12,11,18]; ]
+    module Layouts {
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 13; @symbol_functiondef = [WatchFace,13,17,26]; @symbol_param<0> = [dc,13,27,29]; @symbol_param<0>_type<0> = [Graphics,13,33,41]; @symbol_param<0>_type<1> = [Dc,13,42,44]; @symbol_return<0> = [Array,13,49,54]; @symbol_return<1> = [WatchUi,13,55,62]; @symbol_return<2> = [Drawable,13,63,71]; ]
+        function WatchFace(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+c__temp_CregFace_CregFace_bin_gen_006_B4426_00_source_Rez_mcgen_13_73_17_8_start:
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 14 12 ]
+            [ "c__temp_CregFace_CregFace_bin_gen_006_B4426_00_source_Rez_mcgen_13_73_17_8_start" "c__temp_CregFace_CregFace_bin_gen_006_B4426_00_source_Rez_mcgen_13_73_17_8_stop" ]
+            %rez_cmp_local_text_TimeLabel.1 = local;
+            symbol [ rez_cmp_local_text_TimeLabel %rez_cmp_local_text_TimeLabel.1 14 16 44 ];
+            symbol [ WatchUi %tmp.3 14 51 58 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 14 59 63 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 14 66 76 const ];
+            %tmp.8 = "TimeLabel";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 14 92 97 const ];
+            symbol [ Graphics %tmp.13 14 99 107 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_BLUE %tmp.14 14 108 118 ];
+            %tmp.14 = getv %tmp.13 :COLOR_BLUE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 14 121 125 const ];
+            %tmp.19 = 390;
+            %tmp.20 = 0.5;
+            %tmp.21 = mul %tmp.19 %tmp.20;
+            %tmp.22 = dup %tmp.16;
+            %tmp.23 = aputv %tmp.22 %tmp.18 %tmp.21;
+            %tmp.25 = const :locY;
+            symbol [ locY %tmp.25 14 141 145 const ];
+            %tmp.26 = 390;
+            %tmp.27 = lgetv %dc;
+            symbol [ dc %tmp.27 14 155 157 ];
+            symbol [ getFontHeight %tmp.28 14 158 171 ];
+            %tmp.28 = getv function %tmp.27 :getFontHeight;
+            symbol [ Graphics %tmp.29 14 172 180 ];
+            %tmp.29 = getm $.Toybox.Graphics;
+            symbol [ FONT_LARGE %tmp.30 14 181 191 ];
+            %tmp.30 = getv %tmp.29 :FONT_LARGE;
+            %tmp.31 = invoke %tmp.27 %tmp.28(%tmp.30);
+            %tmp.32 = sub %tmp.26 %tmp.31;
+            %tmp.33 = 0.5;
+            %tmp.34 = mul %tmp.32 %tmp.33;
+            %tmp.35 = dup %tmp.23;
+            %tmp.36 = aputv %tmp.35 %tmp.25 %tmp.34;
+            %tmp.38 = const :justification;
+            symbol [ justification %tmp.38 14 203 216 const ];
+            symbol [ Graphics %tmp.39 14 218 226 ];
+            %tmp.39 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.40 14 227 246 ];
+            %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_CENTER;
+            %tmp.41 = dup %tmp.36;
+            %tmp.42 = aputv %tmp.41 %tmp.38 %tmp.40;
+            %tmp.44 = const :font;
+            symbol [ font %tmp.44 14 249 253 const ];
+            symbol [ Graphics %tmp.45 14 255 263 ];
+            %tmp.45 = getm $.Toybox.Graphics;
+            symbol [ FONT_LARGE %tmp.46 14 264 274 ];
+            %tmp.46 = getv %tmp.45 :FONT_LARGE;
+            %tmp.47 = dup %tmp.42;
+            %tmp.48 = aputv %tmp.47 %tmp.44 %tmp.46;
+            %tmp.1 = newc %tmp.4 (%tmp.48);
+            lputv %rez_cmp_local_text_TimeLabel.1 %tmp.1;
+            symbol [ rez_cmp_local_text_TimeLabel %rez_cmp_local_text_TimeLabel.1 14 16 44 ];
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 16 12 ]
+            %tmp.49 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.49 16 53 58 ];
+            symbol [ WatchUi %tmp.49 16 59 66 ];
+            symbol [ Drawable %tmp.49 16 67 75 ];
+            %tmp.50 = lgetv %rez_cmp_local_text_TimeLabel.1;
+            symbol [ rez_cmp_local_text_TimeLabel %tmp.50 16 20 48 ];
+            %tmp.51 = dup %tmp.49;
+            %tmp.52 = aputv %tmp.51 0 %tmp.50;
+            ret %tmp.52;
+c__temp_CregFace_CregFace_bin_gen_006_B4426_00_source_Rez_mcgen_13_73_17_8_stop:
+        }
+    }
+    [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 20; @symbol_moduledef = [Strings,20,11,18]; ]
+    module Strings {
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 20; ]
+        <init> {
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [AppName,21,27,34]; @symbol_type<0> = [ResourceId,21,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 24; @symbol_moduledef = [Styles,24,11,17]; ]
+    module Styles {
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 25; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,25,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 25; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 26 18 ]
+                symbol [ Graphics %tmp.53 26 34 42 ];
+                %tmp.53 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.54 26 43 62 ];
+                %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.54;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 27 18 ]
+                symbol [ Graphics %tmp.55 27 25 33 ];
+                %tmp.55 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.56 27 34 44 ];
+                %tmp.56 = getv %tmp.55 :FONT_SMALL;
+                putv self :font %tmp.56;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 26; @position = 18; @symbol_constdef = [justification,26,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 27; @position = 18; @symbol_constdef = [font,27,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 30; @symbol_moduledef = [system_size__menu_header,30,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 30; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 31; @position = 18; @symbol_constdef = [width,31,18,23]; @symbol_type<0> = [Number,31,27,33]; ]
+            const width as Number = 390;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 32; @position = 18; @symbol_constdef = [height,32,18,24]; @symbol_type<0> = [Number,32,28,34]; ]
+            const height as Number = 90;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 35; @symbol_moduledef = [system_loc__hint_button_left_bottom,35,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 35; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 36; @position = 18; @symbol_constdef = [exclude,36,18,25]; @symbol_type<0> = [Boolean,36,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 39; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,39,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 39; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 40 18 ]
+                symbol [ Graphics %tmp.57 40 34 42 ];
+                %tmp.57 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.58 40 43 62 ];
+                %tmp.58 = getv %tmp.57 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.59 40 63 71 ];
+                %tmp.59 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.60 40 72 92 ];
+                %tmp.60 = getv %tmp.59 :TEXT_JUSTIFY_VCENTER;
+                %tmp.61 = bitor %tmp.58 %tmp.60;
+                putv self :justification %tmp.61;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 41 18 ]
+                symbol [ Graphics %tmp.62 41 25 33 ];
+                %tmp.62 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.63 41 34 44 ];
+                %tmp.63 = getv %tmp.62 :FONT_SMALL;
+                putv self :font %tmp.63;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 40; @position = 18; @symbol_constdef = [justification,40,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 41; @position = 18; @symbol_constdef = [font,41,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 44; @symbol_moduledef = [prompt_loc__body_no_title,44,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 44; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 45; @position = 18; @symbol_constdef = [x,45,18,19]; @symbol_type<0> = [Number,45,23,29]; ]
+            const x as Number = 39;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 46; @position = 18; @symbol_constdef = [y,46,18,19]; @symbol_type<0> = [Number,46,23,29]; ]
+            const y as Number = 58;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 49; @symbol_moduledef = [system_icon_dark__about,49,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 49; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 50; @position = 18; @symbol_constdef = [filename,50,18,26]; @symbol_type<0> = [String,50,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__about.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 51; @position = 18; @symbol_constdef = [compress,51,18,26]; @symbol_type<0> = [String,51,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 52; @position = 18; @symbol_constdef = [dithering,52,18,27]; @symbol_type<0> = [String,52,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 53; @position = 18; @symbol_constdef = [automaticPalette,53,18,34]; @symbol_type<0> = [String,53,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 54; @position = 18; @symbol_constdef = [packingFormat,54,18,31]; @symbol_type<0> = [String,54,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 57; @symbol_moduledef = [system_icon_light__question,57,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 57; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 58; @position = 18; @symbol_constdef = [filename,58,18,26]; @symbol_type<0> = [String,58,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__question.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 59; @position = 18; @symbol_constdef = [compress,59,18,26]; @symbol_type<0> = [String,59,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 60; @position = 18; @symbol_constdef = [dithering,60,18,27]; @symbol_type<0> = [String,60,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [automaticPalette,61,18,34]; @symbol_type<0> = [String,61,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [packingFormat,62,18,31]; @symbol_type<0> = [String,62,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 65; @symbol_moduledef = [system_loc__hint_button_left_top,65,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 65; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 66; @position = 18; @symbol_constdef = [exclude,66,18,25]; @symbol_type<0> = [Boolean,66,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 69; @symbol_moduledef = [prompt_font__title,69,15,33]; ]
+        module prompt_font__title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 69; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 70 18 ]
+                symbol [ Graphics %tmp.64 70 34 42 ];
+                %tmp.64 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.65 70 43 62 ];
+                %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.66 70 63 71 ];
+                %tmp.66 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.67 70 72 92 ];
+                %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
+                %tmp.68 = bitor %tmp.65 %tmp.67;
+                putv self :justification %tmp.68;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 71 18 ]
+                symbol [ Graphics %tmp.69 71 25 33 ];
+                %tmp.69 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.70 71 34 44 ];
+                %tmp.70 = getv %tmp.69 :FONT_XTINY;
+                putv self :font %tmp.70;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 70; @position = 18; @symbol_constdef = [justification,70,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [font,71,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 74; @symbol_moduledef = [system_icon_dark__discard,74,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [filename,75,18,26]; @symbol_type<0> = [String,75,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__discard.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [compress,76,18,26]; @symbol_type<0> = [String,76,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [dithering,77,18,27]; @symbol_type<0> = [String,77,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [automaticPalette,78,18,34]; @symbol_type<0> = [String,78,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [packingFormat,79,18,31]; @symbol_type<0> = [String,79,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 82; @symbol_moduledef = [system_size__menu_item,82,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 82; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [width,83,18,23]; @symbol_type<0> = [Number,83,27,33]; ]
+            const width as Number = 390;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [height,84,18,24]; @symbol_type<0> = [Number,84,28,34]; ]
+            const height as Number = 100;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 87; @symbol_moduledef = [system_color_dark__text,87,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 87; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 89 18 ]
+                symbol [ Graphics %tmp.71 89 31 39 ];
+                %tmp.71 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.72 89 40 57 ];
+                %tmp.72 = getv %tmp.71 :COLOR_TRANSPARENT;
+                putv self :background %tmp.72;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [color,88,18,23]; @symbol_type<0> = [Number,88,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [background,89,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 92; @symbol_moduledef = [system_icon_destructive__discard,92,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 92; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [filename,93,18,26]; @symbol_type<0> = [String,93,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_destructive__discard.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [dithering,94,18,27]; @symbol_type<0> = [String,94,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [packingFormat,95,18,31]; @symbol_type<0> = [String,95,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 98; @symbol_moduledef = [system_icon_dark__hint_action_menu,98,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 98; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [filename,99,18,26]; @symbol_type<0> = [String,99,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__hint_action_menu.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [dithering,100,18,27]; @symbol_type<0> = [String,100,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [packingFormat,101,18,31]; @symbol_type<0> = [String,101,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 104; @symbol_moduledef = [prompt_size__title,104,15,33]; ]
+        module prompt_size__title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 104; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [width,105,18,23]; @symbol_type<0> = [Number,105,27,33]; ]
+            const width as Number = 165;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [height,106,18,24]; @symbol_type<0> = [Number,106,28,34]; ]
+            const height as Number = 70;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 109; @symbol_moduledef = [confirmation_font__body,109,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 109; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 110 18 ]
+                symbol [ Graphics %tmp.73 110 34 42 ];
+                %tmp.73 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.74 110 43 62 ];
+                %tmp.74 = getv %tmp.73 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.75 110 63 71 ];
+                %tmp.75 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.76 110 72 92 ];
+                %tmp.76 = getv %tmp.75 :TEXT_JUSTIFY_VCENTER;
+                %tmp.77 = bitor %tmp.74 %tmp.76;
+                putv self :justification %tmp.77;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 111 18 ]
+                symbol [ Graphics %tmp.78 111 25 33 ];
+                %tmp.78 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.79 111 34 43 ];
+                %tmp.79 = getv %tmp.78 :FONT_TINY;
+                putv self :font %tmp.79;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [justification,110,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [font,111,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 114; @symbol_moduledef = [system_color_dark__background,114,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 114; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [color,115,18,23]; @symbol_type<0> = [Number,115,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [background,116,18,28]; @symbol_type<0> = [Number,116,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 119; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,119,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 119; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [exclude,120,18,25]; @symbol_type<0> = [Boolean,120,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 123; @symbol_moduledef = [system_size__launch_icon,123,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 123; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [scaleX,124,18,24]; @symbol_type<0> = [Number,124,28,34]; ]
+            const scaleX as Number = 70;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [scaleY,125,18,24]; @symbol_type<0> = [Number,125,28,34]; ]
+            const scaleY as Number = 70;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [scaleRelativeTo,126,18,33]; @symbol_type<0> = [String,126,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 129; @symbol_moduledef = [confirmation_input__confirm,129,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 129; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [y1,130,18,20]; @symbol_type<0> = [Number,130,24,30]; ]
+            const y1 as Number = 297;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [x1,131,18,20]; @symbol_type<0> = [Number,131,24,30]; ]
+            const x1 as Number = 72;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 132; @position = 18; @symbol_constdef = [y2,132,18,20]; @symbol_type<0> = [Number,132,24,30]; ]
+            const y2 as Number = 390;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 133; @position = 18; @symbol_constdef = [x2,133,18,20]; @symbol_type<0> = [Number,133,24,30]; ]
+            const x2 as Number = 318;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 136; @symbol_moduledef = [prompt_font__body_with_title,136,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 136; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 137 18 ]
+                symbol [ Graphics %tmp.80 137 34 42 ];
+                %tmp.80 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.81 137 43 62 ];
+                %tmp.81 = getv %tmp.80 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.81;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 138 18 ]
+                symbol [ Graphics %tmp.82 138 25 33 ];
+                %tmp.82 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.83 138 34 43 ];
+                %tmp.83 = getv %tmp.82 :FONT_TINY;
+                putv self :font %tmp.83;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [justification,137,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 138; @position = 18; @symbol_constdef = [font,138,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 141; @symbol_moduledef = [confirmation_loc__body,141,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [x,142,18,19]; @symbol_type<0> = [Number,142,23,29]; ]
+            const x as Number = 80;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [y,143,18,19]; @symbol_type<0> = [Number,143,23,29]; ]
+            const y as Number = 78;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 146; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,146,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [exclude,147,18,25]; @symbol_type<0> = [Boolean,147,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 150; @symbol_moduledef = [prompt_color_dark__background,150,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 150; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 151; @position = 18; @symbol_constdef = [color,151,18,23]; @symbol_type<0> = [Number,151,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 152; @position = 18; @symbol_constdef = [background,152,18,28]; @symbol_type<0> = [Number,152,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 155; @symbol_moduledef = [system_icon_destructive__hint_action_menu,155,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 155; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 156; @position = 18; @symbol_constdef = [filename,156,18,26]; @symbol_type<0> = [String,156,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_destructive__hint_action_menu.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 157; @position = 18; @symbol_constdef = [dithering,157,18,27]; @symbol_type<0> = [String,157,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [packingFormat,158,18,31]; @symbol_type<0> = [String,158,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 161; @symbol_moduledef = [system_loc__hint_action_menu,161,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 161; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 162; @position = 18; @symbol_constdef = [x,162,18,19]; @symbol_type<0> = [Number,162,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 163; @position = 18; @symbol_constdef = [horizontalJustification,163,18,41]; @symbol_type<0> = [String,163,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [y,164,18,19]; @symbol_type<0> = [Number,164,23,29]; ]
+            const y as Number = 318;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 167; @symbol_moduledef = [confirmation_icon__hint_confirm,167,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 167; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [filename,168,18,26]; @symbol_type<0> = [String,168,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [dithering,169,18,27]; @symbol_type<0> = [String,169,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 170; @position = 18; @symbol_constdef = [packingFormat,170,18,31]; @symbol_type<0> = [String,170,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 173; @symbol_moduledef = [system_loc__hint_button_left_middle,173,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 173; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [exclude,174,18,25]; @symbol_type<0> = [Boolean,174,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 177; @symbol_moduledef = [prompt_size__body_no_title,177,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 177; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 178; @position = 18; @symbol_constdef = [width,178,18,23]; @symbol_type<0> = [Number,178,27,33]; ]
+            const width as Number = 312;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 179; @position = 18; @symbol_constdef = [height,179,18,24]; @symbol_type<0> = [Number,179,28,34]; ]
+            const height as Number = 253;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 182; @symbol_moduledef = [system_icon_light__hint_button_left_top,182,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 182; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 183; @position = 18; @symbol_constdef = [exclude,183,18,25]; @symbol_type<0> = [Boolean,183,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 186; @symbol_moduledef = [prompt_color_light__background,186,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 186; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [color,187,18,23]; @symbol_type<0> = [Number,187,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 188; @position = 18; @symbol_constdef = [background,188,18,28]; @symbol_type<0> = [Number,188,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 191; @symbol_moduledef = [confirmation_input__delete,191,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 191; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 192 18 ]
+                symbol [ WatchUi %tmp.84 192 27 34 ];
+                %tmp.84 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.85 192 35 44 ];
+                %tmp.85 = getv %tmp.84 :KEY_ENTER;
+                putv self :button %tmp.85;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 192; @position = 18; @symbol_constdef = [button,192,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 195; @symbol_moduledef = [system_icon_dark__hint_button_left_top,195,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 195; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 196; @position = 18; @symbol_constdef = [exclude,196,18,25]; @symbol_type<0> = [Boolean,196,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 199; @symbol_moduledef = [system_input__action_menu,199,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 199; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [y1,200,18,20]; @symbol_type<0> = [Number,200,24,30]; ]
+            const y1 as Number = 318;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 201; @position = 18; @symbol_constdef = [x1,201,18,20]; @symbol_type<0> = [Number,201,24,30]; ]
+            const x1 as Number = 97;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 202; @position = 18; @symbol_constdef = [y2,202,18,20]; @symbol_type<0> = [Number,202,24,30]; ]
+            const y2 as Number = 390;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 203; @position = 18; @symbol_constdef = [x2,203,18,20]; @symbol_type<0> = [Number,203,24,30]; ]
+            const x2 as Number = 293;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 206; @symbol_moduledef = [system_icon_light__save,206,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 206; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 207; @position = 18; @symbol_constdef = [filename,207,18,26]; @symbol_type<0> = [String,207,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__save.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 208; @position = 18; @symbol_constdef = [compress,208,18,26]; @symbol_type<0> = [String,208,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [dithering,209,18,27]; @symbol_type<0> = [String,209,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [automaticPalette,210,18,34]; @symbol_type<0> = [String,210,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [packingFormat,211,18,31]; @symbol_type<0> = [String,211,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 214; @symbol_moduledef = [prompt_color_light__body,214,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 214; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 216 18 ]
+                symbol [ Graphics %tmp.86 216 31 39 ];
+                %tmp.86 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.87 216 40 57 ];
+                %tmp.87 = getv %tmp.86 :COLOR_TRANSPARENT;
+                putv self :background %tmp.87;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 215; @position = 18; @symbol_constdef = [color,215,18,23]; @symbol_type<0> = [Number,215,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [background,216,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 219; @symbol_moduledef = [system_loc__subwindow,219,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 219; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 220; @position = 18; @symbol_constdef = [exclude,220,18,25]; @symbol_type<0> = [Boolean,220,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 223; @symbol_moduledef = [system_icon_light__warning,223,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 223; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 224; @position = 18; @symbol_constdef = [filename,224,18,26]; @symbol_type<0> = [String,224,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__warning.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [compress,225,18,26]; @symbol_type<0> = [String,225,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [dithering,226,18,27]; @symbol_type<0> = [String,226,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [automaticPalette,227,18,34]; @symbol_type<0> = [String,227,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 228; @position = 18; @symbol_constdef = [packingFormat,228,18,31]; @symbol_type<0> = [String,228,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 231; @symbol_moduledef = [confirmation_color_light__body,231,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 231; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 233 18 ]
+                symbol [ Graphics %tmp.88 233 31 39 ];
+                %tmp.88 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.89 233 40 57 ];
+                %tmp.89 = getv %tmp.88 :COLOR_TRANSPARENT;
+                putv self :background %tmp.89;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [color,232,18,23]; @symbol_type<0> = [Number,232,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 233; @position = 18; @symbol_constdef = [background,233,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 236; @symbol_moduledef = [confirmation_icon_light__hint_keep,236,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 236; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 237; @position = 18; @symbol_constdef = [filename,237,18,26]; @symbol_type<0> = [String,237,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 238; @position = 18; @symbol_constdef = [dithering,238,18,27]; @symbol_type<0> = [String,238,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 239; @position = 18; @symbol_constdef = [packingFormat,239,18,31]; @symbol_type<0> = [String,239,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 242; @symbol_moduledef = [activity_color_light__background,242,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 242; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 243; @position = 18; @symbol_constdef = [color,243,18,23]; @symbol_type<0> = [Number,243,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 244; @position = 18; @symbol_constdef = [background,244,18,28]; @symbol_type<0> = [Number,244,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 247; @symbol_moduledef = [system_icon_positive__hint_button_right_top,247,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 247; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 248; @position = 18; @symbol_constdef = [filename,248,18,26]; @symbol_type<0> = [String,248,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [dithering,249,18,27]; @symbol_type<0> = [String,249,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 250; @position = 18; @symbol_constdef = [packingFormat,250,18,31]; @symbol_type<0> = [String,250,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 253; @symbol_moduledef = [system_size__screen,253,15,34]; ]
+        module system_size__screen {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 253; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 254; @position = 18; @symbol_constdef = [width,254,18,23]; @symbol_type<0> = [Number,254,27,33]; ]
+            const width as Number = 390;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 255; @position = 18; @symbol_constdef = [height,255,18,24]; @symbol_type<0> = [Number,255,28,34]; ]
+            const height as Number = 390;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 258; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,258,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 258; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 259; @position = 18; @symbol_constdef = [filename,259,18,26]; @symbol_type<0> = [String,259,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 260; @position = 18; @symbol_constdef = [dithering,260,18,27]; @symbol_type<0> = [String,260,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [packingFormat,261,18,31]; @symbol_type<0> = [String,261,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 264; @symbol_moduledef = [system_color_light__background,264,15,45]; ]
+        module system_color_light__background {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 264; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [color,265,18,23]; @symbol_type<0> = [Number,265,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [background,266,18,28]; @symbol_type<0> = [Number,266,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 269; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,269,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 270; @position = 18; @symbol_constdef = [filename,270,18,26]; @symbol_type<0> = [String,270,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 271; @position = 18; @symbol_constdef = [dithering,271,18,27]; @symbol_type<0> = [String,271,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 272; @position = 18; @symbol_constdef = [packingFormat,272,18,31]; @symbol_type<0> = [String,272,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 275; @symbol_moduledef = [confirmation_loc__hint_confirm,275,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 275; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [x,276,18,19]; @symbol_type<0> = [Number,276,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 277; @position = 18; @symbol_constdef = [horizontalJustification,277,18,41]; @symbol_type<0> = [String,277,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 278; @position = 18; @symbol_constdef = [y,278,18,19]; @symbol_type<0> = [Number,278,23,29]; ]
+            const y as Number = 297;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 281; @symbol_moduledef = [activity_color_dark__text,281,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 281; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 283 18 ]
+                symbol [ Graphics %tmp.90 283 31 39 ];
+                %tmp.90 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.91 283 40 57 ];
+                %tmp.91 = getv %tmp.90 :COLOR_TRANSPARENT;
+                putv self :background %tmp.91;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 282; @position = 18; @symbol_constdef = [color,282,18,23]; @symbol_type<0> = [Number,282,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 283; @position = 18; @symbol_constdef = [background,283,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 286; @symbol_moduledef = [confirmation_input__keep,286,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 286; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 287 18 ]
+                symbol [ WatchUi %tmp.92 287 27 34 ];
+                %tmp.92 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.93 287 35 42 ];
+                %tmp.93 = getv %tmp.92 :KEY_ESC;
+                putv self :button %tmp.93;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [button,287,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 290; @symbol_moduledef = [prompt_loc__body_with_title,290,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 290; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 291; @position = 18; @symbol_constdef = [x,291,18,19]; @symbol_type<0> = [Number,291,23,29]; ]
+            const x as Number = 39;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [y,292,18,19]; @symbol_type<0> = [Number,292,23,29]; ]
+            const y as Number = 98;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 295; @symbol_moduledef = [system_icon_dark__search,295,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 295; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 296; @position = 18; @symbol_constdef = [filename,296,18,26]; @symbol_type<0> = [String,296,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__search.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 297; @position = 18; @symbol_constdef = [compress,297,18,26]; @symbol_type<0> = [String,297,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [dithering,298,18,27]; @symbol_type<0> = [String,298,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [automaticPalette,299,18,34]; @symbol_type<0> = [String,299,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 300; @position = 18; @symbol_constdef = [packingFormat,300,18,31]; @symbol_type<0> = [String,300,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 303; @symbol_moduledef = [activity_color_light__text,303,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 303; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 305 18 ]
+                symbol [ Graphics %tmp.94 305 31 39 ];
+                %tmp.94 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.95 305 40 57 ];
+                %tmp.95 = getv %tmp.94 :COLOR_TRANSPARENT;
+                putv self :background %tmp.95;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 304; @position = 18; @symbol_constdef = [color,304,18,23]; @symbol_type<0> = [Number,304,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 305; @position = 18; @symbol_constdef = [background,305,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 308; @symbol_moduledef = [confirmation_icon__hint_keep,308,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 308; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 309; @position = 18; @symbol_constdef = [filename,309,18,26]; @symbol_type<0> = [String,309,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [dithering,310,18,27]; @symbol_type<0> = [String,310,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 311; @position = 18; @symbol_constdef = [packingFormat,311,18,31]; @symbol_type<0> = [String,311,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 314; @symbol_moduledef = [system_icon_dark__save,314,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 314; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 315; @position = 18; @symbol_constdef = [filename,315,18,26]; @symbol_type<0> = [String,315,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__save.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 316; @position = 18; @symbol_constdef = [compress,316,18,26]; @symbol_type<0> = [String,316,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 317; @position = 18; @symbol_constdef = [dithering,317,18,27]; @symbol_type<0> = [String,317,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [automaticPalette,318,18,34]; @symbol_type<0> = [String,318,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 319; @position = 18; @symbol_constdef = [packingFormat,319,18,31]; @symbol_type<0> = [String,319,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 322; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,322,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 322; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [exclude,323,18,25]; @symbol_type<0> = [Boolean,323,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 326; @symbol_moduledef = [system_icon_light__search,326,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 326; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 327; @position = 18; @symbol_constdef = [filename,327,18,26]; @symbol_type<0> = [String,327,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__search.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 328; @position = 18; @symbol_constdef = [compress,328,18,26]; @symbol_type<0> = [String,328,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [dithering,329,18,27]; @symbol_type<0> = [String,329,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [automaticPalette,330,18,34]; @symbol_type<0> = [String,330,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [packingFormat,331,18,31]; @symbol_type<0> = [String,331,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 334; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,334,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 334; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 335; @position = 18; @symbol_constdef = [exclude,335,18,25]; @symbol_type<0> = [Boolean,335,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 338; @symbol_moduledef = [system_icon_positive__hint_button_left_top,338,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 338; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 339; @position = 18; @symbol_constdef = [exclude,339,18,25]; @symbol_type<0> = [Boolean,339,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 342; @symbol_moduledef = [system_loc__hint_button_right_bottom,342,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 342; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [x,343,18,19]; @symbol_type<0> = [Number,343,23,29]; ]
+            const x as Number = 304;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 344; @position = 18; @symbol_constdef = [y,344,18,19]; @symbol_type<0> = [Number,344,23,29]; ]
+            const y as Number = 234;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 347; @symbol_moduledef = [confirmation_icon_dark__hint_reject,347,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 347; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [filename,348,18,26]; @symbol_type<0> = [String,348,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [dithering,349,18,27]; @symbol_type<0> = [String,349,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 350; @position = 18; @symbol_constdef = [packingFormat,350,18,31]; @symbol_type<0> = [String,350,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 353; @symbol_moduledef = [confirmation_color_dark__body,353,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 353; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 355 18 ]
+                symbol [ Graphics %tmp.96 355 31 39 ];
+                %tmp.96 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.97 355 40 57 ];
+                %tmp.97 = getv %tmp.96 :COLOR_TRANSPARENT;
+                putv self :background %tmp.97;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [color,354,18,23]; @symbol_type<0> = [Number,354,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 355; @position = 18; @symbol_constdef = [background,355,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 358; @symbol_moduledef = [confirmation_icon_light__hint_confirm,358,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 358; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [filename,359,18,26]; @symbol_type<0> = [String,359,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 360; @position = 18; @symbol_constdef = [dithering,360,18,27]; @symbol_type<0> = [String,360,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 361; @position = 18; @symbol_constdef = [packingFormat,361,18,31]; @symbol_type<0> = [String,361,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 364; @symbol_moduledef = [prompt_color_dark__title,364,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 364; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 366 18 ]
+                symbol [ Graphics %tmp.98 366 31 39 ];
+                %tmp.98 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.99 366 40 57 ];
+                %tmp.99 = getv %tmp.98 :COLOR_TRANSPARENT;
+                putv self :background %tmp.99;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 365; @position = 18; @symbol_constdef = [color,365,18,23]; @symbol_type<0> = [Number,365,27,33]; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 366; @position = 18; @symbol_constdef = [background,366,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 369; @symbol_moduledef = [system_icon_destructive__cancel,369,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 369; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 370; @position = 18; @symbol_constdef = [filename,370,18,26]; @symbol_type<0> = [String,370,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_destructive__cancel.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 371; @position = 18; @symbol_constdef = [dithering,371,18,27]; @symbol_type<0> = [String,371,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 372; @position = 18; @symbol_constdef = [packingFormat,372,18,31]; @symbol_type<0> = [String,372,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 375; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,375,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 375; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 376; @position = 18; @symbol_constdef = [filename,376,18,26]; @symbol_type<0> = [String,376,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 377; @position = 18; @symbol_constdef = [dithering,377,18,27]; @symbol_type<0> = [String,377,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [packingFormat,378,18,31]; @symbol_type<0> = [String,378,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 381; @symbol_moduledef = [prompt_loc__title,381,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 381; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 382; @position = 18; @symbol_constdef = [x,382,18,19]; @symbol_type<0> = [Number,382,23,29]; ]
+            const x as Number = 113;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 383; @position = 18; @symbol_constdef = [y,383,18,19]; @symbol_type<0> = [Number,383,23,29]; ]
+            const y as Number = 19;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 386; @symbol_moduledef = [confirmation_font_enhanced_readability__body,386,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 386; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 387 18 ]
+                symbol [ Graphics %tmp.100 387 34 42 ];
+                %tmp.100 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.101 387 43 62 ];
+                %tmp.101 = getv %tmp.100 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.102 387 63 71 ];
+                %tmp.102 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.103 387 72 92 ];
+                %tmp.103 = getv %tmp.102 :TEXT_JUSTIFY_VCENTER;
+                %tmp.104 = bitor %tmp.101 %tmp.103;
+                putv self :justification %tmp.104;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 388 18 ]
+                symbol [ Graphics %tmp.105 388 25 33 ];
+                %tmp.105 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.106 388 34 44 ];
+                %tmp.106 = getv %tmp.105 :FONT_SMALL;
+                putv self :font %tmp.106;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [justification,387,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 388; @position = 18; @symbol_constdef = [font,388,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 391; @symbol_moduledef = [prompt_color_light__title,391,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 391; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 393 18 ]
+                symbol [ Graphics %tmp.107 393 31 39 ];
+                %tmp.107 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.108 393 40 57 ];
+                %tmp.108 = getv %tmp.107 :COLOR_TRANSPARENT;
+                putv self :background %tmp.108;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [color,392,18,23]; @symbol_type<0> = [Number,392,27,33]; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [background,393,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 396; @symbol_moduledef = [system_icon_dark__hint_button_right_top,396,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 396; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 397; @position = 18; @symbol_constdef = [filename,397,18,26]; @symbol_type<0> = [String,397,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [dithering,398,18,27]; @symbol_type<0> = [String,398,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [packingFormat,399,18,31]; @symbol_type<0> = [String,399,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 402; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,402,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 402; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [exclude,403,18,25]; @symbol_type<0> = [Boolean,403,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 406; @symbol_moduledef = [confirmation_icon_dark__hint_keep,406,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 406; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 407; @position = 18; @symbol_constdef = [filename,407,18,26]; @symbol_type<0> = [String,407,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 408; @position = 18; @symbol_constdef = [dithering,408,18,27]; @symbol_type<0> = [String,408,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 409; @position = 18; @symbol_constdef = [packingFormat,409,18,31]; @symbol_type<0> = [String,409,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 412; @symbol_moduledef = [system_icon_light__cancel,412,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 412; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 413; @position = 18; @symbol_constdef = [filename,413,18,26]; @symbol_type<0> = [String,413,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__cancel.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 414; @position = 18; @symbol_constdef = [compress,414,18,26]; @symbol_type<0> = [String,414,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [dithering,415,18,27]; @symbol_type<0> = [String,415,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 416; @position = 18; @symbol_constdef = [automaticPalette,416,18,34]; @symbol_type<0> = [String,416,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 417; @position = 18; @symbol_constdef = [packingFormat,417,18,31]; @symbol_type<0> = [String,417,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 420; @symbol_moduledef = [confirmation_icon_light__hint_reject,420,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 420; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 421; @position = 18; @symbol_constdef = [filename,421,18,26]; @symbol_type<0> = [String,421,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 422; @position = 18; @symbol_constdef = [dithering,422,18,27]; @symbol_type<0> = [String,422,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 423; @position = 18; @symbol_constdef = [packingFormat,423,18,31]; @symbol_type<0> = [String,423,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 426; @symbol_moduledef = [system_icon_light__about,426,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 426; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 427; @position = 18; @symbol_constdef = [filename,427,18,26]; @symbol_type<0> = [String,427,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__about.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 428; @position = 18; @symbol_constdef = [compress,428,18,26]; @symbol_type<0> = [String,428,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 429; @position = 18; @symbol_constdef = [dithering,429,18,27]; @symbol_type<0> = [String,429,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [automaticPalette,430,18,34]; @symbol_type<0> = [String,430,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [packingFormat,431,18,31]; @symbol_type<0> = [String,431,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 434; @symbol_moduledef = [system_size__toast_icon,434,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 434; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 435; @position = 18; @symbol_constdef = [scaleX,435,18,24]; @symbol_type<0> = [Number,435,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [scaleY,436,18,24]; @symbol_type<0> = [Number,436,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 437; @position = 18; @symbol_constdef = [scaleRelativeTo,437,18,33]; @symbol_type<0> = [String,437,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 440; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,440,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 440; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [exclude,441,18,25]; @symbol_type<0> = [Boolean,441,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 444; @symbol_moduledef = [confirmation_icon__hint_reject,444,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 445; @position = 18; @symbol_constdef = [filename,445,18,26]; @symbol_type<0> = [String,445,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 446; @position = 18; @symbol_constdef = [dithering,446,18,27]; @symbol_type<0> = [String,446,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [packingFormat,447,18,31]; @symbol_type<0> = [String,447,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 450; @symbol_moduledef = [system_icon_light__hint_action_menu,450,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 450; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 451; @position = 18; @symbol_constdef = [filename,451,18,26]; @symbol_type<0> = [String,451,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__hint_action_menu.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 452; @position = 18; @symbol_constdef = [dithering,452,18,27]; @symbol_type<0> = [String,452,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 453; @position = 18; @symbol_constdef = [packingFormat,453,18,31]; @symbol_type<0> = [String,453,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 456; @symbol_moduledef = [system_icon_light__hint_button_right_middle,456,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 456; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [exclude,457,18,25]; @symbol_type<0> = [Boolean,457,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 460; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,460,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 460; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 461; @position = 18; @symbol_constdef = [exclude,461,18,25]; @symbol_type<0> = [Boolean,461,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 464; @symbol_moduledef = [confirmation_loc__hint_reject,464,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 464; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 465; @position = 18; @symbol_constdef = [x,465,18,19]; @symbol_type<0> = [Number,465,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 466; @position = 18; @symbol_constdef = [horizontalJustification,466,18,41]; @symbol_type<0> = [String,466,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [y,467,18,19]; @symbol_type<0> = [Number,467,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 470; @symbol_moduledef = [confirmation_icon_dark__hint_delete,470,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 470; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 471; @position = 18; @symbol_constdef = [filename,471,18,26]; @symbol_type<0> = [String,471,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 472; @position = 18; @symbol_constdef = [dithering,472,18,27]; @symbol_type<0> = [String,472,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [packingFormat,473,18,31]; @symbol_type<0> = [String,473,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 476; @symbol_moduledef = [activity_color_dark__background,476,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [color,477,18,23]; @symbol_type<0> = [Number,477,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 478; @position = 18; @symbol_constdef = [background,478,18,28]; @symbol_type<0> = [Number,478,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 481; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,481,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 481; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 482; @position = 18; @symbol_constdef = [exclude,482,18,25]; @symbol_type<0> = [Boolean,482,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 485; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,485,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 485; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 486; @position = 18; @symbol_constdef = [exclude,486,18,25]; @symbol_type<0> = [Boolean,486,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 489; @symbol_moduledef = [system_size__menu_icon,489,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 489; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [scaleX,490,18,24]; @symbol_type<0> = [Number,490,28,34]; ]
+            const scaleX as Number = 45;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 491; @position = 18; @symbol_constdef = [scaleY,491,18,24]; @symbol_type<0> = [Number,491,28,34]; ]
+            const scaleY as Number = 45;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 492; @position = 18; @symbol_constdef = [scaleRelativeTo,492,18,33]; @symbol_type<0> = [String,492,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 495; @symbol_moduledef = [system_icon_destructive__warning,495,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 495; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 496; @position = 18; @symbol_constdef = [filename,496,18,26]; @symbol_type<0> = [String,496,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_destructive__warning.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [dithering,497,18,27]; @symbol_type<0> = [String,497,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 498; @position = 18; @symbol_constdef = [packingFormat,498,18,31]; @symbol_type<0> = [String,498,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 501; @symbol_moduledef = [system_loc__hint_button_right_middle,501,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 501; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [exclude,502,18,25]; @symbol_type<0> = [Boolean,502,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 505; @symbol_moduledef = [system_icon_dark__cancel,505,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 505; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 506; @position = 18; @symbol_constdef = [filename,506,18,26]; @symbol_type<0> = [String,506,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__cancel.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 507; @position = 18; @symbol_constdef = [compress,507,18,26]; @symbol_type<0> = [String,507,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [dithering,508,18,27]; @symbol_type<0> = [String,508,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [automaticPalette,509,18,34]; @symbol_type<0> = [String,509,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [packingFormat,510,18,31]; @symbol_type<0> = [String,510,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 513; @symbol_moduledef = [prompt_size__body_with_title,513,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 513; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [width,514,18,23]; @symbol_type<0> = [Number,514,27,33]; ]
+            const width as Number = 312;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [height,515,18,24]; @symbol_type<0> = [Number,515,28,34]; ]
+            const height as Number = 215;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 518; @symbol_moduledef = [system_loc__hint_button_right_top,518,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 518; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 519; @position = 18; @symbol_constdef = [x,519,18,19]; @symbol_type<0> = [Number,519,23,29]; ]
+            const x as Number = 318;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [y,520,18,19]; @symbol_type<0> = [Number,520,23,29]; ]
+            const y as Number = 59;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 523; @symbol_moduledef = [system_color_light__text,523,15,39]; ]
+        module system_color_light__text {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 523; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 525 18 ]
+                symbol [ Graphics %tmp.109 525 31 39 ];
+                %tmp.109 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.110 525 40 57 ];
+                %tmp.110 = getv %tmp.109 :COLOR_TRANSPARENT;
+                putv self :background %tmp.110;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 524; @position = 18; @symbol_constdef = [color,524,18,23]; @symbol_type<0> = [Number,524,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 525; @position = 18; @symbol_constdef = [background,525,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 528; @symbol_moduledef = [system_icon_light__check,528,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 528; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 529; @position = 18; @symbol_constdef = [filename,529,18,26]; @symbol_type<0> = [String,529,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__check.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 530; @position = 18; @symbol_constdef = [compress,530,18,26]; @symbol_type<0> = [String,530,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 531; @position = 18; @symbol_constdef = [dithering,531,18,27]; @symbol_type<0> = [String,531,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [automaticPalette,532,18,34]; @symbol_type<0> = [String,532,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [packingFormat,533,18,31]; @symbol_type<0> = [String,533,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 536; @symbol_moduledef = [confirmation_input__reject,536,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 536; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [y1,537,18,20]; @symbol_type<0> = [Number,537,24,30]; ]
+            const y1 as Number = 0;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 538; @position = 18; @symbol_constdef = [x1,538,18,20]; @symbol_type<0> = [Number,538,24,30]; ]
+            const x1 as Number = 97;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 539; @position = 18; @symbol_constdef = [y2,539,18,20]; @symbol_type<0> = [Number,539,24,30]; ]
+            const y2 as Number = 76;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 540; @position = 18; @symbol_constdef = [x2,540,18,20]; @symbol_type<0> = [Number,540,24,30]; ]
+            const x2 as Number = 293;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 543; @symbol_moduledef = [system_icon_light__revert,543,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 543; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [filename,544,18,26]; @symbol_type<0> = [String,544,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__revert.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 545; @position = 18; @symbol_constdef = [compress,545,18,26]; @symbol_type<0> = [String,545,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 546; @position = 18; @symbol_constdef = [dithering,546,18,27]; @symbol_type<0> = [String,546,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 547; @position = 18; @symbol_constdef = [automaticPalette,547,18,34]; @symbol_type<0> = [String,547,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 548; @position = 18; @symbol_constdef = [packingFormat,548,18,31]; @symbol_type<0> = [String,548,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 551; @symbol_moduledef = [system_size__subwindow,551,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 551; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 552; @position = 18; @symbol_constdef = [exclude,552,18,25]; @symbol_type<0> = [Boolean,552,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 555; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,555,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 555; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [exclude,556,18,25]; @symbol_type<0> = [Boolean,556,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 559; @symbol_moduledef = [system_icon_dark__check,559,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 559; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [filename,560,18,26]; @symbol_type<0> = [String,560,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__check.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [compress,561,18,26]; @symbol_type<0> = [String,561,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 562; @position = 18; @symbol_constdef = [dithering,562,18,27]; @symbol_type<0> = [String,562,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 563; @position = 18; @symbol_constdef = [automaticPalette,563,18,34]; @symbol_type<0> = [String,563,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 564; @position = 18; @symbol_constdef = [packingFormat,564,18,31]; @symbol_type<0> = [String,564,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 567; @symbol_moduledef = [confirmation_loc__hint_keep,567,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 567; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [x,568,18,19]; @symbol_type<0> = [Number,568,23,29]; ]
+            const x as Number = 304;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [y,569,18,19]; @symbol_type<0> = [Number,569,23,29]; ]
+            const y as Number = 234;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 572; @symbol_moduledef = [confirmation_loc__hint_delete,572,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 572; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [x,573,18,19]; @symbol_type<0> = [Number,573,23,29]; ]
+            const x as Number = 309;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [y,574,18,19]; @symbol_type<0> = [Number,574,23,29]; ]
+            const y as Number = 47;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 577; @symbol_moduledef = [system_icon_positive__hint_action_menu,577,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 577; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 578; @position = 18; @symbol_constdef = [filename,578,18,26]; @symbol_type<0> = [String,578,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_positive__hint_action_menu.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [dithering,579,18,27]; @symbol_type<0> = [String,579,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [packingFormat,580,18,31]; @symbol_type<0> = [String,580,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 583; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,583,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 583; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 584; @position = 18; @symbol_constdef = [exclude,584,18,25]; @symbol_type<0> = [Boolean,584,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 587; @symbol_moduledef = [system_icon_light__hint_button_left_middle,587,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 587; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 588; @position = 18; @symbol_constdef = [exclude,588,18,25]; @symbol_type<0> = [Boolean,588,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 591; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,591,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 591; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [filename,592,18,26]; @symbol_type<0> = [String,592,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 593; @position = 18; @symbol_constdef = [dithering,593,18,27]; @symbol_type<0> = [String,593,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 594; @position = 18; @symbol_constdef = [packingFormat,594,18,31]; @symbol_type<0> = [String,594,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 597; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,597,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 597; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [filename,598,18,26]; @symbol_type<0> = [String,598,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 599; @position = 18; @symbol_constdef = [dithering,599,18,27]; @symbol_type<0> = [String,599,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [packingFormat,600,18,31]; @symbol_type<0> = [String,600,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 603; @symbol_moduledef = [system_icon_dark__revert,603,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 603; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [filename,604,18,26]; @symbol_type<0> = [String,604,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__revert.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 605; @position = 18; @symbol_constdef = [compress,605,18,26]; @symbol_type<0> = [String,605,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 606; @position = 18; @symbol_constdef = [dithering,606,18,27]; @symbol_type<0> = [String,606,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [automaticPalette,607,18,34]; @symbol_type<0> = [String,607,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [packingFormat,608,18,31]; @symbol_type<0> = [String,608,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 611; @symbol_moduledef = [confirmation_icon_light__hint_delete,611,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 611; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [filename,612,18,26]; @symbol_type<0> = [String,612,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [dithering,613,18,27]; @symbol_type<0> = [String,613,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [packingFormat,614,18,31]; @symbol_type<0> = [String,614,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 617; @symbol_moduledef = [system_icon_dark__question,617,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 617; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [filename,618,18,26]; @symbol_type<0> = [String,618,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__question.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [compress,619,18,26]; @symbol_type<0> = [String,619,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [dithering,620,18,27]; @symbol_type<0> = [String,620,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [automaticPalette,621,18,34]; @symbol_type<0> = [String,621,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [packingFormat,622,18,31]; @symbol_type<0> = [String,622,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 625; @symbol_moduledef = [system_icon_light__discard,625,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 625; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [filename,626,18,26]; @symbol_type<0> = [String,626,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__discard.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [compress,627,18,26]; @symbol_type<0> = [String,627,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [dithering,628,18,27]; @symbol_type<0> = [String,628,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [automaticPalette,629,18,34]; @symbol_type<0> = [String,629,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [packingFormat,630,18,31]; @symbol_type<0> = [String,630,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 633; @symbol_moduledef = [device_info,633,15,26]; ]
+        module device_info {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 633; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 635 18 ]
+                symbol [ Toybox %tmp.112 635 32 38 ];
+                %tmp.112 = getv ? :Toybox;
+                symbol [ System %tmp.113 635 39 45 ];
+                %tmp.113 = getv %tmp.112 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.114 635 46 64 ];
+                %tmp.114 = getv %tmp.113 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.114;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 634; @position = 18; @symbol_constdef = [screenWidth,634,18,29]; @symbol_type<0> = [Number,634,33,39]; ]
+            const screenWidth as Number = 390;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [screenShape,635,18,29]; ]
+            const screenShape;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [hasNightMode,636,18,30]; @symbol_type<0> = [Boolean,636,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 637; @position = 18; @symbol_constdef = [hasGpu,637,18,24]; @symbol_type<0> = [Boolean,637,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 638; @position = 18; @symbol_constdef = [screenHeight,638,18,30]; @symbol_type<0> = [Number,638,34,40]; ]
+            const screenHeight as Number = 390;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [hasTouchScreen,639,18,32]; @symbol_type<0> = [Boolean,639,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,640,18,44]; @symbol_type<0> = [Boolean,640,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = true;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 643; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,643,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 643; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [filename,644,18,26]; @symbol_type<0> = [String,644,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [dithering,645,18,27]; @symbol_type<0> = [String,645,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [packingFormat,646,18,31]; @symbol_type<0> = [String,646,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 649; @symbol_moduledef = [prompt_font__body_no_title,649,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 649; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 650 18 ]
+                symbol [ Graphics %tmp.115 650 34 42 ];
+                %tmp.115 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.116 650 43 62 ];
+                %tmp.116 = getv %tmp.115 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.117 650 63 71 ];
+                %tmp.117 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.118 650 72 92 ];
+                %tmp.118 = getv %tmp.117 :TEXT_JUSTIFY_VCENTER;
+                %tmp.119 = bitor %tmp.116 %tmp.118;
+                putv self :justification %tmp.119;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 651 18 ]
+                symbol [ Graphics %tmp.120 651 25 33 ];
+                %tmp.120 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.121 651 34 43 ];
+                %tmp.121 = getv %tmp.120 :FONT_TINY;
+                putv self :font %tmp.121;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [justification,650,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 651; @position = 18; @symbol_constdef = [font,651,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 654; @symbol_moduledef = [prompt_size__title_icon,654,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 654; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [scaleX,655,18,24]; @symbol_type<0> = [Float,655,28,33]; ]
+            const scaleX as Float = 0.12;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [scaleRelativeTo,656,18,33]; @symbol_type<0> = [String,656,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 659; @symbol_moduledef = [system_icon_dark__warning,659,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 659; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 660; @position = 18; @symbol_constdef = [filename,660,18,26]; @symbol_type<0> = [String,660,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_dark__warning.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 661; @position = 18; @symbol_constdef = [compress,661,18,26]; @symbol_type<0> = [String,661,30,36]; ]
+            const compress as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 662; @position = 18; @symbol_constdef = [dithering,662,18,27]; @symbol_type<0> = [String,662,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 663; @position = 18; @symbol_constdef = [automaticPalette,663,18,34]; @symbol_type<0> = [String,663,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [packingFormat,664,18,31]; @symbol_type<0> = [String,664,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 667; @symbol_moduledef = [prompt_loc__title_icon,667,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 667; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 668; @position = 18; @symbol_constdef = [x,668,18,19]; @symbol_type<0> = [Number,668,23,29]; ]
+            const x as Number = 195;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 669; @position = 18; @symbol_constdef = [y,669,18,19]; @symbol_type<0> = [Number,669,23,29]; ]
+            const y as Number = 39;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 670; @position = 18; @symbol_constdef = [horizontalJustification,670,18,41]; @symbol_type<0> = [String,670,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 671; @position = 18; @symbol_constdef = [verticalJustification,671,18,39]; @symbol_type<0> = [String,671,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 674; @symbol_moduledef = [prompt_font_enhanced_readability__title,674,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 674; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 675 18 ]
+                symbol [ Graphics %tmp.122 675 34 42 ];
+                %tmp.122 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.123 675 43 62 ];
+                %tmp.123 = getv %tmp.122 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.124 675 63 71 ];
+                %tmp.124 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.125 675 72 92 ];
+                %tmp.125 = getv %tmp.124 :TEXT_JUSTIFY_VCENTER;
+                %tmp.126 = bitor %tmp.123 %tmp.125;
+                putv self :justification %tmp.126;
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 676 18 ]
+                symbol [ Graphics %tmp.127 676 25 33 ];
+                %tmp.127 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.128 676 34 43 ];
+                %tmp.128 = getv %tmp.127 :FONT_TINY;
+                putv self :font %tmp.128;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 675; @position = 18; @symbol_constdef = [justification,675,18,31]; ]
+            const justification;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 676; @position = 18; @symbol_constdef = [font,676,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 679; @symbol_moduledef = [prompt_color_dark__body,679,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 679; ]
+            <init> {
+[ "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen" 681 18 ]
+                symbol [ Graphics %tmp.129 681 31 39 ];
+                %tmp.129 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.130 681 40 57 ];
+                %tmp.130 = getv %tmp.129 :COLOR_TRANSPARENT;
+                putv self :background %tmp.130;
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 680; @position = 18; @symbol_constdef = [color,680,18,23]; @symbol_type<0> = [Number,680,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 681; @position = 18; @symbol_constdef = [background,681,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 684; @symbol_moduledef = [confirmation_icon__hint_delete,684,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 684; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 685; @position = 18; @symbol_constdef = [filename,685,18,26]; @symbol_type<0> = [String,685,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 686; @position = 18; @symbol_constdef = [dithering,686,18,27]; @symbol_type<0> = [String,686,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 687; @position = 18; @symbol_constdef = [packingFormat,687,18,31]; @symbol_type<0> = [String,687,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 690; @symbol_moduledef = [system_icon_light__hint_button_right_top,690,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 690; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 691; @position = 18; @symbol_constdef = [filename,691,18,26]; @symbol_type<0> = [String,691,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 692; @position = 18; @symbol_constdef = [dithering,692,18,27]; @symbol_type<0> = [String,692,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 693; @position = 18; @symbol_constdef = [packingFormat,693,18,31]; @symbol_type<0> = [String,693,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 696; @symbol_moduledef = [confirmation_size__body,696,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 696; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 697; @position = 18; @symbol_constdef = [width,697,18,23]; @symbol_type<0> = [Number,697,27,33]; ]
+            const width as Number = 231;
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 698; @position = 18; @symbol_constdef = [height,698,18,24]; @symbol_type<0> = [Number,698,28,34]; ]
+            const height as Number = 234;
+        }
+        [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 701; @symbol_moduledef = [system_icon_positive__check,701,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 701; ]
+            <init> {
+            }
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 702; @position = 18; @symbol_constdef = [filename,702,18,26]; @symbol_type<0> = [String,702,30,36]; ]
+            const filename as String = "C:\\Users\\steve\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\vivoactive5\\system_icon_positive__check.svg";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 703; @position = 18; @symbol_constdef = [dithering,703,18,27]; @symbol_type<0> = [String,703,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 704; @position = 18; @symbol_constdef = [packingFormat,704,18,31]; @symbol_type<0> = [String,704,35,41]; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "c:\temp\CregFace\CregFace\bin\gen\006-B4426-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

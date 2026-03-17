@@ -1,0 +1,33 @@
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 21; @symbol_classdef = [CregFaceDelegate,21,6,22]; @symbol_extends<0> = [WatchUi,21,31,38]; @symbol_extends<1> = [WatchFaceDelegate,21,39,56]; ]
+class CregFaceDelegate extends WatchUi.WatchFaceDelegate {
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 21; ]
+    <init> {
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 21; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 23; @symbol_functiondef = [initialize,23,13,23]; ]
+    function initialize() as Void {
+C__temp_CregFace_CregFace_source_CregFaceDelegate_mc_23_26_25_4_start:
+[ "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc" 24 8 ]
+        symbol [ WatchFaceDelegate %tmp.2 24 8 25 ];
+        %tmp.2 = getv ? :WatchFaceDelegate;
+        symbol [ initialize %tmp.3 24 26 36 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__temp_CregFace_CregFace_source_CregFaceDelegate_mc_23_26_25_4_stop:
+    }
+    [ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 30; @symbol_functiondef = [onPowerBudgetExceeded,30,13,34]; @symbol_param<0> = [powerInfo,30,35,44]; @symbol_param<0>_type<0> = [WatchUi,30,48,55]; @symbol_param<0>_type<1> = [WatchFacePowerInfo,30,56,74]; ]
+    function onPowerBudgetExceeded(powerInfo as WatchUi.WatchFacePowerInfo) as Void {
+    }
+}
+[ @file = "C:\temp\CregFace\CregFace\source\CregFaceDelegate.mc"; @line = 1; ]
+<init> {
+}
