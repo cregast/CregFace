@@ -6,432 +6,360 @@ import Toybox.Time;
 import Toybox.Time.Gregorian;
 import Toybox.WatchUi;
 
-// ---------------------------------------------------------------------------
-// CregFace — Low-Power Digital/Analog Watchface for Garmin Vivoactive 5
-//
-//   AWAKE  — Analog watchface with seconds hand and complications:
-//              At 12: digital time
-//              At 3: today's day and date in the format "Wed 4" or "Thu 5." Black text on a white background (emulating a cutout on a real watch)
-//              At 6: steps taken today, responsive notification light
-//              At 9: watch's battery percentage
-//            Full redraw every minute via onUpdate().
-//            Per-second seconds-hand tick via onPartialUpdate() with a tight bounding-box clip region.
-//
-//   SLEEP  — Large digital time with today's date beneath
-//            onUpdate() fires once per minute.
-//            The positions change every minute to reduce risk of burn-in.
-//
-// ---------------------------------------------------------------------------
-
 class CregFaceView extends WatchUi.WatchFace {
 
-    // Layout state
-    private var mCenterX as Number = 0;
-    private var mCenterY as Number = 0;
-    private var mRadius  as Number = 0;
+    // Layout
+    private var mCenterX = 0;
+    private var mCenterY = 0;
+    private var mRadius  = 0;
 
-    // Buffered bitmap for the static dial
-    // Allocated once in onLayout(); re-used every frame.
-    private var mDialBuffer as Graphics.BufferedBitmap? = null;
+    // Dial asset
+    private var mDialBitmap as Graphics.BitmapReference?;
+    private var mDialBuffer as Graphics.BufferedBitmap?;
 
-    // Sleep / wake state
-    private var mAwake as Boolean = true;
+    // State
+    private var mAwake = true;
+    private var mPrevSecond = -1;
 
-    // Partial-update book-keeping
-    // We must remember the previous second-hand endpoint so we can compute the
-    // union clip region (old position ∪ new position) and erase the old line.
-    private var mPrevSecX      as Float   = 0.0;
-    private var mPrevSecY      as Float   = 0.0;
-    private var mPrevSecValid  as Boolean = false;
+    // Tables
+    private var mSin as Array<Float> = new Array<Float>[60];
+    private var mCos as Array<Float> = new Array<Float>[60];
+    private var mSecTable  as Array<Array<Number>> = new Array<Array<Number>>[60];
+    private var mMinTable  as Array<Array<Number>> = new Array<Array<Number>>[60];
+    private var mHourTable as Array<Array<Number>> = new Array<Array<Number>>[720];
 
     // Date cache
-    private var mDayDateText      as String? = null; // "Wed 4"
-    private var mDayMonthDateText as String? = null; // "Wed, Mar 4"
-    private var mLastDateDay      as Number? = null;
+    private var mDayDateText      = "";
+    private var mDayMonthDateText = "";
+    private var mLastDateDay      = -1;
 
-    // Pre-computed text dims (cached after layout)
-    private var mDateDims     as Array<Number>? = null;
-    private var mIdleTimeDims as Array<Number>? = null;
+    private const WEEK_DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+    private const MONTH_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-    // Constants
-    private const WEEK_DAYS   = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-    private const MONTH_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+    private const TWO_PI = 2.0 * Math.PI;
 
-    // Hand geometry (fraction of mRadius)
-    private const HOUR_LEN = 0.50f;
-    private const MIN_LEN  = 0.78f;
-    private const SEC_LEN  = 0.88f;
-    private const SEC_TAIL = 0.15f;  // tail behind center for seconds hand
+    private const HOUR_LEN = 0.50;
+    private const MIN_LEN  = 0.78;
+    private const SEC_LEN  = 0.88;
+    private const SEC_TAIL = 0.15;
 
-    // Initialize
+    // Height offsets for centering, from dc.getTextDimensions("A", Graphics.FONT_LARGE)[1] / 2;
+    private const mFontLargeHeightOffset        = 32;
+    private const mFontNumberMediumHeightOffset = 50;
+    private const mFontXTinyHeightOffset        = 16;
+    private var mDayDateTextDimensions as Array<Number> = [91, 32];
+
+    private const mSecondHandWidth = 2;
+    private const mMinuteHandWidth = 4;
+    private const mHourHandWidth   = 6;
+
+    //#region System Functions
     function initialize() {
         WatchFace.initialize();
+        mDialBitmap = WatchUi.loadResource(Rez.Drawables.DialBackground) as Graphics.BitmapReference;
     }
 
-    // Layout / resource init
-    // Called once (or on orientation change). Heavy work lives here so it is not repeated every draw cycle.
     function onLayout(dc as Graphics.Dc) as Void {
-        mCenterX = dc.getWidth()  / 2;
-        mCenterY = dc.getHeight() / 2;
-        mRadius  = (mCenterX < mCenterY ? mCenterX : mCenterY) - 10;
-
-        // Seed the date cache (avoids a null on first draw)
-        updateDateCache();
-
-        // Cache text dimensions used for layout maths
-        mDateDims     = dc.getTextDimensions("Wed 4",  Graphics.FONT_XTINY);
-        mIdleTimeDims = dc.getTextDimensions("12:59",  Graphics.FONT_NUMBER_MEDIUM);
-
-        // Render the static dial into a buffered bitmap once
+        setDimensions(dc);
+        buildTables();
         buildDialBuffer(dc);
-    }
-
-    // Visibility callbacks
-    function onShow() as Void {}
-    function onHide() as Void {}
-
-    // Sleep / wake
-    function onExitSleep() as Void {
-        mAwake = true;
-        mPrevSecValid = false;   // force a full redraw of sec hand on first tick
-        WatchUi.requestUpdate();
+        updateDateCache(dc);
     }
 
     function onEnterSleep() as Void {
-        mAwake = false;
-        mPrevSecValid = false;
-        WatchUi.requestUpdate();
+        handleSleep(false);
     }
 
-    // Full redraw (every minute in sleep; every second awake via OS)
+    function onExitSleep() as Void {
+        handleSleep(true);
+    }
+
+    // Full redraw - triggered once per minute or on sleep/wake transition
     function onUpdate(dc as Graphics.Dc) as Void {
-        // Refresh date string if the calendar day has rolled over
-        var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        if (mLastDateDay == null || (mLastDateDay as Number) != info.day) {
-            updateDateCache();
-        }
-
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        dc.clear();
-
-        if (mAwake) {
-            drawActiveFace(dc);
-        } else {
-            drawIdleFace(dc);
-        }
+        updateDateCache(dc);
+        clearScreen(dc);
+        drawFace(dc, System.getClockTime());
+        mPrevSecond = -1;
     }
 
-    // Per-second partial update
+    // Per-second partial update - only redraws the seconds hand
     function onPartialUpdate(dc as Graphics.Dc) as Void {
-        // Only animate the seconds hand when awake
         if (!mAwake) {
             return;
         }
+        redrawSecondHand(dc, System.getClockTime().sec);
+    }
 
-        var t       = System.getClockTime();
-        var secAng  = (t.sec / 60.0) * 2.0 * Math.PI;
+    //#endregion System Functions
 
-        var newSecX = mCenterX + (mRadius * SEC_LEN)  * Math.sin(secAng);
-        var newSecY = mCenterY - (mRadius * SEC_LEN)  * Math.cos(secAng);
-        var tailX   = mCenterX - (mRadius * SEC_TAIL) * Math.sin(secAng);
-        var tailY   = mCenterY + (mRadius * SEC_TAIL) * Math.cos(secAng);
-
-        //  Build clip region
-        // Union of: new hand line + previous hand line (to erase it)
-        // Add 2px padding so antialiased pixels are fully covered.
-        var PAD = 3;
-
-        var x1 = newSecX.toNumber();
-        var y1 = newSecY.toNumber();
-        var x2 = tailX.toNumber();
-        var y2 = tailY.toNumber();
-
-        var clipX = x1 < x2 ? x1 : x2;
-        var clipY = y1 < y2 ? y1 : y2;
-        var clipW = (x1 > x2 ? x1 : x2) - clipX;
-        var clipH = (y1 > y2 ? y1 : y2) - clipY;
-
-        if (mPrevSecValid) {
-            var px  = mPrevSecX.toNumber();
-            var py  = mPrevSecY.toNumber();
-            if (px < clipX) { clipX = px; }
-            if (py < clipY) { clipY = py; }
-            var px2 = px > (clipX + clipW) ? px : (clipX + clipW);
-            var py2 = py > (clipY + clipH) ? py : (clipY + clipH);
-              clipW = px2 - clipX;
-              clipH = py2 - clipY;
+    private function drawFace(dc as Graphics.Dc, t as System.ClockTime) as Void {
+        if (mAwake) {
+            drawActiveFace(dc, t);
+        } else {
+            drawIdleFace(dc, t);
         }
+    }
 
-        // Always include center boss in clip (hands meet here)
-        var bossR = 6;
-        var bx = mCenterX - bossR;
-        var by = mCenterY - bossR;
-        if (bx < clipX) { clipX = bx; }
-        if (by < clipY) { clipY = by; }
-        var bx2 = mCenterX + bossR;
-        var by2 = mCenterY + bossR;
-        if (bx2 > clipX + clipW) { clipW = bx2 - clipX; }
-        if (by2 > clipY + clipH) { clipH = by2 - clipY; }
+    private function drawIdleFace(dc as Graphics.Dc, t as System.ClockTime) as Void {
+        var hour12  = (t.hour % 12 == 0) ? 12 : t.hour % 12;
+        var timeStr = hour12.toString() + ":" + t.min.format("%02d");
 
-        clipX -= PAD;
-        clipY -= PAD;
-        clipW += PAD * 2;
-        clipH += PAD * 2;
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            mCenterX,
+            mCenterY - mFontNumberMediumHeightOffset,
+            Graphics.FONT_NUMBER_MEDIUM,
+            timeStr,
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
 
-        dc.setClip(clipX, clipY, clipW, clipH);
+        if (!mDayMonthDateText.equals("")) {
+            dc.drawText(
+                mCenterX,
+                mCenterY + mFontNumberMediumHeightOffset - mFontXTinyHeightOffset,
+                Graphics.FONT_XTINY,
+                mDayMonthDateText,
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+        }
+    }
 
-        // Repaint clipped area
-        // 1. Blit the static dial buffer (restores the background under old hand)
+    private function drawActiveFace(dc as Graphics.Dc, t as System.ClockTime) as Void {
+        // Draw analog dial with tick marks and hour numbers from buffer/bitmap
         if (mDialBuffer != null) {
             dc.drawBitmap(0, 0, mDialBuffer as Graphics.BufferedBitmap);
-        } else {
+        } else if (mDialBitmap != null) {
+            dc.drawBitmap(0, 0, mDialBitmap as Graphics.BitmapReference);
+        }
+
+        drawComplications(dc, t);
+        redrawHands(dc, t.hour, t.min);
+        redrawSecondHand(dc, t.sec);
+
+        mPrevSecond = t.sec;
+    }
+
+    private function redrawSecondHand(dc as Graphics.Dc, sec as Number) {
+        // Erase previous second hand
+        if (mPrevSecond >= 0) {
+            var prev = mSecTable[mPrevSecond];
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-            dc.fillRectangle(clipX, clipY, clipW, clipH);
+            dc.setPenWidth(mSecondHandWidth);
+            dc.drawLine(prev[2], prev[3], prev[0], prev[1]);
         }
 
-        // 2. Redraw hour & minute hands (they may cross the clipped region)
-        var hour   = t.hour % 12;
-        var minute = t.min;
-        redrawHourMinHands(dc, hour, minute);
-
-        // 3. Draw new second hand
+        // Draw new second hand
+        var pos = mSecTable[sec];
         dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(2);
-        dc.drawLine(tailX.toNumber(), tailY.toNumber(), x1, y1);
+        dc.setPenWidth(mSecondHandWidth);
+        dc.drawLine(pos[2], pos[3], pos[0], pos[1]);
 
-        // 4. Center boss (drawn last so it sits on top)
-        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.fillCircle(mCenterX, mCenterY, bossR - 1);
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        dc.fillCircle(mCenterX, mCenterY, 3);
-
-        dc.clearClip();
-
-        // Save for next tick
-        mPrevSecX     = newSecX;
-        mPrevSecY     = newSecY;
-        mPrevSecValid = true;
-    }
-
-    // =========================================================================
-    //  Private helpers
-    // =========================================================================
-
-    // Build the buffered bitmap for the static dial
-    // This is called once in onLayout(). The resulting bitmap is blitted cheaply each frame instead of re-executing ~60 trig + draw calls.
-    private function buildDialBuffer(dc as Graphics.Dc) as Void {
-        var w = dc.getWidth();
-        var h = dc.getHeight();
-        var options = {
-            :width  => w,
-            :height => h
-        };
-        mDialBuffer = Graphics.createBufferedBitmap(options).get() as Graphics.BufferedBitmap;
-        if (mDialBuffer == null) {
-            return;
-        }
-
-        var bdc = (mDialBuffer as Graphics.BufferedBitmap).getDc();
-        bdc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-        bdc.clear();
-
-        renderDial(bdc);
-    }
-
-    // Render dial into any DC (used for buffer build and fallback)
-    private function renderDial(bdc as Graphics.Dc) as Void {
-        bdc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-        bdc.setPenWidth(1);
-        bdc.drawCircle(mCenterX, mCenterY, mRadius);
-
-        for (var i = 0; i < 60; i++) {
-            var angle  = 2.0 * Math.PI * i / 60.0;
-            var sinA   = Math.sin(angle);
-            var cosA   = Math.cos(angle);
-            var isHour = (i % 5 == 0);
-
-            var innerR = mRadius - (isHour ? 15 : 8);
-            var outerX = mCenterX + mRadius * sinA;
-            var outerY = mCenterY - mRadius * cosA;
-            var innerX = mCenterX + innerR  * sinA;
-            var innerY = mCenterY - innerR  * cosA;
-
-            bdc.setPenWidth(isHour ? 3 : 1);
-            bdc.drawLine(innerX.toNumber(), innerY.toNumber(),
-                         outerX.toNumber(), outerY.toNumber());
-
-            if (isHour) {
-                var hour   = (i == 0) ? 12 : i / 5;
-                var labelR = mRadius - 38;
-                var lx     = mCenterX + labelR * sinA;
-                var ly     = mCenterY - labelR * cosA;
-                var fh     = bdc.getFontHeight(Graphics.FONT_TINY);
-                bdc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
-                bdc.drawText(lx.toNumber(), (ly - fh / 2).toNumber(),
-                             Graphics.FONT_TINY,
-                             hour.toString(),
-                             Graphics.TEXT_JUSTIFY_CENTER);
-            }
-        }
-    }
-
-    // Draw the full active face
-    private function drawActiveFace(dc as Graphics.Dc) as Void {
-        // 1. Blit static dial buffer (or re-draw if buffer allocation failed)
-        if (mDialBuffer != null) {
-            dc.drawBitmap(0, 0, mDialBuffer as Graphics.BufferedBitmap);
-        } else {
-            renderDial(dc);
-        }
-
-        // 2. Complications
-        drawComplications(dc);
-
-        // 3. Hands
-        var t      = System.getClockTime();
-        var hour   = t.hour % 12;
-        var minute = t.min;
-        var second = t.sec;
-
-        redrawHourMinHands(dc, hour, minute);
-
-        var secAng = (second / 60.0) * 2.0 * Math.PI;
-        var secX   = mCenterX + (mRadius * SEC_LEN)  * Math.sin(secAng);
-        var secY   = mCenterY - (mRadius * SEC_LEN)  * Math.cos(secAng);
-        var tailX  = mCenterX - (mRadius * SEC_TAIL) * Math.sin(secAng);
-        var tailY  = mCenterY + (mRadius * SEC_TAIL) * Math.cos(secAng);
-
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(2);
-        dc.drawLine(tailX.toNumber(), tailY.toNumber(),
-                    secX.toNumber(), secY.toNumber());
-
-        // 4. Center boss
+        // Draw center boss on top
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.fillCircle(mCenterX, mCenterY, 6);
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.fillCircle(mCenterX, mCenterY, 4);
 
-        // Seed partial-update tracker
-        mPrevSecX     = secX;
-        mPrevSecY     = secY;
-        mPrevSecValid = true;
+        mPrevSecond = sec;
     }
 
-    // Draw hour & minute hands (shared by onUpdate and onPartialUpdate)
-    private function redrawHourMinHands(dc as Graphics.Dc, hour as Number, minute as Number) as Void {
-        var minAng  = (minute / 60.0) * 2.0 * Math.PI;
-        var hourAng = ((hour + minute / 60.0) / 12.0) * 2.0 * Math.PI;
-
-        var minX  = mCenterX + (mRadius * MIN_LEN)  * Math.sin(minAng);
-        var minY  = mCenterY - (mRadius * MIN_LEN)  * Math.cos(minAng);
-        var hourX = mCenterX + (mRadius * HOUR_LEN) * Math.sin(hourAng);
-        var hourY = mCenterY - (mRadius * HOUR_LEN) * Math.cos(hourAng);
+    private function redrawHands(dc as Graphics.Dc, hour as Number, minute as Number) as Void {
+        var minP  = mMinTable[minute];
+        var hourP = mHourTable[(hour % 12) * 60 + minute];
 
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(7);
-        dc.drawLine(mCenterX, mCenterY, hourX.toNumber(), hourY.toNumber());
-        dc.setPenWidth(4);
-        dc.drawLine(mCenterX, mCenterY, minX.toNumber(),  minY.toNumber());
+
+        dc.setPenWidth(mHourHandWidth);
+        dc.drawLine(mCenterX, mCenterY, hourP[0], hourP[1]);
+
+        dc.setPenWidth(mMinuteHandWidth);
+        dc.drawLine(mCenterX, mCenterY, minP[0], minP[1]);
     }
 
-    //  Complications
-    private function drawComplications(dc as Graphics.Dc) as Void {
-        var actInfo  = ActivityMonitor.getInfo();
-        var sysStats = System.getSystemStats();
-        var devSet   = System.getDeviceSettings();
-        var t        = System.getClockTime();
-
-        // 12 o'clock: digital time
-        var hour12      = (t.hour % 12 == 0) ? 12 : t.hour % 12;
-        var digitalText = Lang.format("$1$:$2$", [hour12.format("%d"), t.min.format("%02d")]);
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(mCenterX,
-                    mCenterY - (mRadius * 0.39).toNumber(),
-                    Graphics.FONT_LARGE,
-                    digitalText,
-                    Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-
-        // 3 o'clock: date in white box
-        var dateX = mCenterX + (mRadius * 0.40).toNumber();
-        var dateY = mCenterY;
-        var xPad  = 2;
-        var yPad  = 0;
-        if (mDateDims != null && mDayDateText != null) {
-            var dw = (mDateDims as Array<Number>)[0];
-            var dh = (mDateDims as Array<Number>)[1];
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-            dc.fillRectangle(dateX - dw / 2 - xPad,
-                             dateY - dh / 2 - yPad / 2,
-                             dw + 2 * xPad,
-                             dh + yPad);
-            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(dateX, dateY,
-                        Graphics.FONT_XTINY,
-                        mDayDateText as String,
-                        Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-        }
-
-        // 6 o'clock: step count + notification dot
-        var stepsY  = mCenterY + (mRadius * 0.55).toNumber();
-        var notifyY = mCenterY + (mRadius * 0.38).toNumber();
-
-        if (devSet.notificationCount > 0) {
-            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
-            dc.fillCircle(mCenterX, notifyY, 5);
-        }
-
-        var stepsText = (actInfo.steps == null) ? "--" : Lang.format("$1$", [actInfo.steps]);
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(mCenterX, stepsY,
-                    Graphics.FONT_XTINY,
-                    stepsText,
-                    Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-
-        // 9 o'clock: battery
-        var battLevel = sysStats.battery;
-        var battText  = Lang.format("$1$%", [battLevel.format("%d")]);
-        var battColor = (battLevel <= 15) ? Graphics.COLOR_RED : Graphics.COLOR_WHITE;
-        dc.setColor(battColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(mCenterX - (mRadius * 0.52).toNumber(),
-                    mCenterY,
-                    Graphics.FONT_XTINY,
-                    battText,
-                    Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-    }
-
-    // Idle / sleep face - Large, centered digital time with date below
-    private function drawIdleFace(dc as Graphics.Dc) as Void {
-        var t       = System.getClockTime();
+    private function drawComplications(dc as Graphics.Dc, t as System.ClockTime) as Void {
+        // 12 o'clock: Digital time
         var hour12  = (t.hour % 12 == 0) ? 12 : t.hour % 12;
-        var timeStr = Lang.format("$1$:$2$", [hour12.format("%d"), t.min.format("%02d")]);
-        var timeY   = mCenterY;
+        var timeStr = hour12.toString() + ":" + t.min.format("%02d");
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(mCenterX, timeY,
-                    Graphics.FONT_NUMBER_MEDIUM,
-                    timeStr,
-                    Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(
+            mCenterX,
+            mCenterY - (mRadius * 0.37) - mFontLargeHeightOffset,
+            Graphics.FONT_LARGE,
+            timeStr,
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
 
-        if (mDayMonthDateText != null) {
-            var dateY = mCenterY + (mIdleTimeDims != null ? (mIdleTimeDims as Array<Number>)[1] / 2.0 : 0);
+        // 3 o'clock: Day + date
+        if (mDayDateText != "") {
+            var dateX = mCenterX + (mRadius * 0.40);
+            var dateY = mCenterY - mFontXTinyHeightOffset;
+            var xPad  = 8;
+            var yPad  = 0;
 
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(mCenterX, dateY,
-                        Graphics.FONT_XTINY,
-                        mDayMonthDateText as String,
-                        Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+            dc.fillRectangle(
+                dateX - mDayDateTextDimensions[0] / 2 - xPad,
+                dateY - yPad,
+                mDayDateTextDimensions[0] + 2 * xPad,
+                mDayDateTextDimensions[1] + 2 * yPad
+            );
+
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(
+                dateX,
+                dateY,
+                Graphics.FONT_XTINY,
+                mDayDateText,
+                Graphics.TEXT_JUSTIFY_CENTER
+            );
+        }
+
+        // 6 o'clock: Steps
+        var steps     = ActivityMonitor.getInfo().steps;
+        var stepsText = (steps == null) ? "--" : steps.toString();
+
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            mCenterX,
+            mCenterY + (mRadius * 0.50) - mFontXTinyHeightOffset,
+            Graphics.FONT_XTINY,
+            stepsText,
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+
+        // 6 o'clock: Notification dot
+        if (System.getDeviceSettings().notificationCount > 0) {
+            dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_TRANSPARENT);
+            dc.fillCircle(mCenterX, mCenterY + (mRadius * 0.38), 5);
+        }
+
+        // 9 o'clock: Battery
+        var batt = System.getSystemStats().battery;
+
+        dc.setColor((batt <= 15.0 ? Graphics.COLOR_RED : Graphics.COLOR_WHITE), Graphics.COLOR_TRANSPARENT);
+        dc.drawText(
+            mCenterX - (mRadius * 0.50),
+            mCenterY - mFontXTinyHeightOffset,
+            Graphics.FONT_XTINY,
+            batt.format("%d") + "%",
+            Graphics.TEXT_JUSTIFY_CENTER
+        );
+    }
+
+    // #region Setup helpers
+    private function setDimensions(dc as Graphics.Dc) as Void {
+        mCenterX = dc.getWidth()  / 2;
+        mCenterY = dc.getHeight() / 2;
+        mRadius  = (mCenterX < mCenterY ? mCenterX : mCenterY) - 10;
+    }
+
+    // Render the static dial bitmap once into an off-screen BufferedBitmap.
+    private function buildDialBuffer(dc as Graphics.Dc) as Void {
+        if (mDialBitmap == null) {
+            return;
+        }
+
+        var opts = {
+            :width  => dc.getWidth(),
+            :height => dc.getHeight()
+        };
+
+        try {
+            var bufRef = Graphics.createBufferedBitmap(opts);
+            var buf    = bufRef.get() as Graphics.BufferedBitmap;
+            var bdc    = buf.getDc();
+            bdc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+            bdc.clear();
+            bdc.drawBitmap(0, 0, mDialBitmap as Graphics.BitmapReference);
+            mDialBuffer = buf;
+        } catch (ex instanceof Lang.Exception) {
+            mDialBuffer = null;
         }
     }
 
-    // Updates date strings
-    private function updateDateCache() as Void {
-        var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var dow  = WEEK_DAYS[info.day_of_week - 1];
-        var mon  = MONTH_NAMES[info.month - 1];
+    private function buildTables() as Void {
+        buildTrigTables();
+        buildSecondTable();
+        buildMinuteTable();
+        buildHourTable();
+    }
 
-        mDayDateText      = Lang.format("$1$ $2$",      [dow, info.day]);
-        mDayMonthDateText = Lang.format("$1$, $2$ $3$", [dow, mon, info.day]);
-        mLastDateDay      = info.day;
+    private function buildTrigTables() as Void {
+        for (var i = 0; i < 60; i++) {
+            var a   = (TWO_PI / 60.0) * i; // 2Pi/60 is step size
+
+            mSin[i] = Math.sin(a);
+            mCos[i] = Math.cos(a);
+        }
+    }
+
+    private function buildSecondTable() as Void {
+        for (var i = 0; i < 60; i++) {
+            var s = mSin[i];
+            var c = mCos[i];
+
+            mSecTable[i] = [
+                (mCenterX + mRadius * SEC_LEN  * s),
+                (mCenterY - mRadius * SEC_LEN  * c),
+                (mCenterX - mRadius * SEC_TAIL * s),
+                (mCenterY + mRadius * SEC_TAIL * c)
+            ];
+        }
+    }
+
+    private function buildMinuteTable() as Void {
+        for (var i = 0; i < 60; i++) {
+            var s = mSin[i];
+            var c = mCos[i];
+
+            mMinTable[i] = [
+                (mCenterX + mRadius * MIN_LEN * s),
+                (mCenterY - mRadius * MIN_LEN * c)
+            ];
+        }
+    }
+
+    private function buildHourTable() as Void {
+        for (var h = 0; h < 12; h++) {
+            for (var m = 0; m < 60; m++) {
+                var angleIndex = (h * 5 + m / 12);
+                var s = mSin[angleIndex];
+                var c = mCos[angleIndex];
+
+                mHourTable[h * 60 + m] = [
+                    (mCenterX + mRadius * HOUR_LEN * s),
+                    (mCenterY - mRadius * HOUR_LEN * c)
+                ];
+            }
+        }
+    }
+    // #endregion Setup helpers
+
+    private function updateDateCache(dc as Graphics.Dc) as Void {
+        var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+
+        if (mLastDateDay == info.day) {
+            return;
+        }
+
+        var dow = WEEK_DAYS[info.day_of_week - 1];
+        var mon = MONTH_NAMES[info.month - 1];
+
+        mDayDateText           = dow + " " + info.day.toString();
+        mDayDateTextDimensions = dc.getTextDimensions(mDayDateText, Graphics.FONT_XTINY);
+        mDayMonthDateText      = dow + ", " + mon + " " + info.day.toString();
+        mLastDateDay           = info.day;
+    }
+
+    private function handleSleep(mAwakeState as Boolean) {
+        mAwake      = mAwakeState;
+        mPrevSecond = -1;
+        WatchUi.requestUpdate();
+    }
+
+    private function clearScreen(dc as Graphics.Dc) as Void {
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.clear();
     }
 }
