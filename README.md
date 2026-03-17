@@ -45,20 +45,6 @@ When the watch enters idle/always-on mode, the face switches to a minimal layout
 
 ---
 
-## Project Structure
-
-```
-CregFace/
-├── source/
-│   └── CregFaceView.mc      # Main watchface view logic
-├── resources/
-│   └── drawables/           # DialBackground bitmap asset
-├── manifest.xml
-└── monkey.jungle
-```
-
----
-
 ## Building & Installing
 
 1. Install the [Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/) and configure your IDE (VS Code with the Monkey C extension recommended).
