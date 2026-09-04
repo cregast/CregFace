@@ -182,12 +182,10 @@ class CregFaceView extends WatchUi.WatchFace {
     }
 
     private function drawComplications(dc as Graphics.Dc, t as System.ClockTime) as Void {
-        updateTimeStrings(t);
-
-        // Update slower changing system stats once per minute
         if (mLastMin != t.min) {
             updateSystemComplications();
         }
+        updateTimeStrings(t);
 
         // 12 o'clock: Digital time
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
